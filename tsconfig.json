@@ -1,7 +1,15 @@
 {
-    "extends": "astro/tsconfigs/strict",
+    "extends": "./tsconfig.strict.json",
     "compilerOptions": {
-      "jsx": "react-jsx",
-      "jsxImportSource": "react"
-    }
+      "noImplicitAny": false,
+      "noEmitOnError": true,
+      "removeComments": false,
+      "sourceMap": true,
+      "target": "ESNext",
+      "outDir": "dist"
+    },
+    "include": [
+      "src/**/*",
+      "tests/**/*"
+    ]
   }
