@@ -1,2 +1,3 @@
 Product Advertising API 5.0 SDK for NodeJS
 Copyright 2019-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+Refactoring Copyright 2024 David A. Ball.
