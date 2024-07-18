@@ -37,6 +37,7 @@ import { Condition } from "./model/Condition";
 import { ContentInfo } from "./model/ContentInfo";
 import { ContentRating } from "./model/ContentRating";
 import { Contributor } from "./model/Contributor";
+import { CustomerReviews } from "./model/CustomerReviews";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { OfferSavings } from "./model/OfferSavings";
