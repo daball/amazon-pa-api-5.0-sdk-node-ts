@@ -90,6 +90,7 @@ import { RefinementBin } from "./model/RefinementBin";
 import { RentalOfferListing } from "./model/RentalOfferListing";
 import { RentalOffers } from "./model/RentalOffers";
 import { SearchRefinements } from "./model/SearchRefinements";
+import { SearchResult } from "./model/SearchResult";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
