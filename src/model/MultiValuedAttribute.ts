@@ -21,45 +21,33 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.MultiValuedAttribute = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The MultiValuedAttribute model module.
+ * @module model/MultiValuedAttribute
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>MultiValuedAttribute</code>.
+ * @alias module:model/MultiValuedAttribute
+ * @class
+ */
+export class MultiValuedAttribute {
   /**
-   * The MultiValuedAttribute model module.
-   * @module model/MultiValuedAttribute
-   * @version 1.0.0
+   * @member {Array.<String>} DisplayValues
    */
-
+  public DisplayValues?: string[];
   /**
-   * Constructs a new <code>MultiValuedAttribute</code>.
-   * @alias module:model/MultiValuedAttribute
-   * @class
+   * @member {String} Label
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
-
+  public Label?: string;
+  /**
+   * @member {String} Locale
+   */
+  public Locale?: string;
+  
   /**
    * Constructs a <code>MultiValuedAttribute</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,39 +55,20 @@
    * @param {module:model/MultiValuedAttribute} obj Optional instance to populate.
    * @return {module:model/MultiValuedAttribute} The populated <code>MultiValuedAttribute</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: MultiValuedAttribute) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new MultiValuedAttribute();
 
       if (data.hasOwnProperty('DisplayValues')) {
-        obj['DisplayValues'] = ApiClient.convertToType(data['DisplayValues'], ['String']);
+        obj.DisplayValues = ApiClient.convertToType(data['DisplayValues'], ['String']);
       }
       if (data.hasOwnProperty('Label')) {
-        obj['Label'] = ApiClient.convertToType(data['Label'], 'String');
+        obj.Label = ApiClient.convertToType(data['Label'], 'String');
       }
       if (data.hasOwnProperty('Locale')) {
-        obj['Locale'] = ApiClient.convertToType(data['Locale'], 'String');
+        obj.Locale = ApiClient.convertToType(data['Locale'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<String>} DisplayValues
-   */
-  exports.prototype['DisplayValues'] = undefined;
-  /**
-   * @member {String} Label
-   */
-  exports.prototype['Label'] = undefined;
-  /**
-   * @member {String} Locale
-   */
-  exports.prototype['Locale'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

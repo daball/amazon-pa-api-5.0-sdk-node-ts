@@ -44,6 +44,7 @@ import { DurationPrice } from "./model/DurationPrice";
 import { ErrorData } from "./model/ErrorData";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
+import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
 import { PriceType } from "./model/PriceType";
