@@ -23,6 +23,13 @@
 
  import { ApiClient } from "../ApiClient";
  import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest";
+ import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse";
+ import { GetItemsRequest } from "../model/GetItemsRequest";
+ import { GetItemsResponse } from "../model/GetItemsResponse";
+ import { GetVariationsRequest } from "../model/GetVariationsRequest";
+ import { GetVariationsResponse } from "../model/GetVariationsResponse";
+ import { SearchItemsRequest } from "../model/SearchItemsRequest";
+ import { SearchItemsResponse } from "../model/SearchItemsResponse";
  
  /**
   * Default service.
@@ -86,7 +93,7 @@
     */
    public getBrowseNodes(getBrowseNodesRequest: GetBrowseNodesRequest) {
      return this.getBrowseNodesWithHttpInfo(getBrowseNodesRequest)
-       .then(function(response_and_data) {
+       .then(function(response_and_data: any) {
          return response_and_data.data;
        });
    }
@@ -134,7 +141,7 @@
     */
    public getItems(getItemsRequest: GetItemsRequest) {
      return this.getItemsWithHttpInfo(getItemsRequest)
-       .then(function(response_and_data) {
+       .then(function(response_and_data: any) {
          return response_and_data.data;
        });
    }
@@ -182,7 +189,7 @@
     */
    public getVariations(getVariationsRequest: GetVariationsRequest) {
      return this.getVariationsWithHttpInfo(getVariationsRequest)
-       .then(function(response_and_data) {
+       .then(function(response_and_data: any) {
          return response_and_data.data;
        });
    }
@@ -230,7 +237,7 @@
     */
    public searchItems(searchItemsRequest: SearchItemsRequest) {
      return this.searchItemsWithHttpInfo(searchItemsRequest)
-       .then(function(response_and_data) {
+       .then(function(response_and_data: any) {
          return response_and_data.data;
        });
    }

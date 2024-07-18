@@ -31,24 +31,6 @@
  
  const PRODUCT_ADVERTISING_API = 'ProductAdvertisingAPI';
  
- //wtf:
- // (function(root, factory) {
- //   if (typeof define === 'function' && define.amd) {
- //     // AMD. Register as an anonymous module.
- //     define(['superagent', 'querystring'], factory);
- //   } else if (typeof module === 'object' && module.exports) {
- //     // CommonJS-like environments that support module.exports, like Node.
- //     module.exports = factory(require('superagent'), require('querystring'));
- //   } else {
- //     // Browser globals (root is window)
- //     if (!root.ProductAdvertisingAPIv1) {
- //       root.ProductAdvertisingAPIv1 = {};
- //     }
- //     root.ProductAdvertisingAPIv1.ApiClient = factory(root.superagent, root.querystring);
- //   }
- // }(this, function(superagent, querystring) {
- //   'use strict';
- 
  /**
   * @module ApiClient
   * @version 1.0.0
@@ -583,6 +565,5 @@
        }
      }
    };
- 
  }
  
