@@ -21,45 +21,33 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Refinement'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Refinement'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.SearchRefinements = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.Refinement);
-  }
-}(this, function(ApiClient, Refinement) {
-  'use strict';
+/**
+ * The SearchRefinements model module.
+ * @module model/SearchRefinements
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { Refinement } from "./Refinement";
 
-
-
+/**
+ * Constructs a new <code>SearchRefinements</code>.
+ * @alias module:model/SearchRefinements
+ * @class
+ */
+export class SearchRefinements {
   /**
-   * The SearchRefinements model module.
-   * @module model/SearchRefinements
-   * @version 1.0.0
+   * @member {module:model/Refinement} BrowseNode
    */
-
+  public BrowseNode?: Refinement
   /**
-   * Constructs a new <code>SearchRefinements</code>.
-   * @alias module:model/SearchRefinements
-   * @class
+   * @member {Array.<module:model/Refinement>} OtherRefinements
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
-
+  public OtherRefinements?: Refinement[]
+  /**
+   * @member {module:model/Refinement} SearchIndex
+   */
+  public SearchIndex?: Refinement
   /**
    * Constructs a <code>SearchRefinements</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,39 +55,20 @@
    * @param {module:model/SearchRefinements} obj Optional instance to populate.
    * @return {module:model/SearchRefinements} The populated <code>SearchRefinements</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: SearchRefinements) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new SearchRefinements();
 
       if (data.hasOwnProperty('BrowseNode')) {
-        obj['BrowseNode'] = Refinement.constructFromObject(data['BrowseNode']);
+        obj.BrowseNode = Refinement.constructFromObject(data['BrowseNode']);
       }
       if (data.hasOwnProperty('OtherRefinements')) {
-        obj['OtherRefinements'] = ApiClient.convertToType(data['OtherRefinements'], [Refinement]);
+        obj.OtherRefinements = ApiClient.convertToType(data['OtherRefinements'], [Refinement]);
       }
       if (data.hasOwnProperty('SearchIndex')) {
-        obj['SearchIndex'] = Refinement.constructFromObject(data['SearchIndex']);
+        obj.SearchIndex = Refinement.constructFromObject(data['SearchIndex']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/Refinement} BrowseNode
-   */
-  exports.prototype['BrowseNode'] = undefined;
-  /**
-   * @member {Array.<module:model/Refinement>} OtherRefinements
-   */
-  exports.prototype['OtherRefinements'] = undefined;
-  /**
-   * @member {module:model/Refinement} SearchIndex
-   */
-  exports.prototype['SearchIndex'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
