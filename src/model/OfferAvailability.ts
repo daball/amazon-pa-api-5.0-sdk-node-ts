@@ -21,45 +21,36 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferAvailability = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferAvailability model module.
+ * @module model/OfferAvailability
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferAvailability</code>.
+ * @alias module:model/OfferAvailability
+ * @class
+ */
+export class OfferAvailability {
   /**
-   * The OfferAvailability model module.
-   * @module model/OfferAvailability
-   * @version 1.0.0
+   * @member {Number} MaxOrderQuantity
    */
-
+  public MaxOrderQuantity?: number;
   /**
-   * Constructs a new <code>OfferAvailability</code>.
-   * @alias module:model/OfferAvailability
-   * @class
+   * @member {String} Message
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public Message?: string;
+  /**
+   * @member {Number} MinOrderQuantity
+   */
+  public MinOrderQuantity?: number;
+  /**
+   * @member {String} Type
+   */
+  public Type?: string;
 
   /**
    * Constructs a <code>OfferAvailability</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +59,23 @@
    * @param {module:model/OfferAvailability} obj Optional instance to populate.
    * @return {module:model/OfferAvailability} The populated <code>OfferAvailability</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferAvailability) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferAvailability();
 
       if (data.hasOwnProperty('MaxOrderQuantity')) {
-        obj['MaxOrderQuantity'] = ApiClient.convertToType(data['MaxOrderQuantity'], 'Number');
+        obj.MaxOrderQuantity = ApiClient.convertToType(data['MaxOrderQuantity'], 'Number');
       }
       if (data.hasOwnProperty('Message')) {
-        obj['Message'] = ApiClient.convertToType(data['Message'], 'String');
+        obj.Message = ApiClient.convertToType(data['Message'], 'String');
       }
       if (data.hasOwnProperty('MinOrderQuantity')) {
-        obj['MinOrderQuantity'] = ApiClient.convertToType(data['MinOrderQuantity'], 'Number');
+        obj.MinOrderQuantity = ApiClient.convertToType(data['MinOrderQuantity'], 'Number');
       }
       if (data.hasOwnProperty('Type')) {
-        obj['Type'] = ApiClient.convertToType(data['Type'], 'String');
+        obj.Type = ApiClient.convertToType(data['Type'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Number} MaxOrderQuantity
-   */
-  exports.prototype['MaxOrderQuantity'] = undefined;
-  /**
-   * @member {String} Message
-   */
-  exports.prototype['Message'] = undefined;
-  /**
-   * @member {Number} MinOrderQuantity
-   */
-  exports.prototype['MinOrderQuantity'] = undefined;
-  /**
-   * @member {String} Type
-   */
-  exports.prototype['Type'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

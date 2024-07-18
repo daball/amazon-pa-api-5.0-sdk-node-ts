@@ -58,6 +58,7 @@ import { MaxPrice } from "./model/MaxPrice";
 import { Merchant } from "./model/Merchant";
 import { MinPrice } from "./model/MinPrice";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
+import { OfferAvailability } from "./model/OfferAvailability";
 import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
