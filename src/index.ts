@@ -97,8 +97,10 @@ import { TechnicalInfo } from "./model/TechnicalInfo";
 import { TradeInInfo } from "./model/TradeInInfo";
 import { TradeInPrice } from "./model/TradeInPrice";
 import { UnitBasedAttribute } from "./model/UnitBasedAttribute";
+import { VariationAttribute } from "./model/VariationAttribute";
 import { VariationDimension } from "./model/VariationDimension";
 import { VariationSummary } from "./model/VariationSummary";
+import { VariationsResult } from "./model/VariationsResult";
 import { WebsiteSalesRank } from "./model/WebsiteSalesRank";
 
 /**

@@ -21,43 +21,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.VariationAttribute = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The VariationAttribute model module.
+ * @module model/VariationAttribute
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>VariationAttribute</code>.
+ * @alias module:model/VariationAttribute
+ * @class
+ */
+export class VariationAttribute {
   /**
-   * The VariationAttribute model module.
-   * @module model/VariationAttribute
-   * @version 1.0.0
+   * @member {String} Name
    */
-
+  public Name?: string;
   /**
-   * Constructs a new <code>VariationAttribute</code>.
-   * @alias module:model/VariationAttribute
-   * @class
+   * @member {String} Value
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Value?: string;
 
   /**
    * Constructs a <code>VariationAttribute</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +51,17 @@
    * @param {module:model/VariationAttribute} obj Optional instance to populate.
    * @return {module:model/VariationAttribute} The populated <code>VariationAttribute</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: VariationAttribute) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new VariationAttribute();
 
       if (data.hasOwnProperty('Name')) {
-        obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+        obj.Name = ApiClient.convertToType(data['Name'], 'String');
       }
       if (data.hasOwnProperty('Value')) {
-        obj['Value'] = ApiClient.convertToType(data['Value'], 'String');
+        obj.Value = ApiClient.convertToType(data['Value'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} Name
-   */
-  exports.prototype['Name'] = undefined;
-  /**
-   * @member {String} Value
-   */
-  exports.prototype['Value'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
