@@ -39,6 +39,11 @@ export const enum GetBrowseNodesResourceValues {
   Children = "BrowseNodes.Children"
 };
 
+/**
+ * Enum class GetBrowseNodesResource.
+ * @enum {}
+ * @readonly
+ */
 export class GetBrowseNodesResource extends String {
   /**
    * value: "BrowseNodes.Ancestor"
@@ -55,5 +60,5 @@ export class GetBrowseNodesResource extends String {
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/GetBrowseNodesResource} The enum <code>GetBrowseNodesResource</code> value.
    */
-  public static constructFromObject(object: string) { return object; }
+  public static constructFromObject(object: GetBrowseNodesResource|GetBrowseNodesResourceValues|string) { return object; }
 };

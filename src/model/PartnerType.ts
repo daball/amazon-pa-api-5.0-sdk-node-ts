@@ -21,46 +21,35 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.PartnerType = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
-
-
+/**
+ * Enum class PartnerType.
+ * @enum {}
+ * @readonly
+ */
+export enum PartnerTypeValues {
   /**
-   * Enum class PartnerType.
-   * @enum {}
-   * @readonly
+   * value: "Associates"
+   * @const
    */
-  var exports = {
-    /**
-     * value: "Associates"
-     * @const
-     */
-    "Associates": "Associates"  };
+  Associates = "Associates"
+};
 
+/**
+ * Enum class PartnerType.
+ * @enum {}
+ * @readonly
+ */
+export class PartnerType extends String {
+  /**
+   * value: "Associates"
+   * @const
+   */
+  public static get Associates() { return PartnerTypeValues.Associates; }
+  
   /**
    * Returns a <code>PartnerType</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/PartnerType} The enum <code>PartnerType</code> value.
    */
-  exports.constructFromObject = function(object) {
-    return object;
-  }
-
-  return exports;
-}));
-
-
+  public constructFromObject(object: PartnerType|PartnerTypeValues|string) { return object; }
+};

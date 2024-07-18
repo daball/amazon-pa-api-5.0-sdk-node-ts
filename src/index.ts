@@ -49,6 +49,7 @@ import { LanguageType } from "./model/LanguageType";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
+import { PartnerType } from "./model/PartnerType";
 import { PriceType } from "./model/PriceType";
 import { Rating } from "./model/Rating";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
