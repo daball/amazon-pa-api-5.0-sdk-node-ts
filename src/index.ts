@@ -22,6 +22,9 @@
  */
 
 import { ApiClient } from "./ApiClient";
+
+import { DefaultApi } from "./api/DefaultApi";
+
 import { Availability } from "./model/Availability";
 import { BrowseNode } from "./model/BrowseNode";
 import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor";
@@ -30,8 +33,8 @@ import { BrowseNodeInfo } from "./model/BrowseNodeInfo";
 import { BrowseNodesResult } from "./model/BrowseNodesResult";
 import { ByLineInfo } from "./model/ByLineInfo";
 import { Classifications } from "./model/Classifications";
-import { DefaultApi } from "./api/DefaultApi";
 import { Condition } from "./model/Condition";
+import { ContentRating } from "./model/ContentRating";
 import { Contributor } from "./model/Contributor";
 import { OfferSavings } from "./model/OfferSavings";
 import { PriceType } from "./model/PriceType";

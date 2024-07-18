@@ -27,7 +27,6 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient";
 import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute";
 
 /**
