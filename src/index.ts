@@ -89,6 +89,8 @@ import { Refinement } from "./model/Refinement";
 import { RefinementBin } from "./model/RefinementBin";
 import { RentalOfferListing } from "./model/RentalOfferListing";
 import { RentalOffers } from "./model/RentalOffers";
+import { SearchItemsRequest } from "./model/SearchItemsRequest";
+import { SearchItemsResponse } from "./model/SearchItemsResponse";
 import { SearchRefinements } from "./model/SearchRefinements";
 import { SearchResult } from "./model/SearchResult";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";

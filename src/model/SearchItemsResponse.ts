@@ -21,43 +21,30 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorData', 'model/SearchResult'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ErrorData'), require('./SearchResult'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.SearchItemsResponse = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.ErrorData, root.ProductAdvertisingAPIv1.SearchResult);
-  }
-}(this, function(ApiClient, ErrorData, SearchResult) {
-  'use strict';
+/**
+ * The SearchItemsResponse model module.
+ * @module model/SearchItemsResponse
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { ErrorData } from "./ErrorData";
+import { SearchResult } from "./SearchResult";
 
-
-
+/**
+ * Constructs a new <code>SearchItemsResponse</code>.
+ * @alias module:model/SearchItemsResponse
+ * @class
+ */
+export class SearchItemsResponse {
   /**
-   * The SearchItemsResponse model module.
-   * @module model/SearchItemsResponse
-   * @version 1.0.0
+   * @member {module:model/SearchResult} SearchResult
    */
-
+  public SearchResult?: SearchResult;
   /**
-   * Constructs a new <code>SearchItemsResponse</code>.
-   * @alias module:model/SearchItemsResponse
-   * @class
+   * @member {Array.<module:model/ErrorData>} Errors
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Errors?: ErrorData[];
 
   /**
    * Constructs a <code>SearchItemsResponse</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +53,17 @@
    * @param {module:model/SearchItemsResponse} obj Optional instance to populate.
    * @return {module:model/SearchItemsResponse} The populated <code>SearchItemsResponse</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: SearchItemsResponse) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new SearchItemsResponse();
 
       if (data.hasOwnProperty('SearchResult')) {
-        obj['SearchResult'] = SearchResult.constructFromObject(data['SearchResult']);
+        obj.SearchResult = SearchResult.constructFromObject(data['SearchResult']);
       }
       if (data.hasOwnProperty('Errors')) {
-        obj['Errors'] = ApiClient.convertToType(data['Errors'], [ErrorData]);
+        obj.Errors = ApiClient.convertToType(data['Errors'], [ErrorData]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/SearchResult} SearchResult
-   */
-  exports.prototype['SearchResult'] = undefined;
-  /**
-   * @member {Array.<module:model/ErrorData>} Errors
-   */
-  exports.prototype['Errors'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
