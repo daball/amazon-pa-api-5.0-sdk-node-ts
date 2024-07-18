@@ -21,47 +21,49 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DurationPrice', 'model/OfferAvailability', 'model/OfferCondition', 'model/OfferDeliveryInfo', 'model/OfferMerchantInfo'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DurationPrice'), require('./OfferAvailability'), require('./OfferCondition'), require('./OfferDeliveryInfo'), require('./OfferMerchantInfo'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.RentalOfferListing = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.DurationPrice, root.ProductAdvertisingAPIv1.OfferAvailability, root.ProductAdvertisingAPIv1.OfferCondition, root.ProductAdvertisingAPIv1.OfferDeliveryInfo, root.ProductAdvertisingAPIv1.OfferMerchantInfo);
-  }
-}(this, function(ApiClient, DurationPrice, OfferAvailability, OfferCondition, OfferDeliveryInfo, OfferMerchantInfo) {
-  'use strict';
+/**
+ * The RentalOfferListing model module.
+ * @module model/RentalOfferListing
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { DurationPrice } from "./DurationPrice";
+import { OfferAvailability } from "./OfferAvailability";
+import { OfferCondition } from "./OfferCondition";
+import { OfferDeliveryInfo } from "./OfferDeliveryInfo";
+import { OfferMerchantInfo } from "./OfferMerchantInfo";
 
-
-
+/**
+ * Constructs a new <code>RentalOfferListing</code>.
+ * @alias module:model/RentalOfferListing
+ * @class
+ */
+export class RentalOfferListing {
   /**
-   * The RentalOfferListing model module.
-   * @module model/RentalOfferListing
-   * @version 1.0.0
+   * @member {module:model/OfferAvailability} Availability
    */
-
+  public Availability?: OfferAvailability;
   /**
-   * Constructs a new <code>RentalOfferListing</code>.
-   * @alias module:model/RentalOfferListing
-   * @class
+   * @member {module:model/DurationPrice} BasePrice
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-
-  };
+  public BasePrice?: DurationPrice;
+  /**
+   * @member {module:model/OfferCondition} Condition
+   */
+  public Condition?: OfferCondition;
+  /**
+   * @member {module:model/OfferDeliveryInfo} DeliveryInfo
+   */
+  public DeliveryInfo?: OfferDeliveryInfo;
+  /**
+   * @member {String} Id
+   */
+  public Id?: string;
+  /**
+   * @member {module:model/OfferMerchantInfo} MerchantInfo
+   */
+  public MerchantInfo?: OfferMerchantInfo
 
   /**
    * Constructs a <code>RentalOfferListing</code> from a plain JavaScript object, optionally creating a new instance.
@@ -70,60 +72,29 @@
    * @param {module:model/RentalOfferListing} obj Optional instance to populate.
    * @return {module:model/RentalOfferListing} The populated <code>RentalOfferListing</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: RentalOfferListing) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new RentalOfferListing();
 
       if (data.hasOwnProperty('Availability')) {
-        obj['Availability'] = OfferAvailability.constructFromObject(data['Availability']);
+        obj.Availability = OfferAvailability.constructFromObject(data['Availability']);
       }
       if (data.hasOwnProperty('BasePrice')) {
-        obj['BasePrice'] = DurationPrice.constructFromObject(data['BasePrice']);
+        obj.BasePrice = DurationPrice.constructFromObject(data['BasePrice']);
       }
       if (data.hasOwnProperty('Condition')) {
-        obj['Condition'] = OfferCondition.constructFromObject(data['Condition']);
+        obj.Condition = OfferCondition.constructFromObject(data['Condition']);
       }
       if (data.hasOwnProperty('DeliveryInfo')) {
-        obj['DeliveryInfo'] = OfferDeliveryInfo.constructFromObject(data['DeliveryInfo']);
+        obj.DeliveryInfo = OfferDeliveryInfo.constructFromObject(data['DeliveryInfo']);
       }
       if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+        obj.Id = ApiClient.convertToType(data['Id'], 'String');
       }
       if (data.hasOwnProperty('MerchantInfo')) {
-        obj['MerchantInfo'] = OfferMerchantInfo.constructFromObject(data['MerchantInfo']);
+        obj.MerchantInfo = OfferMerchantInfo.constructFromObject(data['MerchantInfo']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/OfferAvailability} Availability
-   */
-  exports.prototype['Availability'] = undefined;
-  /**
-   * @member {module:model/DurationPrice} BasePrice
-   */
-  exports.prototype['BasePrice'] = undefined;
-  /**
-   * @member {module:model/OfferCondition} Condition
-   */
-  exports.prototype['Condition'] = undefined;
-  /**
-   * @member {module:model/OfferDeliveryInfo} DeliveryInfo
-   */
-  exports.prototype['DeliveryInfo'] = undefined;
-  /**
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-  /**
-   * @member {module:model/OfferMerchantInfo} MerchantInfo
-   */
-  exports.prototype['MerchantInfo'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
