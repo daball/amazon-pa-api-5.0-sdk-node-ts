@@ -21,45 +21,34 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RefinementBin'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./RefinementBin'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.Refinement = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.RefinementBin);
-  }
-}(this, function(ApiClient, RefinementBin) {
-  'use strict';
+/**
+ * The Refinement model module.
+ * @module model/Refinement
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { RefinementBin } from "./RefinementBin";
 
-
-
+/**
+ * Constructs a new <code>Refinement</code>.
+ * @alias module:model/Refinement
+ * @class
+ */
+export class Refinement {
   /**
-   * The Refinement model module.
-   * @module model/Refinement
-   * @version 1.0.0
+   * @member {Array.<module:model/RefinementBin>} Bins
    */
-
+  public Bins?: RefinementBin[];
   /**
-   * Constructs a new <code>Refinement</code>.
-   * @alias module:model/Refinement
-   * @class
+   * @member {String} DisplayName
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
-
+  public DisplayName?: string;
+  /**
+   * @member {String} Id
+   */
+  public Id?: string;
+  
   /**
    * Constructs a <code>Refinement</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,39 +56,20 @@
    * @param {module:model/Refinement} obj Optional instance to populate.
    * @return {module:model/Refinement} The populated <code>Refinement</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: Refinement) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new Refinement();
 
       if (data.hasOwnProperty('Bins')) {
-        obj['Bins'] = ApiClient.convertToType(data['Bins'], [RefinementBin]);
+        obj.Bins = ApiClient.convertToType(data['Bins'], [RefinementBin]);
       }
       if (data.hasOwnProperty('DisplayName')) {
-        obj['DisplayName'] = ApiClient.convertToType(data['DisplayName'], 'String');
+        obj.DisplayName = ApiClient.convertToType(data['DisplayName'], 'String');
       }
       if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+        obj.Id = ApiClient.convertToType(data['Id'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:model/RefinementBin>} Bins
-   */
-  exports.prototype['Bins'] = undefined;
-  /**
-   * @member {String} DisplayName
-   */
-  exports.prototype['DisplayName'] = undefined;
-  /**
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

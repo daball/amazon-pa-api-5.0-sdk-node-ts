@@ -64,6 +64,7 @@ import { PartnerType } from "./model/PartnerType";
 import { PriceType } from "./model/PriceType";
 import { Properties } from "./model/Properties";
 import { Rating } from "./model/Rating";
+import { Refinement } from "./model/Refinement";
 import { RefinementBin } from "./model/RefinementBin";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
