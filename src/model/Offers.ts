@@ -21,43 +21,30 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferListing', 'model/OfferSummary'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferListing'), require('./OfferSummary'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.Offers = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferListing, root.ProductAdvertisingAPIv1.OfferSummary);
-  }
-}(this, function(ApiClient, OfferListing, OfferSummary) {
-  'use strict';
+/**
+ * The Offers model module.
+ * @module model/Offers
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { OfferListing } from "./OfferListing";
+import { OfferSummary } from "./OfferSummary";
 
-
-
+/**
+ * Constructs a new <code>Offers</code>.
+ * @alias module:model/Offers
+ * @class
+ */
+export class Offers {
   /**
-   * The Offers model module.
-   * @module model/Offers
-   * @version 1.0.0
+   * @member {Array.<module:model/OfferListing>} Listings
    */
-
+  public Listings?: OfferListing[];
   /**
-   * Constructs a new <code>Offers</code>.
-   * @alias module:model/Offers
-   * @class
+   * @member {Array.<module:model/OfferSummary>} Summaries
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Summaries?: OfferSummary[];
 
   /**
    * Constructs a <code>Offers</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +53,17 @@
    * @param {module:model/Offers} obj Optional instance to populate.
    * @return {module:model/Offers} The populated <code>Offers</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: Offers) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new Offers();
 
       if (data.hasOwnProperty('Listings')) {
-        obj['Listings'] = ApiClient.convertToType(data['Listings'], [OfferListing]);
+        obj.Listings = ApiClient.convertToType(data['Listings'], [OfferListing]);
       }
       if (data.hasOwnProperty('Summaries')) {
-        obj['Summaries'] = ApiClient.convertToType(data['Summaries'], [OfferSummary]);
+        obj.Summaries = ApiClient.convertToType(data['Summaries'], [OfferSummary]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:model/OfferListing>} Listings
-   */
-  exports.prototype['Listings'] = undefined;
-  /**
-   * @member {Array.<module:model/OfferSummary>} Summaries
-   */
-  exports.prototype['Summaries'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

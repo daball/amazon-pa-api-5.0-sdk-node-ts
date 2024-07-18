@@ -76,6 +76,7 @@ import { OfferSavings } from "./model/OfferSavings";
 import { OfferShippingCharge } from "./model/OfferShippingCharge";
 import { OfferSubCondition } from "./model/OfferSubCondition";
 import { OfferSummary } from "./model/OfferSummary";
+import { Offers } from "./model/Offers";
 import { PartnerType } from "./model/PartnerType";
 import { Price } from "./model/Price";
 import { PriceType } from "./model/PriceType";
