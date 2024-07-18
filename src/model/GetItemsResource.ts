@@ -337,6 +337,7 @@ export class GetItemsResource {
     const self = this;
     Object.keys(GetItemsResourceValues).forEach((key: string) => self[key] = GetItemsResource[key]);
   }
+  
   /**
    * Returns a <code>GetItemsResource</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
