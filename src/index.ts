@@ -61,6 +61,7 @@ import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
 import { PartnerType } from "./model/PartnerType";
+import { Price } from "./model/Price";
 import { PriceType } from "./model/PriceType";
 import { Properties } from "./model/Properties";
 import { Rating } from "./model/Rating";

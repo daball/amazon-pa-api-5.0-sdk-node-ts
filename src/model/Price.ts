@@ -21,43 +21,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferPrice'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferPrice'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.Price = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferPrice);
-  }
-}(this, function(ApiClient, OfferPrice) {
-  'use strict';
+ import { OfferPrice } from "./OfferPrice";
 
+/**
+ * The Price model module.
+ * @module model/Price
+ * @version 1.0.0
+ */
 
-
-
+/**
+ * Constructs a new <code>Price</code>.
+ * @alias module:model/Price
+ * @class
+ */
+export class Price {
   /**
-   * The Price model module.
-   * @module model/Price
-   * @version 1.0.0
+   * @member {module:model/OfferPrice} HighestPrice
    */
-
+  public HighestPrice?: OfferPrice;
   /**
-   * Constructs a new <code>Price</code>.
-   * @alias module:model/Price
-   * @class
+   * @member {module:model/OfferPrice} LowestPrice
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public LowestPrice?: OfferPrice;
 
   /**
    * Constructs a <code>Price</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +51,17 @@
    * @param {module:model/Price} obj Optional instance to populate.
    * @return {module:model/Price} The populated <code>Price</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: Price) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new Price();
 
       if (data.hasOwnProperty('HighestPrice')) {
-        obj['HighestPrice'] = OfferPrice.constructFromObject(data['HighestPrice']);
+        obj.HighestPrice = OfferPrice.constructFromObject(data['HighestPrice']);
       }
       if (data.hasOwnProperty('LowestPrice')) {
-        obj['LowestPrice'] = OfferPrice.constructFromObject(data['LowestPrice']);
+        obj.LowestPrice = OfferPrice.constructFromObject(data['LowestPrice']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/OfferPrice} HighestPrice
-   */
-  exports.prototype['HighestPrice'] = undefined;
-  /**
-   * @member {module:model/OfferPrice} LowestPrice
-   */
-  exports.prototype['LowestPrice'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
