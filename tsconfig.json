@@ -1,6 +1,7 @@
 {
     "extends": "./tsconfig.strict.json",
     "compilerOptions": {
+      "declaration": true,
       "noImplicitAny": false,
       "noEmitOnError": true,
       "removeComments": false,
@@ -13,6 +14,6 @@
     "include": [
       "src/**/*",
       "tests/**/*",
-      "examples/**/*",
+      "examples/**/*"
     ]
   }
