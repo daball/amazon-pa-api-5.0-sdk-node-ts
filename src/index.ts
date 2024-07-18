@@ -26,6 +26,7 @@ import { Availability } from "./model/Availability";
 import { BrowseNode } from "./model/BrowseNode";
 import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor";
 import { BrowseNodeChild } from "./model/BrowseNodeChild";
+import { BrowseNodeInfo } from "./model/BrowseNodeInfo";
 import { ByLineInfo } from "./model/ByLineInfo";
 import { Classifications } from "./model/Classifications";
 import { DefaultApi } from "./api/DefaultApi";
@@ -99,12 +100,12 @@ export {
    * The BrowseNodeInfo model constructor.
    * @property {module:model/BrowseNodeInfo}
    */
-  BrowseNodeInfo: BrowseNodeInfo,
+  BrowseNodeInfo,
   /**
    * The BrowseNodesResult model constructor.
    * @property {module:model/BrowseNodesResult}
    */
-  BrowseNodesResult: BrowseNodesResult,
+  BrowseNodesResult,
   /**
    * The ByLineInfo model constructor.
    * @property {module:model/ByLineInfo}
@@ -124,12 +125,12 @@ export {
    * The ContentInfo model constructor.
    * @property {module:model/ContentInfo}
    */
-  ContentInfo: ContentInfo,
+  ContentInfo,
   /**
    * The ContentRating model constructor.
    * @property {module:model/ContentRating}
    */
-  ContentRating: ContentRating,
+  ContentRating,
   /**
    * The Contributor model constructor.
    * @property {module:model/Contributor}
@@ -139,212 +140,212 @@ export {
    * The CustomerReviews model constructor.
    * @property {module:model/CustomerReviews}
    */
-  CustomerReviews: CustomerReviews,
+  CustomerReviews,
   /**
    * The DeliveryFlag model constructor.
    * @property {module:model/DeliveryFlag}
    */
-  DeliveryFlag: DeliveryFlag,
+  DeliveryFlag,
   /**
    * The DimensionBasedAttribute model constructor.
    * @property {module:model/DimensionBasedAttribute}
    */
-  DimensionBasedAttribute: DimensionBasedAttribute,
+  DimensionBasedAttribute,
   /**
    * The DurationPrice model constructor.
    * @property {module:model/DurationPrice}
    */
-  DurationPrice: DurationPrice,
+  DurationPrice,
   /**
    * The ErrorData model constructor.
    * @property {module:model/ErrorData}
    */
-  ErrorData: ErrorData,
+  ErrorData,
   /**
    * The ExternalIds model constructor.
    * @property {module:model/ExternalIds}
    */
-  ExternalIds: ExternalIds,
+  ExternalIds,
   /**
    * The GetBrowseNodesRequest model constructor.
    * @property {module:model/GetBrowseNodesRequest}
    */
-  GetBrowseNodesRequest: GetBrowseNodesRequest,
+  GetBrowseNodesRequest,
   /**
    * The GetBrowseNodesResource model constructor.
    * @property {module:model/GetBrowseNodesResource}
    */
-  GetBrowseNodesResource: GetBrowseNodesResource,
+  GetBrowseNodesResource,
   /**
    * The GetBrowseNodesResponse model constructor.
    * @property {module:model/GetBrowseNodesResponse}
    */
-  GetBrowseNodesResponse: GetBrowseNodesResponse,
+  GetBrowseNodesResponse,
   /**
    * The GetItemsRequest model constructor.
    * @property {module:model/GetItemsRequest}
    */
-  GetItemsRequest: GetItemsRequest,
+  GetItemsRequest,
   /**
    * The GetItemsResource model constructor.
    * @property {module:model/GetItemsResource}
    */
-  GetItemsResource: GetItemsResource,
+  GetItemsResource,
   /**
    * The GetItemsResponse model constructor.
    * @property {module:model/GetItemsResponse}
    */
-  GetItemsResponse: GetItemsResponse,
+  GetItemsResponse,
   /**
    * The GetVariationsRequest model constructor.
    * @property {module:model/GetVariationsRequest}
    */
-  GetVariationsRequest: GetVariationsRequest,
+  GetVariationsRequest,
   /**
    * The GetVariationsResource model constructor.
    * @property {module:model/GetVariationsResource}
    */
-  GetVariationsResource: GetVariationsResource,
+  GetVariationsResource,
   /**
    * The GetVariationsResponse model constructor.
    * @property {module:model/GetVariationsResponse}
    */
-  GetVariationsResponse: GetVariationsResponse,
+  GetVariationsResponse,
   /**
    * The ImageSize model constructor.
    * @property {module:model/ImageSize}
    */
-  ImageSize: ImageSize,
+  ImageSize,
   /**
    * The ImageType model constructor.
    * @property {module:model/ImageType}
    */
-  ImageType: ImageType,
+  ImageType,
   /**
    * The Images model constructor.
    * @property {module:model/Images}
    */
-  Images: Images,
+  Images,
   /**
    * The Item model constructor.
    * @property {module:model/Item}
    */
-  Item: Item,
+  Item,
   /**
    * The ItemIdType model constructor.
    * @property {module:model/ItemIdType}
    */
-  ItemIdType: ItemIdType,
+  ItemIdType,
   /**
    * The ItemInfo model constructor.
    * @property {module:model/ItemInfo}
    */
-  ItemInfo: ItemInfo,
+  ItemInfo,
   /**
    * The ItemsResult model constructor.
    * @property {module:model/ItemsResult}
    */
-  ItemsResult: ItemsResult,
+  ItemsResult,
   /**
    * The LanguageType model constructor.
    * @property {module:model/LanguageType}
    */
-  LanguageType: LanguageType,
+  LanguageType,
   /**
    * The Languages model constructor.
    * @property {module:model/Languages}
    */
-  Languages: Languages,
+  Languages,
   /**
    * The ManufactureInfo model constructor.
    * @property {module:model/ManufactureInfo}
    */
-  ManufactureInfo: ManufactureInfo,
+  ManufactureInfo,
   /**
    * The MaxPrice model constructor.
    * @property {module:model/MaxPrice}
    */
-  MaxPrice: MaxPrice,
+  MaxPrice,
   /**
    * The Merchant model constructor.
    * @property {module:model/Merchant}
    */
-  Merchant: Merchant,
+  Merchant,
   /**
    * The MinPrice model constructor.
    * @property {module:model/MinPrice}
    */
-  MinPrice: MinPrice,
+  MinPrice,
   /**
    * The MinReviewsRating model constructor.
    * @property {module:model/MinReviewsRating}
    */
-  MinReviewsRating: MinReviewsRating,
+  MinReviewsRating,
   /**
    * The MinSavingPercent model constructor.
    * @property {module:model/MinSavingPercent}
    */
-  MinSavingPercent: MinSavingPercent,
+  MinSavingPercent,
   /**
    * The MultiValuedAttribute model constructor.
    * @property {module:model/MultiValuedAttribute}
    */
-  MultiValuedAttribute: MultiValuedAttribute,
+  MultiValuedAttribute,
   /**
    * The OfferAvailability model constructor.
    * @property {module:model/OfferAvailability}
    */
-  OfferAvailability: OfferAvailability,
+  OfferAvailability,
   /**
    * The OfferCondition model constructor.
    * @property {module:model/OfferCondition}
    */
-  OfferCondition: OfferCondition,
+  OfferCondition,
   /**
    * The OfferConditionNote model constructor.
    * @property {module:model/OfferConditionNote}
    */
-  OfferConditionNote: OfferConditionNote,
+  OfferConditionNote,
   /**
    * The OfferCount model constructor.
    * @property {module:model/OfferCount}
    */
-  OfferCount: OfferCount,
+  OfferCount,
   /**
    * The OfferDeliveryInfo model constructor.
    * @property {module:model/OfferDeliveryInfo}
    */
-  OfferDeliveryInfo: OfferDeliveryInfo,
+  OfferDeliveryInfo,
   /**
    * The OfferListing model constructor.
    * @property {module:model/OfferListing}
    */
-  OfferListing: OfferListing,
+  OfferListing,
   /**
    * The OfferLoyaltyPoints model constructor.
    * @property {module:model/OfferLoyaltyPoints}
    */
-  OfferLoyaltyPoints: OfferLoyaltyPoints,
+  OfferLoyaltyPoints,
   /**
    * The OfferMerchantInfo model constructor.
    * @property {module:model/OfferMerchantInfo}
    */
-  OfferMerchantInfo: OfferMerchantInfo,
+  OfferMerchantInfo,
   /**
    * The OfferPrice model constructor.
    * @property {module:model/OfferPrice}
    */
-  OfferPrice: OfferPrice,
+  OfferPrice,
   /**
    * The OfferProgramEligibility model constructor.
    * @property {module:model/OfferProgramEligibility}
    */
-  OfferProgramEligibility: OfferProgramEligibility,
+  OfferProgramEligibility,
   /**
    * The OfferPromotion model constructor.
    * @property {module:model/OfferPromotion}
    */
-  OfferPromotion: OfferPromotion,
+  OfferPromotion,
   /**
    * The OfferSavings model constructor.
    * @property {module:model/OfferSavings}
@@ -354,32 +355,32 @@ export {
    * The OfferShippingCharge model constructor.
    * @property {module:model/OfferShippingCharge}
    */
-  OfferShippingCharge: OfferShippingCharge,
+  OfferShippingCharge,
   /**
    * The OfferSubCondition model constructor.
    * @property {module:model/OfferSubCondition}
    */
-  OfferSubCondition: OfferSubCondition,
+  OfferSubCondition,
   /**
    * The OfferSummary model constructor.
    * @property {module:model/OfferSummary}
    */
-  OfferSummary: OfferSummary,
+  OfferSummary,
   /**
    * The Offers model constructor.
    * @property {module:model/Offers}
    */
-  Offers: Offers,
+  Offers,
   /**
    * The PartnerType model constructor.
    * @property {module:model/PartnerType}
    */
-  PartnerType: PartnerType,
+  PartnerType,
   /**
    * The Price model constructor.
    * @property {module:model/Price}
    */
-  Price: Price,
+  Price,
   /**
    * The PriceType model constructor.
    * @property {module:model/PriceType}
@@ -389,72 +390,72 @@ export {
    * The ProductAdvertisingAPIClientException model constructor.
    * @property {module:model/ProductAdvertisingAPIClientException}
    */
-  ProductAdvertisingAPIClientException: ProductAdvertisingAPIClientException,
+  ProductAdvertisingAPIClientException,
   /**
    * The ProductAdvertisingAPIServiceException model constructor.
    * @property {module:model/ProductAdvertisingAPIServiceException}
    */
-  ProductAdvertisingAPIServiceException: ProductAdvertisingAPIServiceException,
+  ProductAdvertisingAPIServiceException,
   /**
    * The ProductInfo model constructor.
    * @property {module:model/ProductInfo}
    */
-  ProductInfo: ProductInfo,
+  ProductInfo,
   /**
    * The Properties model constructor.
    * @property {module:model/Properties}
    */
-  Properties: Properties,
+  Properties,
   /**
    * The Rating model constructor.
    * @property {module:model/Rating}
    */
-  Rating: Rating,
+  Rating,
   /**
    * The Refinement model constructor.
    * @property {module:model/Refinement}
    */
-  Refinement: Refinement,
+  Refinement,
   /**
    * The RefinementBin model constructor.
    * @property {module:model/RefinementBin}
    */
-  RefinementBin: RefinementBin,
+  RefinementBin,
   /**
    * The RentalOfferListing model constructor.
    * @property {module:model/RentalOfferListing}
    */
-  RentalOfferListing: RentalOfferListing,
+  RentalOfferListing,
   /**
    * The RentalOffers model constructor.
    * @property {module:model/RentalOffers}
    */
-  RentalOffers: RentalOffers,
+  RentalOffers,
   /**
    * The SearchItemsRequest model constructor.
    * @property {module:model/SearchItemsRequest}
    */
-  SearchItemsRequest: SearchItemsRequest,
+  SearchItemsRequest,
   /**
    * The SearchItemsResource model constructor.
    * @property {module:model/SearchItemsResource}
    */
-  SearchItemsResource: SearchItemsResource,
+  SearchItemsResource,
   /**
    * The SearchItemsResponse model constructor.
    * @property {module:model/SearchItemsResponse}
    */
-  SearchItemsResponse: SearchItemsResponse,
+  SearchItemsResponse,
   /**
    * The SearchRefinements model constructor.
    * @property {module:model/SearchRefinements}
    */
-  SearchRefinements: SearchRefinements,
+  SearchRefinements,
   /**
    * The SearchResult model constructor.
    * @property {module:model/SearchResult}
    */
-  SearchResult: SearchResult,
+  SearchResult,
   /**
    * The SingleBooleanValuedAttribute model constructor.
    * @property {module:model/SingleBooleanValuedAttribute}
@@ -474,47 +475,47 @@ export {
    * The SortBy model constructor.
    * @property {module:model/SortBy}
    */
-  SortBy: SortBy,
+  SortBy,
   /**
    * The TechnicalInfo model constructor.
    * @property {module:model/TechnicalInfo}
    */
-  TechnicalInfo: TechnicalInfo,
+  TechnicalInfo,
   /**
    * The TradeInInfo model constructor.
    * @property {module:model/TradeInInfo}
    */
-  TradeInInfo: TradeInInfo,
+  TradeInInfo,
   /**
    * The TradeInPrice model constructor.
    * @property {module:model/TradeInPrice}
    */
-  TradeInPrice: TradeInPrice,
+  TradeInPrice,
   /**
    * The UnitBasedAttribute model constructor.
    * @property {module:model/UnitBasedAttribute}
    */
-  UnitBasedAttribute: UnitBasedAttribute,
+  UnitBasedAttribute,
   /**
    * The VariationAttribute model constructor.
    * @property {module:model/VariationAttribute}
    */
-  VariationAttribute: VariationAttribute,
+  VariationAttribute,
   /**
    * The VariationDimension model constructor.
    * @property {module:model/VariationDimension}
    */
-  VariationDimension: VariationDimension,
+  VariationDimension,
   /**
    * The VariationSummary model constructor.
    * @property {module:model/VariationSummary}
    */
-  VariationSummary: VariationSummary,
+  VariationSummary,
   /**
    * The VariationsResult model constructor.
    * @property {module:model/VariationsResult}
    */
-  VariationsResult: VariationsResult,
+  VariationsResult,
   /**
    * The WebsiteSalesRank model constructor.
    * @property {module:model/WebsiteSalesRank}
