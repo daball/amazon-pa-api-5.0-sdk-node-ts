@@ -47,6 +47,7 @@ export class ImageSize {
    * @member {Number} Width
    */
   public Width?: number;
+  
   /**
    * Constructs a <code>ImageSize</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.

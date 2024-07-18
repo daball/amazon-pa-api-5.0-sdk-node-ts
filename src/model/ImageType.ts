@@ -15,50 +15,38 @@
  * permissions and limitations under the License.
  */
 
- /**
+/**
  * ProductAdvertisingAPI
  * https://webservices.amazon.com/paapi5/documentation/index.html
- *
+ * 
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ImageSize'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ImageSize'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ImageType = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.ImageSize);
-  }
-}(this, function(ApiClient, ImageSize) {
-  'use strict';
+/**
+ * The ImageType model module.
+ * @module model/ImageType
+ * @version 1.0.0
+*/
 
+import { ImageSize } from "./ImageSize";
 
-
-
+/**
+ * Constructs a new <code>ImageType</code>.
+ * @alias module:model/ImageType
+ * @class
+ */
+export class ImageType {
   /**
-   * The ImageType model module.
-   * @module model/ImageType
-   * @version 1.0.0
+   * @member {module:model/ImageSize} Small
    */
-
+  public Small?: ImageSize;
   /**
-   * Constructs a new <code>ImageType</code>.
-   * @alias module:model/ImageType
-   * @class
+   * @member {module:model/ImageSize} Medium
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
+  public Medium?: ImageSize
+  /**
+   * @member {module:model/ImageSize} Large
+   */
+  public Large?: ImageSize;
 
   /**
    * Constructs a <code>ImageType</code> from a plain JavaScript object, optionally creating a new instance.
@@ -67,39 +55,20 @@
    * @param {module:model/ImageType} obj Optional instance to populate.
    * @return {module:model/ImageType} The populated <code>ImageType</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ImageType) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ImageType();
 
       if (data.hasOwnProperty('Small')) {
-        obj['Small'] = ImageSize.constructFromObject(data['Small']);
+        obj.Small = ImageSize.constructFromObject(data['Small']);
       }
       if (data.hasOwnProperty('Medium')) {
-        obj['Medium'] = ImageSize.constructFromObject(data['Medium']);
+        obj.Medium = ImageSize.constructFromObject(data['Medium']);
       }
       if (data.hasOwnProperty('Large')) {
-        obj['Large'] = ImageSize.constructFromObject(data['Large']);
+        obj.Large = ImageSize.constructFromObject(data['Large']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/ImageSize} Small
-   */
-  exports.prototype['Small'] = undefined;
-  /**
-   * @member {module:model/ImageSize} Medium
-   */
-  exports.prototype['Medium'] = undefined;
-  /**
-   * @member {module:model/ImageSize} Large
-   */
-  exports.prototype['Large'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

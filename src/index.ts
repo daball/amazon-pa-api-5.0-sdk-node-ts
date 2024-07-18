@@ -49,6 +49,7 @@ import { GetBrowseNodesResponse } from "./model/GetBrowseNodesResponse";
 import { GetItemsRequest } from "./model/GetItemsRequest";
 import { GetItemsResource } from "./model/GetItemsResource";
 import { ImageSize } from "./model/ImageSize";
+import { ImageType } from "./model/ImageType";
 import { ItemIdType } from "./model/ItemIdType";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
