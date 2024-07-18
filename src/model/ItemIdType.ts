@@ -21,46 +21,35 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ItemIdType = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
-
-
+/**
+ * Enum class ItemIdType.
+ * @enum {}
+ * @readonly
+ */
+export const ItemIdTypeValues = {
   /**
-   * Enum class ItemIdType.
-   * @enum {}
-   * @readonly
+   * value: "ASIN"
+   * @const
    */
-  var exports = {
-    /**
-     * value: "ASIN"
-     * @const
-     */
-    "ASIN": "ASIN"  };
+  "ASIN": "ASIN",
+};
 
+/**
+ * Enum class ItemIdType.
+ * @enum {}
+ * @readonly
+ */
+export class ItemIdType {
+  /**
+   * value: "ASIN"
+   * @const
+   */
+  public static get ASIN() { return ItemIdTypeValues.ASIN; }
+  
   /**
    * Returns a <code>ItemIdType</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/ItemIdType} The enum <code>ItemIdType</code> value.
    */
-  exports.constructFromObject = function(object) {
-    return object;
-  }
-
-  return exports;
-}));
-
-
+  public static constructFromObject(object: any) { return object;}
+};

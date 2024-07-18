@@ -48,6 +48,7 @@ import { GetBrowseNodesResource } from "./model/GetBrowseNodesResource";
 import { GetBrowseNodesResponse } from "./model/GetBrowseNodesResponse";
 import { GetItemsRequest } from "./model/GetItemsRequest";
 import { GetItemsResource } from "./model/GetItemsResource";
+import { ItemIdType } from "./model/ItemIdType";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
