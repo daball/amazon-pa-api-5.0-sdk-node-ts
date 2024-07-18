@@ -59,6 +59,7 @@ import { Merchant } from "./model/Merchant";
 import { MinPrice } from "./model/MinPrice";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
 import { OfferAvailability } from "./model/OfferAvailability";
+import { OfferCondition } from "./model/OfferCondition";
 import { OfferConditionNote } from "./model/OfferConditionNote";
 import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";

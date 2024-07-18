@@ -21,47 +21,46 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferConditionNote', 'model/OfferSubCondition'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferConditionNote'), require('./OfferSubCondition'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferCondition = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferConditionNote, root.ProductAdvertisingAPIv1.OfferSubCondition);
-  }
-}(this, function(ApiClient, OfferConditionNote, OfferSubCondition) {
-  'use strict';
+/**
+ * The OfferCondition model module.
+ * @module model/OfferCondition
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { OfferConditionNote } from "./OfferConditionNote";
+import { OfferSubCondition } from "./OfferSubCondition";
 
-
-
+/**
+ * Constructs a new <code>OfferCondition</code>.
+ * @alias module:model/OfferCondition
+ * @class
+ */
+export class OfferCondition {
   /**
-   * The OfferCondition model module.
-   * @module model/OfferCondition
-   * @version 1.0.0
+   * @member {String} DisplayValue
    */
-
+  public DisplayValue?: string;
   /**
-   * Constructs a new <code>OfferCondition</code>.
-   * @alias module:model/OfferCondition
-   * @class
+   * @member {String} Label
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-
-  };
+  public Label?: string;
+  /**
+   * @member {String} Locale
+   */
+  public Locale?: string;
+  /**
+   * @member {String} Value
+   */
+  public Value?: string;
+  /**
+   * @member {module:model/OfferSubCondition} SubCondition
+   */
+  public SubCondition?: OfferSubCondition;
+  /**
+   * @member {module:model/OfferConditionNote} ConditionNote
+   */
+  public ConditionNote?: OfferConditionNote;
 
   /**
    * Constructs a <code>OfferCondition</code> from a plain JavaScript object, optionally creating a new instance.
@@ -70,60 +69,29 @@
    * @param {module:model/OfferCondition} obj Optional instance to populate.
    * @return {module:model/OfferCondition} The populated <code>OfferCondition</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferCondition) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferCondition();
 
       if (data.hasOwnProperty('DisplayValue')) {
-        obj['DisplayValue'] = ApiClient.convertToType(data['DisplayValue'], 'String');
+        obj.DisplayValue = ApiClient.convertToType(data['DisplayValue'], 'String');
       }
       if (data.hasOwnProperty('Label')) {
-        obj['Label'] = ApiClient.convertToType(data['Label'], 'String');
+        obj.Label = ApiClient.convertToType(data['Label'], 'String');
       }
       if (data.hasOwnProperty('Locale')) {
-        obj['Locale'] = ApiClient.convertToType(data['Locale'], 'String');
+        obj.Locale = ApiClient.convertToType(data['Locale'], 'String');
       }
       if (data.hasOwnProperty('Value')) {
-        obj['Value'] = ApiClient.convertToType(data['Value'], 'String');
+        obj.Value = ApiClient.convertToType(data['Value'], 'String');
       }
       if (data.hasOwnProperty('SubCondition')) {
-        obj['SubCondition'] = OfferSubCondition.constructFromObject(data['SubCondition']);
+        obj.SubCondition = OfferSubCondition.constructFromObject(data['SubCondition']);
       }
       if (data.hasOwnProperty('ConditionNote')) {
-        obj['ConditionNote'] = OfferConditionNote.constructFromObject(data['ConditionNote']);
+        obj.ConditionNote = OfferConditionNote.constructFromObject(data['ConditionNote']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} DisplayValue
-   */
-  exports.prototype['DisplayValue'] = undefined;
-  /**
-   * @member {String} Label
-   */
-  exports.prototype['Label'] = undefined;
-  /**
-   * @member {String} Locale
-   */
-  exports.prototype['Locale'] = undefined;
-  /**
-   * @member {String} Value
-   */
-  exports.prototype['Value'] = undefined;
-  /**
-   * @member {module:model/OfferSubCondition} SubCondition
-   */
-  exports.prototype['SubCondition'] = undefined;
-  /**
-   * @member {module:model/OfferConditionNote} ConditionNote
-   */
-  exports.prototype['ConditionNote'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
