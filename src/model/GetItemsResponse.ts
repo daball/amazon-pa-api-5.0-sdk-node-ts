@@ -21,43 +21,30 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorData', 'model/ItemsResult'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ErrorData'), require('./ItemsResult'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.GetItemsResponse = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.ErrorData, root.ProductAdvertisingAPIv1.ItemsResult);
-  }
-}(this, function(ApiClient, ErrorData, ItemsResult) {
-  'use strict';
+/**
+ * The GetItemsResponse model module.
+ * @module model/GetItemsResponse
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { ErrorData } from "./ErrorData";
+import { ItemsResult } from "./ItemsResult";
 
-
-
+/**
+ * Constructs a new <code>GetItemsResponse</code>.
+ * @alias module:model/GetItemsResponse
+ * @class
+ */
+export class GetItemsResponse {
   /**
-   * The GetItemsResponse model module.
-   * @module model/GetItemsResponse
-   * @version 1.0.0
+   * @member {Array.<module:model/ErrorData>} Errors
    */
-
+  public Errors?: ErrorData[];
   /**
-   * Constructs a new <code>GetItemsResponse</code>.
-   * @alias module:model/GetItemsResponse
-   * @class
+   * @member {module:model/ItemsResult} ItemsResult
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public ItemsResult?: ItemsResult;
 
   /**
    * Constructs a <code>GetItemsResponse</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +53,17 @@
    * @param {module:model/GetItemsResponse} obj Optional instance to populate.
    * @return {module:model/GetItemsResponse} The populated <code>GetItemsResponse</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: GetItemsResponse) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new GetItemsResponse();
 
       if (data.hasOwnProperty('Errors')) {
-        obj['Errors'] = ApiClient.convertToType(data['Errors'], [ErrorData]);
+        obj.Errors = ApiClient.convertToType(data['Errors'], [ErrorData]);
       }
       if (data.hasOwnProperty('ItemsResult')) {
-        obj['ItemsResult'] = ItemsResult.constructFromObject(data['ItemsResult']);
+        obj.ItemsResult = ItemsResult.constructFromObject(data['ItemsResult']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:model/ErrorData>} Errors
-   */
-  exports.prototype['Errors'] = undefined;
-  /**
-   * @member {module:model/ItemsResult} ItemsResult
-   */
-  exports.prototype['ItemsResult'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
