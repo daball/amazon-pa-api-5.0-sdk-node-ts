@@ -21,42 +21,24 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ProductAdvertisingAPIServiceException = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The ProductAdvertisingAPIServiceException model module.
+ * @module model/ProductAdvertisingAPIServiceException
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>ProductAdvertisingAPIServiceException</code>.
+ * @alias module:model/ProductAdvertisingAPIServiceException
+ * @class
+ */
+export class ProductAdvertisingAPIServiceException {
   /**
-   * The ProductAdvertisingAPIServiceException model module.
-   * @module model/ProductAdvertisingAPIServiceException
-   * @version 1.0.0
+   * @member {String} message
    */
-
-  /**
-   * Constructs a new <code>ProductAdvertisingAPIServiceException</code>.
-   * @alias module:model/ProductAdvertisingAPIServiceException
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
+  public message?: string;
 
   /**
    * Constructs a <code>ProductAdvertisingAPIServiceException</code> from a plain JavaScript object, optionally creating a new instance.
@@ -65,25 +47,14 @@
    * @param {module:model/ProductAdvertisingAPIServiceException} obj Optional instance to populate.
    * @return {module:model/ProductAdvertisingAPIServiceException} The populated <code>ProductAdvertisingAPIServiceException</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ProductAdvertisingAPIServiceException) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ProductAdvertisingAPIServiceException();
 
       if (data.hasOwnProperty('message')) {
-        obj['message'] = ApiClient.convertToType(data['message'], 'String');
+        obj.message = ApiClient.convertToType(data['message'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} message
-   */
-  exports.prototype['message'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
