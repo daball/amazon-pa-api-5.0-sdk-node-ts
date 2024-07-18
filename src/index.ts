@@ -63,6 +63,7 @@ import { OfferConditionNote } from "./model/OfferConditionNote";
 import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
+import { OfferSubCondition } from "./model/OfferSubCondition";
 import { PartnerType } from "./model/PartnerType";
 import { Price } from "./model/Price";
 import { PriceType } from "./model/PriceType";
