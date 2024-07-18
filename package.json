@@ -1,6 +1,6 @@
 {
   "name": "amazon-pa-api5-node-ts",
-  "version": "2.1.0",
+  "version": "2.1.3",
   "description": "ProductAdvertisingAPI 5.0 NodeJS SDK rewritten in TypeScript.",
   "license": "Apache-2.0",
   "main": "dist/src/index.ts",
@@ -54,5 +54,14 @@
     "getbrowsenodes",
     "ProductAdvertisingAPI",
     "typescript"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "tests",
+    "examples",
+    "tsconfig*.json",
+    "eslint.config*",
+    "jest.config*"
   ]
 }
