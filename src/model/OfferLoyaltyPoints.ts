@@ -21,42 +21,24 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferLoyaltyPoints = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferLoyaltyPoints model module.
+ * @module model/OfferLoyaltyPoints
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferLoyaltyPoints</code>.
+ * @alias module:model/OfferLoyaltyPoints
+ * @class
+ */
+export class OfferLoyaltyPoints {
   /**
-   * The OfferLoyaltyPoints model module.
-   * @module model/OfferLoyaltyPoints
-   * @version 1.0.0
+   * @member {Number} Points
    */
-
-  /**
-   * Constructs a new <code>OfferLoyaltyPoints</code>.
-   * @alias module:model/OfferLoyaltyPoints
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
+  public Points?: number;
 
   /**
    * Constructs a <code>OfferLoyaltyPoints</code> from a plain JavaScript object, optionally creating a new instance.
@@ -65,25 +47,14 @@
    * @param {module:model/OfferLoyaltyPoints} obj Optional instance to populate.
    * @return {module:model/OfferLoyaltyPoints} The populated <code>OfferLoyaltyPoints</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferLoyaltyPoints) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferLoyaltyPoints();
 
       if (data.hasOwnProperty('Points')) {
-        obj['Points'] = ApiClient.convertToType(data['Points'], 'Number');
+        obj.Points = ApiClient.convertToType(data['Points'], 'Number');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Number} Points
-   */
-  exports.prototype['Points'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
