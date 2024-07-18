@@ -21,45 +21,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferCondition', 'model/OfferPrice'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferCondition'), require('./OfferPrice'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferSummary = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferCondition, root.ProductAdvertisingAPIv1.OfferPrice);
-  }
-}(this, function(ApiClient, OfferCondition, OfferPrice) {
-  'use strict';
+/**
+ * The OfferSummary model module.
+ * @module model/OfferSummary
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { OfferCondition } from "./OfferCondition";
+import { OfferPrice } from "./OfferPrice";
 
-
-
+/**
+ * Constructs a new <code>OfferSummary</code>.
+ * @alias module:model/OfferSummary
+ * @class
+ */
+export class OfferSummary {
   /**
-   * The OfferSummary model module.
-   * @module model/OfferSummary
-   * @version 1.0.0
+   * @member {module:model/OfferCondition} Condition
    */
-
+  public Condition?: OfferCondition;
   /**
-   * Constructs a new <code>OfferSummary</code>.
-   * @alias module:model/OfferSummary
-   * @class
+   * @member {module:model/OfferPrice} HighestPrice
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public HighestPrice?: OfferPrice;
+  /**
+   * @member {module:model/OfferPrice} LowestPrice
+   */
+  public LowestPrice?: OfferPrice;
+  /**
+   * @member {Number} OfferCount
+   */
+  public OfferCount?: number;
 
   /**
    * Constructs a <code>OfferSummary</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +61,23 @@
    * @param {module:model/OfferSummary} obj Optional instance to populate.
    * @return {module:model/OfferSummary} The populated <code>OfferSummary</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferSummary) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferSummary();
 
       if (data.hasOwnProperty('Condition')) {
-        obj['Condition'] = OfferCondition.constructFromObject(data['Condition']);
+        obj.Condition = OfferCondition.constructFromObject(data['Condition']);
       }
       if (data.hasOwnProperty('HighestPrice')) {
-        obj['HighestPrice'] = OfferPrice.constructFromObject(data['HighestPrice']);
+        obj.HighestPrice = OfferPrice.constructFromObject(data['HighestPrice']);
       }
       if (data.hasOwnProperty('LowestPrice')) {
-        obj['LowestPrice'] = OfferPrice.constructFromObject(data['LowestPrice']);
+        obj.LowestPrice = OfferPrice.constructFromObject(data['LowestPrice']);
       }
       if (data.hasOwnProperty('OfferCount')) {
-        obj['OfferCount'] = ApiClient.convertToType(data['OfferCount'], 'Number');
+        obj.OfferCount = ApiClient.convertToType(data['OfferCount'], 'Number');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/OfferCondition} Condition
-   */
-  exports.prototype['Condition'] = undefined;
-  /**
-   * @member {module:model/OfferPrice} HighestPrice
-   */
-  exports.prototype['HighestPrice'] = undefined;
-  /**
-   * @member {module:model/OfferPrice} LowestPrice
-   */
-  exports.prototype['LowestPrice'] = undefined;
-  /**
-   * @member {Number} OfferCount
-   */
-  exports.prototype['OfferCount'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
