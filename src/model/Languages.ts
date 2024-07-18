@@ -29,6 +29,8 @@ import { LanguageType } from "./LanguageType";
  * @version 1.0.0
  */
 
+import { ApiClient } from "../ApiClient";
+
 /**
  * Constructs a new <code>Languages</code>.
  * @alias module:model/Languages
