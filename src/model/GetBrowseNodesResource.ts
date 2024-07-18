@@ -21,51 +21,39 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.GetBrowseNodesResource = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
-
-
+/**
+ * Enum class GetBrowseNodesResource.
+ * @enum {}
+ * @readonly
+ */
+export const enum GetBrowseNodesResourceValues {
   /**
-   * Enum class GetBrowseNodesResource.
-   * @enum {}
-   * @readonly
+   * value: "BrowseNodes.Ancestor"
+   * @const
    */
-  var exports = {
-    /**
-     * value: "BrowseNodes.Ancestor"
-     * @const
-     */
-    "Ancestor": "BrowseNodes.Ancestor",
-    /**
-     * value: "BrowseNodes.Children"
-     * @const
-     */
-    "Children": "BrowseNodes.Children"  };
+  Ancestor = "BrowseNodes.Ancestor",
+  /**
+   * value: "BrowseNodes.Children"
+   * @const
+   */
+  Children = "BrowseNodes.Children"
+};
 
+export class GetBrowseNodesResource extends String {
+  /**
+   * value: "BrowseNodes.Ancestor"
+   * @const
+   */
+  public static get Ancestor() { return GetBrowseNodesResourceValues.Ancestor; }
+  /**
+   * value: "BrowseNodes.Children"
+   * @const
+   */
+  public static get Children() { return GetBrowseNodesResourceValues.Children; }
   /**
    * Returns a <code>GetBrowseNodesResource</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/GetBrowseNodesResource} The enum <code>GetBrowseNodesResource</code> value.
    */
-  exports.constructFromObject = function(object) {
-    return object;
-  }
-
-  return exports;
-}));
-
-
+  public static constructFromObject(object: string) { return object; }
+};
