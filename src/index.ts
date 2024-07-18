@@ -41,6 +41,7 @@ import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { OfferSavings } from "./model/OfferSavings";
 import { PriceType } from "./model/PriceType";
+import { Rating } from "./model/Rating";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
