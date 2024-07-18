@@ -27,6 +27,7 @@ import { BrowseNode } from "./model/BrowseNode";
 import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor";
 import { BrowseNodeChild } from "./model/BrowseNodeChild";
 import { BrowseNodeInfo } from "./model/BrowseNodeInfo";
+import { BrowseNodesResult } from "./model/BrowseNodesResult";
 import { ByLineInfo } from "./model/ByLineInfo";
 import { Classifications } from "./model/Classifications";
 import { DefaultApi } from "./api/DefaultApi";
