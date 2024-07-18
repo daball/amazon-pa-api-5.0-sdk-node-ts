@@ -21,43 +21,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.LanguageType = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The LanguageType model module.
+ * @module model/LanguageType
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>LanguageType</code>.
+ * @alias module:model/LanguageType
+ * @class
+ */
+export class LanguageType {
   /**
-   * The LanguageType model module.
-   * @module model/LanguageType
-   * @version 1.0.0
+   * @member {String} DisplayValue
    */
-
+  public DisplayValue?: string;
   /**
-   * Constructs a new <code>LanguageType</code>.
-   * @alias module:model/LanguageType
-   * @class
+   * @member {String} Type
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Type?: string;
 
   /**
    * Constructs a <code>LanguageType</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +51,17 @@
    * @param {module:model/LanguageType} obj Optional instance to populate.
    * @return {module:model/LanguageType} The populated <code>LanguageType</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: LanguageType) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new LanguageType();
 
       if (data.hasOwnProperty('DisplayValue')) {
-        obj['DisplayValue'] = ApiClient.convertToType(data['DisplayValue'], 'String');
+        obj.DisplayValue = ApiClient.convertToType(data['DisplayValue'], 'String');
       }
       if (data.hasOwnProperty('Type')) {
-        obj['Type'] = ApiClient.convertToType(data['Type'], 'String');
+        obj.Type = ApiClient.convertToType(data['Type'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} DisplayValue
-   */
-  exports.prototype['DisplayValue'] = undefined;
-  /**
-   * @member {String} Type
-   */
-  exports.prototype['Type'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
