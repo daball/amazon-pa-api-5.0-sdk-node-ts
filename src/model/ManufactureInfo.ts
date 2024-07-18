@@ -21,45 +21,33 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SingleStringValuedAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SingleStringValuedAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ManufactureInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.SingleStringValuedAttribute);
-  }
-}(this, function(ApiClient, SingleStringValuedAttribute) {
-  'use strict';
+/**
+ * The ManufactureInfo model module.
+ * @module model/ManufactureInfo
+ * @version 1.0.0
+ */
 
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute";
 
-
-
+/**
+ * Constructs a new <code>ManufactureInfo</code>.
+ * @alias module:model/ManufactureInfo
+ * @class
+ */
+export class ManufactureInfo {
   /**
-   * The ManufactureInfo model module.
-   * @module model/ManufactureInfo
-   * @version 1.0.0
+   * @member {module:model/SingleStringValuedAttribute} ItemPartNumber
    */
-
+  public ItemPartNumber?: SingleStringValuedAttribute;
   /**
-   * Constructs a new <code>ManufactureInfo</code>.
-   * @alias module:model/ManufactureInfo
-   * @class
+   * @member {module:model/SingleStringValuedAttribute} Model
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
-
+  public Model?: SingleStringValuedAttribute;
+  /**
+   * @member {module:model/SingleStringValuedAttribute} Warranty
+   */
+  public Warranty?: SingleStringValuedAttribute;
+  
   /**
    * Constructs a <code>ManufactureInfo</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,39 +55,20 @@
    * @param {module:model/ManufactureInfo} obj Optional instance to populate.
    * @return {module:model/ManufactureInfo} The populated <code>ManufactureInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ManufactureInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ManufactureInfo();
 
       if (data.hasOwnProperty('ItemPartNumber')) {
-        obj['ItemPartNumber'] = SingleStringValuedAttribute.constructFromObject(data['ItemPartNumber']);
+        obj.ItemPartNumber = SingleStringValuedAttribute.constructFromObject(data['ItemPartNumber']);
       }
       if (data.hasOwnProperty('Model')) {
-        obj['Model'] = SingleStringValuedAttribute.constructFromObject(data['Model']);
+        obj.Model = SingleStringValuedAttribute.constructFromObject(data['Model']);
       }
       if (data.hasOwnProperty('Warranty')) {
-        obj['Warranty'] = SingleStringValuedAttribute.constructFromObject(data['Warranty']);
+        obj.Warranty = SingleStringValuedAttribute.constructFromObject(data['Warranty']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/SingleStringValuedAttribute} ItemPartNumber
-   */
-  exports.prototype['ItemPartNumber'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Model
-   */
-  exports.prototype['Model'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Warranty
-   */
-  exports.prototype['Warranty'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

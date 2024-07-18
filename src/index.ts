@@ -54,6 +54,7 @@ import { Images } from "./model/Images";
 import { ItemIdType } from "./model/ItemIdType";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
+import { ManufactureInfo } from "./model/ManufactureInfo";
 import { MaxPrice } from "./model/MaxPrice";
 import { Merchant } from "./model/Merchant";
 import { MinPrice } from "./model/MinPrice";
