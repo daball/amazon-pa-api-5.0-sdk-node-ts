@@ -48,6 +48,7 @@ import { GetBrowseNodesResource } from "./model/GetBrowseNodesResource";
 import { GetBrowseNodesResponse } from "./model/GetBrowseNodesResponse";
 import { GetItemsRequest } from "./model/GetItemsRequest";
 import { GetItemsResource } from "./model/GetItemsResource";
+import { ImageSize } from "./model/ImageSize";
 import { ItemIdType } from "./model/ItemIdType";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
@@ -94,7 +95,7 @@ import { WebsiteSalesRank } from "./model/WebsiteSalesRank";
  * </pre>
  * </p>
  * @module index
- * @version 2.0.0
+ * @version 2.1.0
  */
 export {
   /**
