@@ -47,6 +47,7 @@ import { Rating } from "./model/Rating";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
+import { UnitBasedAttribute } from "./model/UnitBasedAttribute";
 import { WebsiteSalesRank } from "./model/WebsiteSalesRank";
 
 /**

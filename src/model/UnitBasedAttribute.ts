@@ -21,45 +21,36 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.UnitBasedAttribute = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The UnitBasedAttribute model module.
+ * @module model/UnitBasedAttribute
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>UnitBasedAttribute</code>.
+ * @alias module:model/UnitBasedAttribute
+ * @class
+ */
+export class UnitBasedAttribute{
   /**
-   * The UnitBasedAttribute model module.
-   * @module model/UnitBasedAttribute
-   * @version 1.0.0
+   * @member {Number} DisplayValue
    */
-
+  public DisplayValue?: number;
   /**
-   * Constructs a new <code>UnitBasedAttribute</code>.
-   * @alias module:model/UnitBasedAttribute
-   * @class
+   * @member {String} Label
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public Label?: string;
+  /**
+   * @member {String} Locale
+   */
+  public Locale?: string;
+  /**
+   * @member {String} Unit
+   */
+  public Unit?: string;
 
   /**
    * Constructs a <code>UnitBasedAttribute</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +59,23 @@
    * @param {module:model/UnitBasedAttribute} obj Optional instance to populate.
    * @return {module:model/UnitBasedAttribute} The populated <code>UnitBasedAttribute</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: UnitBasedAttribute) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new UnitBasedAttribute();
 
       if (data.hasOwnProperty('DisplayValue')) {
-        obj['DisplayValue'] = ApiClient.convertToType(data['DisplayValue'], 'Number');
+        obj.DisplayValue = ApiClient.convertToType(data['DisplayValue'], 'Number');
       }
       if (data.hasOwnProperty('Label')) {
-        obj['Label'] = ApiClient.convertToType(data['Label'], 'String');
+        obj.Label = ApiClient.convertToType(data['Label'], 'String');
       }
       if (data.hasOwnProperty('Locale')) {
-        obj['Locale'] = ApiClient.convertToType(data['Locale'], 'String');
+        obj.Locale = ApiClient.convertToType(data['Locale'], 'String');
       }
       if (data.hasOwnProperty('Unit')) {
-        obj['Unit'] = ApiClient.convertToType(data['Unit'], 'String');
+        obj.Unit = ApiClient.convertToType(data['Unit'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Number} DisplayValue
-   */
-  exports.prototype['DisplayValue'] = undefined;
-  /**
-   * @member {String} Label
-   */
-  exports.prototype['Label'] = undefined;
-  /**
-   * @member {String} Locale
-   */
-  exports.prototype['Locale'] = undefined;
-  /**
-   * @member {String} Unit
-   */
-  exports.prototype['Unit'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
