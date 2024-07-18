@@ -69,6 +69,7 @@ import { OfferCount } from "./model/OfferCount";
 import { OfferMerchantInfo } from "./model/OfferMerchantInfo";
 import { OfferLoyaltyPoints } from "./model/OfferLoyaltyPoints";
 import { OfferPrice } from "./model/OfferPrice";
+import { OfferProgramEligibility } from "./model/OfferProgramEligibility";
 import { OfferSavings } from "./model/OfferSavings";
 import { OfferShippingCharge } from "./model/OfferShippingCharge";
 import { OfferSubCondition } from "./model/OfferSubCondition";

@@ -21,43 +21,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferProgramEligibility = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferProgramEligibility model module.
+ * @module model/OfferProgramEligibility
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferProgramEligibility</code>.
+ * @alias module:model/OfferProgramEligibility
+ * @class
+ */
+export class OfferProgramEligibility {
   /**
-   * The OfferProgramEligibility model module.
-   * @module model/OfferProgramEligibility
-   * @version 1.0.0
+   * @member {Boolean} IsPrimeExclusive
    */
-
+  public IsPrimeExclusive?: boolean;
   /**
-   * Constructs a new <code>OfferProgramEligibility</code>.
-   * @alias module:model/OfferProgramEligibility
-   * @class
+   * @member {Boolean} IsPrimePantry
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public IsPrimePantry?: boolean;
 
   /**
    * Constructs a <code>OfferProgramEligibility</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +51,17 @@
    * @param {module:model/OfferProgramEligibility} obj Optional instance to populate.
    * @return {module:model/OfferProgramEligibility} The populated <code>OfferProgramEligibility</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferProgramEligibility) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferProgramEligibility();
 
       if (data.hasOwnProperty('IsPrimeExclusive')) {
-        obj['IsPrimeExclusive'] = ApiClient.convertToType(data['IsPrimeExclusive'], 'Boolean');
+        obj.IsPrimeExclusive = ApiClient.convertToType(data['IsPrimeExclusive'], 'Boolean');
       }
       if (data.hasOwnProperty('IsPrimePantry')) {
-        obj['IsPrimePantry'] = ApiClient.convertToType(data['IsPrimePantry'], 'Boolean');
+        obj.IsPrimePantry = ApiClient.convertToType(data['IsPrimePantry'], 'Boolean');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Boolean} IsPrimeExclusive
-   */
-  exports.prototype['IsPrimeExclusive'] = undefined;
-  /**
-   * @member {Boolean} IsPrimePantry
-   */
-  exports.prototype['IsPrimePantry'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
