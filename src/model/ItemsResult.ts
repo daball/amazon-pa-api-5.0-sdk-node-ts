@@ -21,42 +21,25 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Item'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Item'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ItemsResult = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.Item);
-  }
-}(this, function(ApiClient, Item) {
-  'use strict';
+/**
+ * The ItemsResult model module.
+ * @module model/ItemsResult
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { Item } from "./Item";
 
-
-
+/**
+ * Constructs a new <code>ItemsResult</code>.
+ * @alias module:model/ItemsResult
+ * @class
+ */
+export class ItemsResult {
   /**
-   * The ItemsResult model module.
-   * @module model/ItemsResult
-   * @version 1.0.0
+   * @member {Array.<module:model/Item>} Items
    */
-
-  /**
-   * Constructs a new <code>ItemsResult</code>.
-   * @alias module:model/ItemsResult
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
+  public Items?: Item[];
 
   /**
    * Constructs a <code>ItemsResult</code> from a plain JavaScript object, optionally creating a new instance.
@@ -65,25 +48,14 @@
    * @param {module:model/ItemsResult} obj Optional instance to populate.
    * @return {module:model/ItemsResult} The populated <code>ItemsResult</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ItemsResult) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ItemsResult();
 
       if (data.hasOwnProperty('Items')) {
-        obj['Items'] = ApiClient.convertToType(data['Items'], [Item]);
+        obj.Items = ApiClient.convertToType(data['Items'], [Item]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:model/Item>} Items
-   */
-  exports.prototype['Items'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

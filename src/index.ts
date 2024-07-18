@@ -55,6 +55,7 @@ import { Images } from "./model/Images";
 import { Item } from "./model/Item";
 import { ItemIdType } from "./model/ItemIdType";
 import { ItemInfo } from "./model/ItemInfo";
+import { ItemsResult } from "./model/ItemsResult";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { ManufactureInfo } from "./model/ManufactureInfo";
