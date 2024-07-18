@@ -29,14 +29,25 @@
 // sources of inspiration:
 // http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
 
-import crypto from 'crypto-js';
+import { createHmac, createHash, BinaryLike } from 'node:crypto';
 
+const SHA256 = 'sha256';
 const AWS4_HMAC_SHA256 = 'AWS4-HMAC-SHA256';
+const HEX = 'hex';
 
 const toTime = (time: number | string | Date) => new Date(time).toISOString().replace(/[:\-]|\.\d{3}/g, '');
 const toDate = (time: number | string | Date) => toTime(time).substring(0, 8);
-const hmac = (key: crypto.lib.WordArray | string, data: crypto.lib.WordArray | string) => crypto.HmacSHA256(data, key);
-const hexEncodedHash = (data: crypto.lib.WordArray | string) => crypto.SHA256(data).toString(crypto.enc.Hex);
+const hmac = (key: string|Buffer, data: string) => {
+  const hmacSHA256 = createHmac(SHA256, key);
+  hmacSHA256.update(data);
+  return hmacSHA256.digest();
+}
+const hexEncodedHash = (data: BinaryLike | string) => {
+  const hashSHA256 = createHash(SHA256);
+  hashSHA256.update(data);
+  return hashSHA256.digest(HEX).toString();
+}
+
 
 export const createAuthorizationHeaders = (timestamp: number | string | Date, accessKey: string, region: string, service: string, signedHeaders: string, signature: string) =>
   `${AWS4_HMAC_SHA256} Credential=${accessKey}/${exports.createCredentialScope(timestamp, region, service)}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
@@ -96,7 +107,7 @@ export const createSignature = (secret: string, time: number | string | Date, re
   var h2 = hmac(h1, region); // region-key
   var h3 = hmac(h2, service); // service-key
   var h4 = hmac(h3, AWS4_REQUEST); // signing-key
-  return hmac(h4, stringToSign).toString(crypto.enc.Hex);
+  return hmac(h4, stringToSign).toString(HEX);
 };
 
 export const toAmzDate = (time: number | string | Date) => new Date(time).toISOString().replace(/[:\-]|\.\d{3}/g, '');
