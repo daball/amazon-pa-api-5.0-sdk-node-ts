@@ -21,43 +21,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferConditionNote = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferConditionNote model module.
+ * @module model/OfferConditionNote
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferConditionNote</code>.
+ * @alias module:model/OfferConditionNote
+ * @class
+ */
+export class OfferConditionNote {
   /**
-   * The OfferConditionNote model module.
-   * @module model/OfferConditionNote
-   * @version 1.0.0
+   * @member {String} Locale
    */
-
+  public Locale?: string;
   /**
-   * Constructs a new <code>OfferConditionNote</code>.
-   * @alias module:model/OfferConditionNote
-   * @class
+   * @member {String} Value
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Value?: string;
 
   /**
    * Constructs a <code>OfferConditionNote</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +51,17 @@
    * @param {module:model/OfferConditionNote} obj Optional instance to populate.
    * @return {module:model/OfferConditionNote} The populated <code>OfferConditionNote</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferConditionNote) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferConditionNote();
 
       if (data.hasOwnProperty('Locale')) {
-        obj['Locale'] = ApiClient.convertToType(data['Locale'], 'String');
+        obj.Locale = ApiClient.convertToType(data['Locale'], 'String');
       }
       if (data.hasOwnProperty('Value')) {
-        obj['Value'] = ApiClient.convertToType(data['Value'], 'String');
+        obj.Value = ApiClient.convertToType(data['Value'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} Locale
-   */
-  exports.prototype['Locale'] = undefined;
-  /**
-   * @member {String} Value
-   */
-  exports.prototype['Value'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
