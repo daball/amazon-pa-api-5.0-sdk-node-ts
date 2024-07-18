@@ -48,7 +48,7 @@
     * @param {module:model/GetBrowseNodesRequest} getBrowseNodesRequest GetBrowseNodesRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBrowseNodesResponse} and HTTP response
     */
-   public getBrowseNodesWithHttpInfo(getBrowseNodesRequest) {
+   public getBrowseNodesWithHttpInfo(getBrowseNodesRequest: GetBrowseNodesRequest) {
      var postBody = getBrowseNodesRequest;
  
      // verify the required parameter 'getBrowseNodesRequest' is set
@@ -84,7 +84,7 @@
     * @param {module:model/GetBrowseNodesRequest} getBrowseNodesRequest GetBrowseNodesRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBrowseNodesResponse}
     */
-   public getBrowseNodes(getBrowseNodesRequest) {
+   public getBrowseNodes(getBrowseNodesRequest: GetBrowseNodesRequest) {
      return this.getBrowseNodesWithHttpInfo(getBrowseNodesRequest)
        .then(function(response_and_data) {
          return response_and_data.data;
@@ -96,7 +96,7 @@
     * @param {module:model/GetItemsRequest} getItemsRequest GetItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetItemsResponse} and HTTP response
     */
-   public getItemsWithHttpInfo(getItemsRequest) {
+   public getItemsWithHttpInfo(getItemsRequest: GetItemsRequest) {
      var postBody = getItemsRequest;
  
      // verify the required parameter 'getItemsRequest' is set
@@ -132,7 +132,7 @@
     * @param {module:model/GetItemsRequest} getItemsRequest GetItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetItemsResponse}
     */
-   public getItems(getItemsRequest) {
+   public getItems(getItemsRequest: GetItemsRequest) {
      return this.getItemsWithHttpInfo(getItemsRequest)
        .then(function(response_and_data) {
          return response_and_data.data;
@@ -144,7 +144,7 @@
     * @param {module:model/GetVariationsRequest} getVariationsRequest GetVariationsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetVariationsResponse} and HTTP response
     */
-   public getVariationsWithHttpInfo(getVariationsRequest) {
+   public getVariationsWithHttpInfo(getVariationsRequest: GetVariationsRequest) {
      var postBody = getVariationsRequest;
  
      // verify the required parameter 'getVariationsRequest' is set
@@ -180,7 +180,7 @@
     * @param {module:model/GetVariationsRequest} getVariationsRequest GetVariationsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetVariationsResponse}
     */
-   public getVariations(getVariationsRequest) {
+   public getVariations(getVariationsRequest: GetVariationsRequest) {
      return this.getVariationsWithHttpInfo(getVariationsRequest)
        .then(function(response_and_data) {
          return response_and_data.data;
@@ -192,7 +192,7 @@
     * @param {module:model/SearchItemsRequest} searchItemsRequest SearchItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchItemsResponse} and HTTP response
     */
-   public searchItemsWithHttpInfo(searchItemsRequest) {
+   public searchItemsWithHttpInfo(searchItemsRequest: SearchItemsRequest) {
      var postBody = searchItemsRequest;
  
      // verify the required parameter 'searchItemsRequest' is set
@@ -228,7 +228,7 @@
     * @param {module:model/SearchItemsRequest} searchItemsRequest SearchItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchItemsResponse}
     */
-   public searchItems(searchItemsRequest) {
+   public searchItems(searchItemsRequest: SearchItemsRequest) {
      return this.searchItemsWithHttpInfo(searchItemsRequest)
        .then(function(response_and_data) {
          return response_and_data.data;
