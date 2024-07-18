@@ -21,46 +21,40 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferMerchantInfo = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferMerchantInfo model module.
+ * @module model/OfferMerchantInfo
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferMerchantInfo</code>.
+ * @alias module:model/OfferMerchantInfo
+ * @class
+ */
+export class OfferMerchantInfo {
   /**
-   * The OfferMerchantInfo model module.
-   * @module model/OfferMerchantInfo
-   * @version 1.0.0
+   * @member {String} DefaultShippingCountry
    */
-
+  public DefaultShippingCountry?: string;
   /**
-   * Constructs a new <code>OfferMerchantInfo</code>.
-   * @alias module:model/OfferMerchantInfo
-   * @class
+   * @member {Number} FeedbackCount
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-  };
+  public FeedbackCount?: number;
+  /**
+   * @member {Number} FeedbackRating
+   */
+  public FeedbackRating?: number;
+  /**
+   * @member {String} Id
+   */
+  public Id?: string;
+  /**
+   * @member {String} Name
+   */
+  public Name?: string;
 
   /**
    * Constructs a <code>OfferMerchantInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -69,53 +63,26 @@
    * @param {module:model/OfferMerchantInfo} obj Optional instance to populate.
    * @return {module:model/OfferMerchantInfo} The populated <code>OfferMerchantInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferMerchantInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferMerchantInfo();
 
       if (data.hasOwnProperty('DefaultShippingCountry')) {
-        obj['DefaultShippingCountry'] = ApiClient.convertToType(data['DefaultShippingCountry'], 'String');
+        obj.DefaultShippingCountry = ApiClient.convertToType(data['DefaultShippingCountry'], 'String');
       }
       if (data.hasOwnProperty('FeedbackCount')) {
-        obj['FeedbackCount'] = ApiClient.convertToType(data['FeedbackCount'], 'Number');
+        obj.FeedbackCount = ApiClient.convertToType(data['FeedbackCount'], 'Number');
       }
       if (data.hasOwnProperty('FeedbackRating')) {
-        obj['FeedbackRating'] = ApiClient.convertToType(data['FeedbackRating'], 'Number');
+        obj.FeedbackRating = ApiClient.convertToType(data['FeedbackRating'], 'Number');
       }
       if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+        obj.Id = ApiClient.convertToType(data['Id'], 'String');
       }
       if (data.hasOwnProperty('Name')) {
-        obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+        obj.Name = ApiClient.convertToType(data['Name'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {String} DefaultShippingCountry
-   */
-  exports.prototype['DefaultShippingCountry'] = undefined;
-  /**
-   * @member {Number} FeedbackCount
-   */
-  exports.prototype['FeedbackCount'] = undefined;
-  /**
-   * @member {Number} FeedbackRating
-   */
-  exports.prototype['FeedbackRating'] = undefined;
-  /**
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-  /**
-   * @member {String} Name
-   */
-  exports.prototype['Name'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
