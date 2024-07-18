@@ -80,6 +80,7 @@ import { SearchRefinements } from "./model/SearchRefinements";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
+import { TechnicalInfo } from "./model/TechnicalInfo";
 import { TradeInPrice } from "./model/TradeInPrice";
 import { UnitBasedAttribute } from "./model/UnitBasedAttribute";
 import { VariationDimension } from "./model/VariationDimension";
