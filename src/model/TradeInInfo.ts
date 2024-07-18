@@ -21,43 +21,29 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/TradeInPrice'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TradeInPrice'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.TradeInInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.TradeInPrice);
-  }
-}(this, function(ApiClient, TradeInPrice) {
-  'use strict';
+/**
+ * The TradeInInfo model module.
+ * @module model/TradeInInfo
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { TradeInPrice } from "./TradeInPrice";
 
-
-
+/**
+ * Constructs a new <code>TradeInInfo</code>.
+ * @alias module:model/TradeInInfo
+ * @class
+ */
+export class TradeInInfo {
   /**
-   * The TradeInInfo model module.
-   * @module model/TradeInInfo
-   * @version 1.0.0
+   * @member {Boolean} IsEligibleForTradeIn
    */
-
+  public IsEligibleForTradeIn?: boolean;
   /**
-   * Constructs a new <code>TradeInInfo</code>.
-   * @alias module:model/TradeInInfo
-   * @class
+   * @member {module:model/TradeInPrice} Price
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Price?: TradeInPrice;
 
   /**
    * Constructs a <code>TradeInInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +52,17 @@
    * @param {module:model/TradeInInfo} obj Optional instance to populate.
    * @return {module:model/TradeInInfo} The populated <code>TradeInInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: TradeInInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new TradeInInfo();
 
       if (data.hasOwnProperty('IsEligibleForTradeIn')) {
-        obj['IsEligibleForTradeIn'] = ApiClient.convertToType(data['IsEligibleForTradeIn'], 'Boolean');
+        obj.IsEligibleForTradeIn = ApiClient.convertToType(data['IsEligibleForTradeIn'], 'Boolean');
       }
       if (data.hasOwnProperty('Price')) {
-        obj['Price'] = TradeInPrice.constructFromObject(data['Price']);
+        obj.Price = TradeInPrice.constructFromObject(data['Price']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Boolean} IsEligibleForTradeIn
-   */
-  exports.prototype['IsEligibleForTradeIn'] = undefined;
-  /**
-   * @member {module:model/TradeInPrice} Price
-   */
-  exports.prototype['Price'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
