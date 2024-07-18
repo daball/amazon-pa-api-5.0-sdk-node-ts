@@ -21,45 +21,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Languages', 'model/SingleIntegerValuedAttribute', 'model/SingleStringValuedAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Languages'), require('./SingleIntegerValuedAttribute'), require('./SingleStringValuedAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ContentInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.Languages, root.ProductAdvertisingAPIv1.SingleIntegerValuedAttribute, root.ProductAdvertisingAPIv1.SingleStringValuedAttribute);
-  }
-}(this, function(ApiClient, Languages, SingleIntegerValuedAttribute, SingleStringValuedAttribute) {
-  'use strict';
+/**
+ * The ContentInfo model module.
+ * @module model/ContentInfo
+ * @version 1.0.0
+ */
 
+import { Languages } from "./Languages";
+import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute";
 
-
-
+/**
+ * Constructs a new <code>ContentInfo</code>.
+ * @alias module:model/ContentInfo
+ * @class
+ */
+export class ContentInfo {
   /**
-   * The ContentInfo model module.
-   * @module model/ContentInfo
-   * @version 1.0.0
+   * @member {module:model/SingleStringValuedAttribute} Edition
    */
-
+  public Edition?: SingleStringValuedAttribute;
   /**
-   * Constructs a new <code>ContentInfo</code>.
-   * @alias module:model/ContentInfo
-   * @class
+   * @member {module:model/Languages} Languages
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public Languages?: Languages;
+  /**
+   * @member {module:model/SingleIntegerValuedAttribute} PagesCount
+   */
+  public PagesCount?: SingleIntegerValuedAttribute
+  /**
+   * @member {module:model/SingleStringValuedAttribute} PublicationDate
+   */
+  public PublicationDate?: SingleStringValuedAttribute;
 
   /**
    * Constructs a <code>ContentInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +61,23 @@
    * @param {module:model/ContentInfo} obj Optional instance to populate.
    * @return {module:model/ContentInfo} The populated <code>ContentInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ContentInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ContentInfo();
 
       if (data.hasOwnProperty('Edition')) {
-        obj['Edition'] = SingleStringValuedAttribute.constructFromObject(data['Edition']);
+        obj.Edition = SingleStringValuedAttribute.constructFromObject(data['Edition']);
       }
       if (data.hasOwnProperty('Languages')) {
-        obj['Languages'] = Languages.constructFromObject(data['Languages']);
+        obj.Languages = Languages.constructFromObject(data['Languages']);
       }
       if (data.hasOwnProperty('PagesCount')) {
-        obj['PagesCount'] = SingleIntegerValuedAttribute.constructFromObject(data['PagesCount']);
+        obj.PagesCount = SingleIntegerValuedAttribute.constructFromObject(data['PagesCount']);
       }
       if (data.hasOwnProperty('PublicationDate')) {
-        obj['PublicationDate'] = SingleStringValuedAttribute.constructFromObject(data['PublicationDate']);
+        obj.PublicationDate = SingleStringValuedAttribute.constructFromObject(data['PublicationDate']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Edition
-   */
-  exports.prototype['Edition'] = undefined;
-  /**
-   * @member {module:model/Languages} Languages
-   */
-  exports.prototype['Languages'] = undefined;
-  /**
-   * @member {module:model/SingleIntegerValuedAttribute} PagesCount
-   */
-  exports.prototype['PagesCount'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} PublicationDate
-   */
-  exports.prototype['PublicationDate'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
