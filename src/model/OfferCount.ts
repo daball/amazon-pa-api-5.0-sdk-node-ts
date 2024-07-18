@@ -42,7 +42,5 @@ export class OfferCount {
    * @param {module:model/OfferCount} obj Optional instance to populate.
    * @return {module:model/OfferCount} The populated <code>OfferCount</code> instance.
    */
-  public static constructFromObject(data: any, _obj?: string) {
-    return data;
-  }
+  public static constructFromObject(data: any, _obj?: string) { return data; }
 };
