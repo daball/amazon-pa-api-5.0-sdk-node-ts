@@ -52,6 +52,7 @@ import { ImageSize } from "./model/ImageSize";
 import { ImageType } from "./model/ImageType";
 import { Images } from "./model/Images";
 import { ItemIdType } from "./model/ItemIdType";
+import { ItemInfo } from "./model/ItemInfo";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { ManufactureInfo } from "./model/ManufactureInfo";

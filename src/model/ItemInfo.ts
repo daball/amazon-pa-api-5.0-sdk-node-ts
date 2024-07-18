@@ -21,52 +21,74 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ByLineInfo', 'model/Classifications', 'model/ContentInfo', 'model/ContentRating', 'model/ExternalIds', 'model/ManufactureInfo', 'model/MultiValuedAttribute', 'model/ProductInfo', 'model/SingleStringValuedAttribute', 'model/TechnicalInfo', 'model/TradeInInfo'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ByLineInfo'), require('./Classifications'), require('./ContentInfo'), require('./ContentRating'), require('./ExternalIds'), require('./ManufactureInfo'), require('./MultiValuedAttribute'), require('./ProductInfo'), require('./SingleStringValuedAttribute'), require('./TechnicalInfo'), require('./TradeInInfo'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ItemInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.ByLineInfo, root.ProductAdvertisingAPIv1.Classifications, root.ProductAdvertisingAPIv1.ContentInfo, root.ProductAdvertisingAPIv1.ContentRating, root.ProductAdvertisingAPIv1.ExternalIds, root.ProductAdvertisingAPIv1.ManufactureInfo, root.ProductAdvertisingAPIv1.MultiValuedAttribute, root.ProductAdvertisingAPIv1.ProductInfo, root.ProductAdvertisingAPIv1.SingleStringValuedAttribute, root.ProductAdvertisingAPIv1.TechnicalInfo, root.ProductAdvertisingAPIv1.TradeInInfo);
-  }
-}(this, function(ApiClient, ByLineInfo, Classifications, ContentInfo, ContentRating, ExternalIds, ManufactureInfo, MultiValuedAttribute, ProductInfo, SingleStringValuedAttribute, TechnicalInfo, TradeInInfo) {
-  'use strict';
+/**
+ * The ItemInfo model module.
+ * @module model/ItemInfo
+ * @version 1.0.0
+ */
 
+import { ByLineInfo } from "./ByLineInfo";
+import { Classifications } from "./Classifications";
+import { ContentInfo } from "./ContentInfo";
+import { ContentRating } from "./ContentRating";
+import { ExternalIds } from "./ExternalIds";
+import { ManufactureInfo } from "./ManufactureInfo";
+import { MultiValuedAttribute } from "./MultiValuedAttribute";
+import { ProductInfo } from "./ProductInfo";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute";
+import { TechnicalInfo } from "./TechnicalInfo";
+import { TradeInInfo } from "./TradeInInfo";
 
-
-
+/**
+ * Constructs a new <code>ItemInfo</code>.
+ * @alias module:model/ItemInfo
+ * @class
+ */
+export class ItemInfo {
   /**
-   * The ItemInfo model module.
-   * @module model/ItemInfo
-   * @version 1.0.0
+   * @member {module:model/ByLineInfo} ByLineInfo
    */
-
+  public ByLineInfo?: ByLineInfo;
   /**
-   * Constructs a new <code>ItemInfo</code>.
-   * @alias module:model/ItemInfo
-   * @class
+   * @member {module:model/Classifications} Classifications
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-
-
-
-
-
-
-  };
+  public Classifications?: Classifications;
+  /**
+   * @member {module:model/ContentInfo} ContentInfo
+   */
+  public ContentInfo?: ContentInfo;
+  /**
+   * @member {module:model/ContentRating} ContentRating
+   */
+  public ContentRating?: ContentRating;
+  /**
+   * @member {module:model/ExternalIds} ExternalIds
+   */
+  public ExternalIds?: ExternalIds;
+  /**
+   * @member {module:model/MultiValuedAttribute} Features
+   */
+  public Features?: MultiValuedAttribute;
+  /**
+   * @member {module:model/ManufactureInfo} ManufactureInfo
+   */
+  public ManufactureInfo?: ManufactureInfo;
+  /**
+   * @member {module:model/ProductInfo} ProductInfo
+   */
+  public ProductInfo?: ProductInfo;
+  /**
+   * @member {module:model/TechnicalInfo} TechnicalInfo
+   */
+  public TechnicalInfo?: TechnicalInfo;
+  /**
+   * @member {module:model/SingleStringValuedAttribute} Title
+   */
+  public Title?: SingleStringValuedAttribute;
+  /**
+   * @member {module:model/TradeInInfo} TradeInInfo
+   */
+  public TradeInInfo?: TradeInInfo;
 
   /**
    * Constructs a <code>ItemInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -75,95 +97,44 @@
    * @param {module:model/ItemInfo} obj Optional instance to populate.
    * @return {module:model/ItemInfo} The populated <code>ItemInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ItemInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ItemInfo();
 
       if (data.hasOwnProperty('ByLineInfo')) {
-        obj['ByLineInfo'] = ByLineInfo.constructFromObject(data['ByLineInfo']);
+        obj.ByLineInfo = ByLineInfo.constructFromObject(data['ByLineInfo']);
       }
       if (data.hasOwnProperty('Classifications')) {
-        obj['Classifications'] = Classifications.constructFromObject(data['Classifications']);
+        obj.Classifications = Classifications.constructFromObject(data['Classifications']);
       }
       if (data.hasOwnProperty('ContentInfo')) {
-        obj['ContentInfo'] = ContentInfo.constructFromObject(data['ContentInfo']);
+        obj.ContentInfo = ContentInfo.constructFromObject(data['ContentInfo']);
       }
       if (data.hasOwnProperty('ContentRating')) {
-        obj['ContentRating'] = ContentRating.constructFromObject(data['ContentRating']);
+        obj.ContentRating = ContentRating.constructFromObject(data['ContentRating']);
       }
       if (data.hasOwnProperty('ExternalIds')) {
-        obj['ExternalIds'] = ExternalIds.constructFromObject(data['ExternalIds']);
+        obj.ExternalIds = ExternalIds.constructFromObject(data['ExternalIds']);
       }
       if (data.hasOwnProperty('Features')) {
-        obj['Features'] = MultiValuedAttribute.constructFromObject(data['Features']);
+        obj.Features = MultiValuedAttribute.constructFromObject(data['Features']);
       }
       if (data.hasOwnProperty('ManufactureInfo')) {
-        obj['ManufactureInfo'] = ManufactureInfo.constructFromObject(data['ManufactureInfo']);
+        obj.ManufactureInfo = ManufactureInfo.constructFromObject(data['ManufactureInfo']);
       }
       if (data.hasOwnProperty('ProductInfo')) {
-        obj['ProductInfo'] = ProductInfo.constructFromObject(data['ProductInfo']);
+        obj.ProductInfo = ProductInfo.constructFromObject(data['ProductInfo']);
       }
       if (data.hasOwnProperty('TechnicalInfo')) {
-        obj['TechnicalInfo'] = TechnicalInfo.constructFromObject(data['TechnicalInfo']);
+        obj.TechnicalInfo = TechnicalInfo.constructFromObject(data['TechnicalInfo']);
       }
       if (data.hasOwnProperty('Title')) {
-        obj['Title'] = SingleStringValuedAttribute.constructFromObject(data['Title']);
+        obj.Title = SingleStringValuedAttribute.constructFromObject(data['Title']);
       }
       if (data.hasOwnProperty('TradeInInfo')) {
-        obj['TradeInInfo'] = TradeInInfo.constructFromObject(data['TradeInInfo']);
+        obj.TradeInInfo = TradeInInfo.constructFromObject(data['TradeInInfo']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/ByLineInfo} ByLineInfo
-   */
-  exports.prototype['ByLineInfo'] = undefined;
-  /**
-   * @member {module:model/Classifications} Classifications
-   */
-  exports.prototype['Classifications'] = undefined;
-  /**
-   * @member {module:model/ContentInfo} ContentInfo
-   */
-  exports.prototype['ContentInfo'] = undefined;
-  /**
-   * @member {module:model/ContentRating} ContentRating
-   */
-  exports.prototype['ContentRating'] = undefined;
-  /**
-   * @member {module:model/ExternalIds} ExternalIds
-   */
-  exports.prototype['ExternalIds'] = undefined;
-  /**
-   * @member {module:model/MultiValuedAttribute} Features
-   */
-  exports.prototype['Features'] = undefined;
-  /**
-   * @member {module:model/ManufactureInfo} ManufactureInfo
-   */
-  exports.prototype['ManufactureInfo'] = undefined;
-  /**
-   * @member {module:model/ProductInfo} ProductInfo
-   */
-  exports.prototype['ProductInfo'] = undefined;
-  /**
-   * @member {module:model/TechnicalInfo} TechnicalInfo
-   */
-  exports.prototype['TechnicalInfo'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Title
-   */
-  exports.prototype['Title'] = undefined;
-  /**
-   * @member {module:model/TradeInInfo} TradeInInfo
-   */
-  exports.prototype['TradeInInfo'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
