@@ -42,6 +42,7 @@ import { DeliveryFlag } from "./model/DeliveryFlag";
 import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
+import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
 import { PriceType } from "./model/PriceType";
 import { Rating } from "./model/Rating";
