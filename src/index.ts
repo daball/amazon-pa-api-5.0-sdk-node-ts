@@ -41,6 +41,7 @@ import { CustomerReviews } from "./model/CustomerReviews";
 import { DeliveryFlag } from "./model/DeliveryFlag";
 import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute";
 import { DurationPrice } from "./model/DurationPrice";
+import { ErrorData } from "./model/ErrorData";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { OfferPrice } from "./model/OfferPrice";
