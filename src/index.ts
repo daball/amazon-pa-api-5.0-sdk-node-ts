@@ -39,6 +39,7 @@ import { ContentRating } from "./model/ContentRating";
 import { Contributor } from "./model/Contributor";
 import { CustomerReviews } from "./model/CustomerReviews";
 import { DeliveryFlag } from "./model/DeliveryFlag";
+import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { OfferSavings } from "./model/OfferSavings";
