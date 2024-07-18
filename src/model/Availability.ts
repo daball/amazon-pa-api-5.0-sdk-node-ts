@@ -21,51 +21,41 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.Availability = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
-
-
+export const enum AvailabilityValues {
   /**
-   * Enum class Availability.
-   * @enum {}
-   * @readonly
+   * value: "Available"
+   * @const
    */
-  var exports = {
-    /**
-     * value: "Available"
-     * @const
-     */
-    "Available": "Available",
-    /**
-     * value: "IncludeOutOfStock"
-     * @const
-     */
-    "IncludeOutOfStock": "IncludeOutOfStock"  };
+  Available = "Available",
+  /**
+   * value: "IncludeOutOfStock"
+   * @const
+   */
+  IncludeOutOfStock = "IncludeOutOfStock",  
+}
 
+/**
+ * Enum class Availability.
+ * @enum {}
+ * @readonly
+ */
+export class Availability extends String {
+  /**
+   * value: "Available"
+   * @const
+   */
+  public static get Available() { return AvailabilityValues.Available; }
+  /**
+   * value: "IncludeOutOfStock"
+   * @const
+   */
+  public static get IncludeOutOfStock() { return AvailabilityValues.IncludeOutOfStock; }
   /**
    * Returns a <code>Availability</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/Availability} The enum <code>Availability</code> value.
    */
-  exports.constructFromObject = function(object) {
+  public static constructFromObject(object: Availability|AvailabilityValues|string) {
     return object;
   }
-
-  return exports;
-}));
-
-
+};

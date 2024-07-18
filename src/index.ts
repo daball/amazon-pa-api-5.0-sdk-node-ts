@@ -22,6 +22,7 @@
  */
 
 import { ApiClient } from "./ApiClient";
+import { Availability } from "./model/Availability";
 import { ByLineInfo } from "./model/ByLineInfo";
 import { Classifications } from "./model/Classifications";
 import { Condition } from "./model/Condition";
@@ -73,7 +74,7 @@ export {
    * The Availability model constructor.
    * @property {module:model/Availability}
    */
-  Availability: Availability,
+  Availability,
   /**
    * The BrowseNode model constructor.
    * @property {module:model/BrowseNode}
