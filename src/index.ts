@@ -28,6 +28,7 @@ import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor";
 import { BrowseNodeChild } from "./model/BrowseNodeChild";
 import { ByLineInfo } from "./model/ByLineInfo";
 import { Classifications } from "./model/Classifications";
+import { DefaultApi } from "./api/DefaultApi";
 import { Condition } from "./model/Condition";
 import { Contributor } from "./model/Contributor";
 import { OfferSavings } from "./model/OfferSavings";
@@ -35,6 +36,7 @@ import { PriceType } from "./model/PriceType";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
+import { WebsiteSalesRank } from "./model/WebsiteSalesRank";
 
 /**
  * ProductAdvertisingAPI 5.0 NodeJS SDK.<br>
@@ -65,7 +67,7 @@ import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute
  * </pre>
  * </p>
  * @module index
- * @version 1.0.0
+ * @version 2.0.0
  */
 export {
   /**
@@ -517,10 +519,10 @@ export {
    * The WebsiteSalesRank model constructor.
    * @property {module:model/WebsiteSalesRank}
    */
-  WebsiteSalesRank: WebsiteSalesRank,
+  WebsiteSalesRank,
   /**
    * The DefaultApi service constructor.
    * @property {module:api/DefaultApi}
    */
-  DefaultApi: DefaultApi
+  DefaultApi
 };
