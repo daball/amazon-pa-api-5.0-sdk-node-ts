@@ -21,45 +21,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Price', 'model/VariationDimension'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Price'), require('./VariationDimension'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.VariationSummary = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.Price, root.ProductAdvertisingAPIv1.VariationDimension);
-  }
-}(this, function(ApiClient, Price, VariationDimension) {
-  'use strict';
+/**
+ * The VariationSummary model module.
+ * @module model/VariationSummary
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { Price } from "./Price";
+import { VariationDimension } from "./VariationDimension";
 
-
-
+/**
+ * Constructs a new <code>VariationSummary</code>.
+ * @alias module:model/VariationSummary
+ * @class
+ */
+export class VariationSummary {
   /**
-   * The VariationSummary model module.
-   * @module model/VariationSummary
-   * @version 1.0.0
+   * @member {Number} PageCount
    */
-
+  public PageCount?: number;
   /**
-   * Constructs a new <code>VariationSummary</code>.
-   * @alias module:model/VariationSummary
-   * @class
+   * @member {module:model/Price} Price
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public Price?: Price;
+  /**
+   * @member {Number} VariationCount
+   */
+  public VariationCount?: number;
+  /**
+   * @member {Array.<module:model/VariationDimension>} VariationDimensions
+   */
+  public VariationDimensions?: VariationDimension[];
 
   /**
    * Constructs a <code>VariationSummary</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +61,23 @@
    * @param {module:model/VariationSummary} obj Optional instance to populate.
    * @return {module:model/VariationSummary} The populated <code>VariationSummary</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: VariationSummary) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new VariationSummary();
 
       if (data.hasOwnProperty('PageCount')) {
-        obj['PageCount'] = ApiClient.convertToType(data['PageCount'], 'Number');
+        obj.PageCount = ApiClient.convertToType(data['PageCount'], 'Number');
       }
       if (data.hasOwnProperty('Price')) {
-        obj['Price'] = Price.constructFromObject(data['Price']);
+        obj.Price = Price.constructFromObject(data['Price']);
       }
       if (data.hasOwnProperty('VariationCount')) {
-        obj['VariationCount'] = ApiClient.convertToType(data['VariationCount'], 'Number');
+        obj.VariationCount = ApiClient.convertToType(data['VariationCount'], 'Number');
       }
       if (data.hasOwnProperty('VariationDimensions')) {
-        obj['VariationDimensions'] = ApiClient.convertToType(data['VariationDimensions'], [VariationDimension]);
+        obj.VariationDimensions = ApiClient.convertToType(data['VariationDimensions'], [VariationDimension]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Number} PageCount
-   */
-  exports.prototype['PageCount'] = undefined;
-  /**
-   * @member {module:model/Price} Price
-   */
-  exports.prototype['Price'] = undefined;
-  /**
-   * @member {Number} VariationCount
-   */
-  exports.prototype['VariationCount'] = undefined;
-  /**
-   * @member {Array.<module:model/VariationDimension>} VariationDimensions
-   */
-  exports.prototype['VariationDimensions'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

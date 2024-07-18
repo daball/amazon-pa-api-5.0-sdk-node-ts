@@ -73,6 +73,7 @@ import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribu
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute";
 import { UnitBasedAttribute } from "./model/UnitBasedAttribute";
 import { VariationDimension } from "./model/VariationDimension";
+import { VariationSummary } from "./model/VariationSummary";
 import { WebsiteSalesRank } from "./model/WebsiteSalesRank";
 
 /**
