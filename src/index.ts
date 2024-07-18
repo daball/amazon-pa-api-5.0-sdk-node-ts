@@ -56,6 +56,7 @@ import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { MaxPrice } from "./model/MaxPrice";
 import { Merchant } from "./model/Merchant";
+import { MinPrice } from "./model/MinPrice";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
 import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";

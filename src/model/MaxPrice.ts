@@ -40,7 +40,5 @@ export class MaxPrice {
    * @param {module:model/MaxPrice} obj Optional instance to populate.
    * @return {module:model/MaxPrice} The populated <code>MaxPrice</code> instance.
    */
-  public static constructFromObject(data: any, _obj?: any) {
-    return data;
-  }
+  public static constructFromObject(data: any, _obj?: any) { return data; }
 };
