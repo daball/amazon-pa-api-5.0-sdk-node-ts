@@ -21,56 +21,85 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Condition', 'model/GetItemsResource', 'model/ItemIdType', 'model/Merchant', 'model/OfferCount', 'model/PartnerType', 'model/Properties'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Condition'), require('./GetItemsResource'), require('./ItemIdType'), require('./Merchant'), require('./OfferCount'), require('./PartnerType'), require('./Properties'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.GetItemsRequest = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.Condition, root.ProductAdvertisingAPIv1.GetItemsResource, root.ProductAdvertisingAPIv1.ItemIdType, root.ProductAdvertisingAPIv1.Merchant, root.ProductAdvertisingAPIv1.OfferCount, root.ProductAdvertisingAPIv1.PartnerType, root.ProductAdvertisingAPIv1.Properties);
-  }
-}(this, function(ApiClient, Condition, GetItemsResource, ItemIdType, Merchant, OfferCount, PartnerType, Properties) {
-  'use strict';
+/**
+ * The GetItemsRequest model module.
+ * @module model/GetItemsRequest
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { Condition } from "./Condition";
+import { GetItemsResource } from "./GetItemsResource";
+import { ItemIdType } from "./ItemIdType";
+import { Merchant } from "./Merchant";
+import { OfferCount } from "./OfferCount";
+import { PartnerType } from "./PartnerType";
+import { Properties } from "./Properties";
 
-
-
+/**
+ * Constructs a new <code>GetItemsRequest</code>.
+ * @alias module:model/GetItemsRequest
+ * @class
+ * @param itemIds {Array.<String>} 
+ * @param partnerTag {String} 
+ * @param partnerType {module:model/PartnerType} 
+ */
+export class GetItemsRequest {
   /**
-   * The GetItemsRequest model module.
-   * @module model/GetItemsRequest
-   * @version 1.0.0
+   * @member {module:model/Condition} Condition
    */
-
+  public Condition?: Condition;
   /**
-   * Constructs a new <code>GetItemsRequest</code>.
-   * @alias module:model/GetItemsRequest
-   * @class
-   * @param itemIds {Array.<String>} 
-   * @param partnerTag {String} 
-   * @param partnerType {module:model/PartnerType} 
+   * @member {String} CurrencyOfPreference
    */
-  var exports = function(itemIds, partnerTag, partnerType) {
-    var _this = this;
+  public CurrencyOfPreference?: string;
+  /**
+   * @member {Array.<String>} ItemIds
+   */
+  public ItemIds?: string[];
+  /**
+   * @member {module:model/ItemIdType} ItemIdType
+   */
+  public ItemIdType?: ItemIdType;
+  /**
+   * @member {Array.<String>} LanguagesOfPreference
+   */
+  public LanguagesOfPreference?: string[];
+  /**
+   * @member {String} Marketplace
+   */
+  public Marketplace?: string;
+  /**
+   * @member {module:model/Merchant} Merchant
+   */
+  public Merchant?: Merchant;
+  /**
+   * @member {module:model/OfferCount} OfferCount
+   */
+  public OfferCount?: OfferCount;
+  /**
+   * @member {String} PartnerTag
+   */
+  public PartnerTag?: string;
+  /**
+   * @member {module:model/PartnerType} PartnerType
+   */
+  public PartnerType?: PartnerType;
+  /**
+   * @member {module:model/Properties} Properties
+   */
+  public Properties?: Properties;
+  /**
+   * @member {Array.<module:model/GetItemsResource>} Resources
+   */
+  public Resources?: GetItemsResource[];
 
-
-
-    _this['ItemIds'] = itemIds;
-
-
-
-
-
-    _this['PartnerTag'] = partnerTag;
-    _this['PartnerType'] = partnerType;
-
-
-  };
+  // not sure if this is ever relevant:
+  // public constructor(itemIds, partnerTag, partnerType) {
+  //   this.ItemIds = itemIds;
+  //   this.PartnerTag = partnerTag;
+  //   this.PartnerType = partnerType;
+  // };
 
   /**
    * Constructs a <code>GetItemsRequest</code> from a plain JavaScript object, optionally creating a new instance.
@@ -79,102 +108,47 @@
    * @param {module:model/GetItemsRequest} obj Optional instance to populate.
    * @return {module:model/GetItemsRequest} The populated <code>GetItemsRequest</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: GetItemsRequest) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new GetItemsRequest();
 
       if (data.hasOwnProperty('Condition')) {
-        obj['Condition'] = Condition.constructFromObject(data['Condition']);
+        obj.Condition = Condition.constructFromObject(data['Condition']);
       }
       if (data.hasOwnProperty('CurrencyOfPreference')) {
-        obj['CurrencyOfPreference'] = ApiClient.convertToType(data['CurrencyOfPreference'], 'String');
+        obj.CurrencyOfPreference = ApiClient.convertToType(data['CurrencyOfPreference'], 'String');
       }
       if (data.hasOwnProperty('ItemIds')) {
-        obj['ItemIds'] = ApiClient.convertToType(data['ItemIds'], ['String']);
+        obj.ItemIds = ApiClient.convertToType(data['ItemIds'], ['String']);
       }
       if (data.hasOwnProperty('ItemIdType')) {
-        obj['ItemIdType'] = ItemIdType.constructFromObject(data['ItemIdType']);
+        obj.ItemIdType = ItemIdType.constructFromObject(data['ItemIdType']);
       }
       if (data.hasOwnProperty('LanguagesOfPreference')) {
-        obj['LanguagesOfPreference'] = ApiClient.convertToType(data['LanguagesOfPreference'], ['String']);
+        obj.LanguagesOfPreference = ApiClient.convertToType(data['LanguagesOfPreference'], ['String']);
       }
       if (data.hasOwnProperty('Marketplace')) {
-        obj['Marketplace'] = ApiClient.convertToType(data['Marketplace'], 'String');
+        obj.Marketplace = ApiClient.convertToType(data['Marketplace'], 'String');
       }
       if (data.hasOwnProperty('Merchant')) {
-        obj['Merchant'] = Merchant.constructFromObject(data['Merchant']);
+        obj.Merchant = Merchant.constructFromObject(data['Merchant']);
       }
       if (data.hasOwnProperty('OfferCount')) {
-        obj['OfferCount'] = OfferCount.constructFromObject(data['OfferCount']);
+        obj.OfferCount = OfferCount.constructFromObject(data['OfferCount']);
       }
       if (data.hasOwnProperty('PartnerTag')) {
-        obj['PartnerTag'] = ApiClient.convertToType(data['PartnerTag'], 'String');
+        obj.PartnerTag = ApiClient.convertToType(data['PartnerTag'], 'String');
       }
       if (data.hasOwnProperty('PartnerType')) {
-        obj['PartnerType'] = PartnerType.constructFromObject(data['PartnerType']);
+        obj.PartnerType = PartnerType.constructFromObject(data['PartnerType']);
       }
       if (data.hasOwnProperty('Properties')) {
-        obj['Properties'] = Properties.constructFromObject(data['Properties']);
+        obj.Properties = Properties.constructFromObject(data['Properties']);
       }
       if (data.hasOwnProperty('Resources')) {
-        obj['Resources'] = ApiClient.convertToType(data['Resources'], [GetItemsResource]);
+        obj.Resources = ApiClient.convertToType(data['Resources'], [GetItemsResource]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/Condition} Condition
-   */
-  exports.prototype['Condition'] = undefined;
-  /**
-   * @member {String} CurrencyOfPreference
-   */
-  exports.prototype['CurrencyOfPreference'] = undefined;
-  /**
-   * @member {Array.<String>} ItemIds
-   */
-  exports.prototype['ItemIds'] = undefined;
-  /**
-   * @member {module:model/ItemIdType} ItemIdType
-   */
-  exports.prototype['ItemIdType'] = undefined;
-  /**
-   * @member {Array.<String>} LanguagesOfPreference
-   */
-  exports.prototype['LanguagesOfPreference'] = undefined;
-  /**
-   * @member {String} Marketplace
-   */
-  exports.prototype['Marketplace'] = undefined;
-  /**
-   * @member {module:model/Merchant} Merchant
-   */
-  exports.prototype['Merchant'] = undefined;
-  /**
-   * @member {module:model/OfferCount} OfferCount
-   */
-  exports.prototype['OfferCount'] = undefined;
-  /**
-   * @member {String} PartnerTag
-   */
-  exports.prototype['PartnerTag'] = undefined;
-  /**
-   * @member {module:model/PartnerType} PartnerType
-   */
-  exports.prototype['PartnerType'] = undefined;
-  /**
-   * @member {module:model/Properties} Properties
-   */
-  exports.prototype['Properties'] = undefined;
-  /**
-   * @member {Array.<module:model/GetItemsResource>} Resources
-   */
-  exports.prototype['Resources'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
