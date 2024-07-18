@@ -21,46 +21,40 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.OfferShippingCharge = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient) {
-  'use strict';
+/**
+ * The OfferShippingCharge model module.
+ * @module model/OfferShippingCharge
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>OfferShippingCharge</code>.
+ * @alias module:model/OfferShippingCharge
+ * @class
+ */
+export class OfferShippingCharge {
   /**
-   * The OfferShippingCharge model module.
-   * @module model/OfferShippingCharge
-   * @version 1.0.0
+   * @member {Number} Amount
    */
-
+  public Amount?: number;
   /**
-   * Constructs a new <code>OfferShippingCharge</code>.
-   * @alias module:model/OfferShippingCharge
-   * @class
+   * @member {String} Currency
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-  };
+  public Currency?: string;
+  /**
+   * @member {String} DisplayAmount
+   */
+  public DisplayAmount?: string;
+  /**
+   * @member {Boolean} IsRateTaxInclusive
+   */
+  public IsRateTaxInclusive?: boolean;
+  /**
+   * @member {String} Type
+   */
+  public Type?: string;
 
   /**
    * Constructs a <code>OfferShippingCharge</code> from a plain JavaScript object, optionally creating a new instance.
@@ -69,53 +63,26 @@
    * @param {module:model/OfferShippingCharge} obj Optional instance to populate.
    * @return {module:model/OfferShippingCharge} The populated <code>OfferShippingCharge</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: OfferShippingCharge) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new OfferShippingCharge();
 
       if (data.hasOwnProperty('Amount')) {
-        obj['Amount'] = ApiClient.convertToType(data['Amount'], 'Number');
+        obj.Amount = ApiClient.convertToType(data['Amount'], 'Number');
       }
       if (data.hasOwnProperty('Currency')) {
-        obj['Currency'] = ApiClient.convertToType(data['Currency'], 'String');
+        obj.Currency = ApiClient.convertToType(data['Currency'], 'String');
       }
       if (data.hasOwnProperty('DisplayAmount')) {
-        obj['DisplayAmount'] = ApiClient.convertToType(data['DisplayAmount'], 'String');
+        obj.DisplayAmount = ApiClient.convertToType(data['DisplayAmount'], 'String');
       }
       if (data.hasOwnProperty('IsRateTaxInclusive')) {
-        obj['IsRateTaxInclusive'] = ApiClient.convertToType(data['IsRateTaxInclusive'], 'Boolean');
+        obj.IsRateTaxInclusive = ApiClient.convertToType(data['IsRateTaxInclusive'], 'Boolean');
       }
       if (data.hasOwnProperty('Type')) {
-        obj['Type'] = ApiClient.convertToType(data['Type'], 'String');
+        obj.Type = ApiClient.convertToType(data['Type'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Number} Amount
-   */
-  exports.prototype['Amount'] = undefined;
-  /**
-   * @member {String} Currency
-   */
-  exports.prototype['Currency'] = undefined;
-  /**
-   * @member {String} DisplayAmount
-   */
-  exports.prototype['DisplayAmount'] = undefined;
-  /**
-   * @member {Boolean} IsRateTaxInclusive
-   */
-  exports.prototype['IsRateTaxInclusive'] = undefined;
-  /**
-   * @member {String} Type
-   */
-  exports.prototype['Type'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
