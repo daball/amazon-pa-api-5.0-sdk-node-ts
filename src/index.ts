@@ -42,6 +42,7 @@ import { DeliveryFlag } from "./model/DeliveryFlag";
 import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute";
 import { DurationPrice } from "./model/DurationPrice";
 import { ErrorData } from "./model/ErrorData";
+import { ExternalIds } from "./model/ExternalIds";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { MultiValuedAttribute } from "./model/MultiValuedAttribute";

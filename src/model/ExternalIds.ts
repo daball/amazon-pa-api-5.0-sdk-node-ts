@@ -21,44 +21,32 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MultiValuedAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./MultiValuedAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ExternalIds = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.MultiValuedAttribute);
-  }
-}(this, function(ApiClient, MultiValuedAttribute) {
-  'use strict';
+ import { MultiValuedAttribute } from "./MultiValuedAttribute";
 
+ /**
+ * The ExternalIds model module.
+ * @module model/ExternalIds
+ * @version 1.0.0
+ */
 
-
-
+/**
+ * Constructs a new <code>ExternalIds</code>.
+ * @alias module:model/ExternalIds
+ * @class
+ */
+export class ExternalIds {
   /**
-   * The ExternalIds model module.
-   * @module model/ExternalIds
-   * @version 1.0.0
+   * @member {module:model/MultiValuedAttribute} EANs
    */
-
+  public EANs?: MultiValuedAttribute
   /**
-   * Constructs a new <code>ExternalIds</code>.
-   * @alias module:model/ExternalIds
-   * @class
+   * @member {module:model/MultiValuedAttribute} ISBNs
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
+  public ISBNs?: MultiValuedAttribute;
+  /**
+   * @member {module:model/MultiValuedAttribute} UPCs
+   */
+  public UPCs?: MultiValuedAttribute;
 
   /**
    * Constructs a <code>ExternalIds</code> from a plain JavaScript object, optionally creating a new instance.
@@ -67,39 +55,20 @@
    * @param {module:model/ExternalIds} obj Optional instance to populate.
    * @return {module:model/ExternalIds} The populated <code>ExternalIds</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ExternalIds) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ExternalIds();
 
       if (data.hasOwnProperty('EANs')) {
-        obj['EANs'] = MultiValuedAttribute.constructFromObject(data['EANs']);
+        obj.EANs = MultiValuedAttribute.constructFromObject(data['EANs']);
       }
       if (data.hasOwnProperty('ISBNs')) {
-        obj['ISBNs'] = MultiValuedAttribute.constructFromObject(data['ISBNs']);
+        obj.ISBNs = MultiValuedAttribute.constructFromObject(data['ISBNs']);
       }
       if (data.hasOwnProperty('UPCs')) {
-        obj['UPCs'] = MultiValuedAttribute.constructFromObject(data['UPCs']);
+        obj.UPCs = MultiValuedAttribute.constructFromObject(data['UPCs']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/MultiValuedAttribute} EANs
-   */
-  exports.prototype['EANs'] = undefined;
-  /**
-   * @member {module:model/MultiValuedAttribute} ISBNs
-   */
-  exports.prototype['ISBNs'] = undefined;
-  /**
-   * @member {module:model/MultiValuedAttribute} UPCs
-   */
-  exports.prototype['UPCs'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
