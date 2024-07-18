@@ -21,43 +21,30 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BrowseNodesResult', 'model/ErrorData'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BrowseNodesResult'), require('./ErrorData'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.GetBrowseNodesResponse = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.BrowseNodesResult, root.ProductAdvertisingAPIv1.ErrorData);
-  }
-}(this, function(ApiClient, BrowseNodesResult, ErrorData) {
-  'use strict';
+/**
+ * The GetBrowseNodesResponse model module.
+ * @module model/GetBrowseNodesResponse
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { BrowseNodesResult } from "./BrowseNodesResult";
+import { ErrorData } from "./ErrorData";
 
-
-
+/**
+ * Constructs a new <code>GetBrowseNodesResponse</code>.
+ * @alias module:model/GetBrowseNodesResponse
+ * @class
+ */
+export class GetBrowseNodesResponse {
   /**
-   * The GetBrowseNodesResponse model module.
-   * @module model/GetBrowseNodesResponse
-   * @version 1.0.0
+   * @member {module:model/BrowseNodesResult} BrowseNodesResult
    */
-
+  public BrowseNodesResult?: BrowseNodesResult;
   /**
-   * Constructs a new <code>GetBrowseNodesResponse</code>.
-   * @alias module:model/GetBrowseNodesResponse
-   * @class
+   * @member {Array.<module:model/ErrorData>} Errors
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Errors?: ErrorData[];
 
   /**
    * Constructs a <code>GetBrowseNodesResponse</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +53,17 @@
    * @param {module:model/GetBrowseNodesResponse} obj Optional instance to populate.
    * @return {module:model/GetBrowseNodesResponse} The populated <code>GetBrowseNodesResponse</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: GetBrowseNodesResponse) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new GetBrowseNodesResponse();
 
       if (data.hasOwnProperty('BrowseNodesResult')) {
-        obj['BrowseNodesResult'] = BrowseNodesResult.constructFromObject(data['BrowseNodesResult']);
+        obj.BrowseNodesResult = BrowseNodesResult.constructFromObject(data['BrowseNodesResult']);
       }
       if (data.hasOwnProperty('Errors')) {
-        obj['Errors'] = ApiClient.convertToType(data['Errors'], [ErrorData]);
+        obj.Errors = ApiClient.convertToType(data['Errors'], [ErrorData]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/BrowseNodesResult} BrowseNodesResult
-   */
-  exports.prototype['BrowseNodesResult'] = undefined;
-  /**
-   * @member {Array.<module:model/ErrorData>} Errors
-   */
-  exports.prototype['Errors'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

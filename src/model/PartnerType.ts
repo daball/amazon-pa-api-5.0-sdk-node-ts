@@ -45,11 +45,11 @@ export class PartnerType extends String {
    * @const
    */
   public static get Associates() { return PartnerTypeValues.Associates; }
-  
+
   /**
    * Returns a <code>PartnerType</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/PartnerType} The enum <code>PartnerType</code> value.
    */
-  public constructFromObject(object: PartnerType|PartnerTypeValues|string) { return object; }
+  public static constructFromObject(object: PartnerType|PartnerTypeValues|string) { return object; }
 };

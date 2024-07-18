@@ -21,50 +21,56 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetBrowseNodesResource', 'model/PartnerType'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetBrowseNodesResource'), require('./PartnerType'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.GetBrowseNodesRequest = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.GetBrowseNodesResource, root.ProductAdvertisingAPIv1.PartnerType);
-  }
-}(this, function(ApiClient, GetBrowseNodesResource, PartnerType) {
-  'use strict';
+/**
+ * The GetBrowseNodesRequest model module.
+ * @module model/GetBrowseNodesRequest
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { PartnerType } from "./PartnerType";
+import { GetBrowseNodesResource } from "./GetBrowseNodesResource";
 
-
-
+/**
+ * Constructs a new <code>GetBrowseNodesRequest</code>.
+ * @alias module:model/GetBrowseNodesRequest
+ * @class
+ * @param browseNodeIds {Array.<String>} 
+ * @param partnerTag {String} 
+ * @param partnerType {module:model/PartnerType} 
+ */
+export class GetBrowseNodesRequest {
   /**
-   * The GetBrowseNodesRequest model module.
-   * @module model/GetBrowseNodesRequest
-   * @version 1.0.0
+   * @member {Array.<String>} BrowseNodeIds
    */
-
+  public BrowseNodeIds?: string[];
   /**
-   * Constructs a new <code>GetBrowseNodesRequest</code>.
-   * @alias module:model/GetBrowseNodesRequest
-   * @class
-   * @param browseNodeIds {Array.<String>} 
-   * @param partnerTag {String} 
-   * @param partnerType {module:model/PartnerType} 
+   * @member {Array.<String>} LanguagesOfPreference
    */
-  var exports = function(browseNodeIds, partnerTag, partnerType) {
-    var _this = this;
+  public LanguagesOfPreference?: string[];
+  /**
+   * @member {String} Marketplace
+   */
+  public Marketplace?: string;
+  /**
+   * @member {String} PartnerTag
+   */
+  public PartnerTag?: string;
+  /**
+   * @member {module:model/PartnerType} PartnerType
+   */
+  public PartnerType?: PartnerType;
+  /**
+   * @member {Array.<module:model/GetBrowseNodesResource>} Resources
+   */
+  public Resources?: GetBrowseNodesResource;
 
-    _this['BrowseNodeIds'] = browseNodeIds;
-
-
-    _this['PartnerTag'] = partnerTag;
-    _this['PartnerType'] = partnerType;
-
-  };
+  // not sure if this is ever going to be relevant:
+  // public constructor(browseNodeIds, partnerTag, partnerType) {
+  //   this.BrowseNodeIds = browseNodeIds;
+  //   this.PartnerTag = partnerTag;
+  //   this.PartnerType = partnerType;
+  // };
 
   /**
    * Constructs a <code>GetBrowseNodesRequest</code> from a plain JavaScript object, optionally creating a new instance.
@@ -73,60 +79,29 @@
    * @param {module:model/GetBrowseNodesRequest} obj Optional instance to populate.
    * @return {module:model/GetBrowseNodesRequest} The populated <code>GetBrowseNodesRequest</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject = function(data: any, obj?: GetBrowseNodesRequest) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new GetBrowseNodesRequest();
 
       if (data.hasOwnProperty('BrowseNodeIds')) {
-        obj['BrowseNodeIds'] = ApiClient.convertToType(data['BrowseNodeIds'], ['String']);
+        obj.BrowseNodeIds = ApiClient.convertToType(data['BrowseNodeIds'], ['String']);
       }
       if (data.hasOwnProperty('LanguagesOfPreference')) {
-        obj['LanguagesOfPreference'] = ApiClient.convertToType(data['LanguagesOfPreference'], ['String']);
+        obj.LanguagesOfPreference = ApiClient.convertToType(data['LanguagesOfPreference'], ['String']);
       }
       if (data.hasOwnProperty('Marketplace')) {
-        obj['Marketplace'] = ApiClient.convertToType(data['Marketplace'], 'String');
+        obj.Marketplace = ApiClient.convertToType(data['Marketplace'], 'String');
       }
       if (data.hasOwnProperty('PartnerTag')) {
-        obj['PartnerTag'] = ApiClient.convertToType(data['PartnerTag'], 'String');
+        obj.PartnerTag = ApiClient.convertToType(data['PartnerTag'], 'String');
       }
       if (data.hasOwnProperty('PartnerType')) {
-        obj['PartnerType'] = PartnerType.constructFromObject(data['PartnerType']);
+        obj.PartnerType = PartnerType.constructFromObject(data['PartnerType']);
       }
       if (data.hasOwnProperty('Resources')) {
-        obj['Resources'] = ApiClient.convertToType(data['Resources'], [GetBrowseNodesResource]);
+        obj.Resources = ApiClient.convertToType(data['Resources'], [GetBrowseNodesResource]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<String>} BrowseNodeIds
-   */
-  exports.prototype['BrowseNodeIds'] = undefined;
-  /**
-   * @member {Array.<String>} LanguagesOfPreference
-   */
-  exports.prototype['LanguagesOfPreference'] = undefined;
-  /**
-   * @member {String} Marketplace
-   */
-  exports.prototype['Marketplace'] = undefined;
-  /**
-   * @member {String} PartnerTag
-   */
-  exports.prototype['PartnerTag'] = undefined;
-  /**
-   * @member {module:model/PartnerType} PartnerType
-   */
-  exports.prototype['PartnerType'] = undefined;
-  /**
-   * @member {Array.<module:model/GetBrowseNodesResource>} Resources
-   */
-  exports.prototype['Resources'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
