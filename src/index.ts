@@ -23,6 +23,7 @@
 
 import { ApiClient } from "./ApiClient";
 import { Availability } from "./model/Availability";
+import { BrowseNode } from "./model/BrowseNode";
 import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor";
 import { BrowseNodeChild } from "./model/BrowseNodeChild";
 import { ByLineInfo } from "./model/ByLineInfo";
@@ -81,7 +82,7 @@ export {
    * The BrowseNode model constructor.
    * @property {module:model/BrowseNode}
    */
-  BrowseNode: BrowseNode,
+  BrowseNode,
   /**
    * The BrowseNodeAncestor model constructor.
    * @property {module:model/BrowseNodeAncestor}
