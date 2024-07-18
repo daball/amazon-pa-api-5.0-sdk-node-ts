@@ -73,7 +73,7 @@ export class OfferPrice {
    * @param {module:model/OfferPrice} obj Optional instance to populate.
    * @return {module:model/OfferPrice} The populated <code>OfferPrice</code> instance.
    */
-  public static constructFromObject(data: any, obj: OfferPrice) {
+  public static constructFromObject(data: any, obj?: OfferPrice) {
     if (data) {
       obj = obj || new OfferPrice();
 

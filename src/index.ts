@@ -40,6 +40,7 @@ import { Contributor } from "./model/Contributor";
 import { CustomerReviews } from "./model/CustomerReviews";
 import { DeliveryFlag } from "./model/DeliveryFlag";
 import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute";
+import { DurationPrice } from "./model/DurationPrice";
 import { Languages } from "./model/Languages";
 import { LanguageType } from "./model/LanguageType";
 import { OfferPrice } from "./model/OfferPrice";

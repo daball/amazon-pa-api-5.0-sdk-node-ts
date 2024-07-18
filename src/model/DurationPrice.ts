@@ -21,43 +21,29 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferPrice', 'model/UnitBasedAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferPrice'), require('./UnitBasedAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.DurationPrice = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferPrice, root.ProductAdvertisingAPIv1.UnitBasedAttribute);
-  }
-}(this, function(ApiClient, OfferPrice, UnitBasedAttribute) {
-  'use strict';
+/**
+ * The DurationPrice model module.
+ * @module model/DurationPrice
+ * @version 1.0.0
+ */
 
+import { OfferPrice } from "./OfferPrice";
+import { UnitBasedAttribute } from "./UnitBasedAttribute";
 
-
-
+/**
+ * Constructs a new <code>DurationPrice</code>.
+ * @alias module:model/DurationPrice
+ * @class
+ */
+export class DurationPrice {
   /**
-   * The DurationPrice model module.
-   * @module model/DurationPrice
-   * @version 1.0.0
+   * @member {module:model/OfferPrice} Price
    */
-
+  public Price?: OfferPrice;
   /**
-   * Constructs a new <code>DurationPrice</code>.
-   * @alias module:model/DurationPrice
-   * @class
+   * @member {module:model/UnitBasedAttribute} Duration
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-  };
+  public Duration?: UnitBasedAttribute;
 
   /**
    * Constructs a <code>DurationPrice</code> from a plain JavaScript object, optionally creating a new instance.
@@ -66,32 +52,17 @@
    * @param {module:model/DurationPrice} obj Optional instance to populate.
    * @return {module:model/DurationPrice} The populated <code>DurationPrice</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: DurationPrice) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new DurationPrice();
 
       if (data.hasOwnProperty('Price')) {
-        obj['Price'] = OfferPrice.constructFromObject(data['Price']);
+        obj.Price = OfferPrice.constructFromObject(data['Price']);
       }
       if (data.hasOwnProperty('Duration')) {
-        obj['Duration'] = UnitBasedAttribute.constructFromObject(data['Duration']);
+        obj.Duration = UnitBasedAttribute.constructFromObject(data['Duration']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/OfferPrice} Price
-   */
-  exports.prototype['Price'] = undefined;
-  /**
-   * @member {module:model/UnitBasedAttribute} Duration
-   */
-  exports.prototype['Duration'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
