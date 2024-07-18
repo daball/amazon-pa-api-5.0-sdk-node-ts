@@ -64,6 +64,7 @@ import { MultiValuedAttribute } from "./model/MultiValuedAttribute";
 import { OfferAvailability } from "./model/OfferAvailability";
 import { OfferCondition } from "./model/OfferCondition";
 import { OfferConditionNote } from "./model/OfferConditionNote";
+import { OfferDeliveryInfo } from "./model/OfferDeliveryInfo";
 import { OfferCount } from "./model/OfferCount";
 import { OfferPrice } from "./model/OfferPrice";
 import { OfferSavings } from "./model/OfferSavings";
