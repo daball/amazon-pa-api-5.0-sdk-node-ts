@@ -88,6 +88,7 @@ import { Rating } from "./model/Rating";
 import { Refinement } from "./model/Refinement";
 import { RefinementBin } from "./model/RefinementBin";
 import { RentalOfferListing } from "./model/RentalOfferListing";
+import { RentalOffers } from "./model/RentalOffers";
 import { SearchRefinements } from "./model/SearchRefinements";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute";

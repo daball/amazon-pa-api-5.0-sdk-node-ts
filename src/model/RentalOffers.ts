@@ -21,42 +21,25 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RentalOfferListing'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./RentalOfferListing'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.RentalOffers = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.RentalOfferListing);
-  }
-}(this, function(ApiClient, RentalOfferListing) {
-  'use strict';
+/**
+ * The RentalOffers model module.
+ * @module model/RentalOffers
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { RentalOfferListing } from "./RentalOfferListing";
 
-
-
+/**
+ * Constructs a new <code>RentalOffers</code>.
+ * @alias module:model/RentalOffers
+ * @class
+ */
+export class RentalOffers {
   /**
-   * The RentalOffers model module.
-   * @module model/RentalOffers
-   * @version 1.0.0
+   * @member {Array.<module:model/RentalOfferListing>} Listings
    */
-
-  /**
-   * Constructs a new <code>RentalOffers</code>.
-   * @alias module:model/RentalOffers
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
+  public Listings?: RentalOfferListing[];
 
   /**
    * Constructs a <code>RentalOffers</code> from a plain JavaScript object, optionally creating a new instance.
@@ -65,25 +48,14 @@
    * @param {module:model/RentalOffers} obj Optional instance to populate.
    * @return {module:model/RentalOffers} The populated <code>RentalOffers</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: RentalOffers) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new RentalOffers();
 
       if (data.hasOwnProperty('Listings')) {
-        obj['Listings'] = ApiClient.convertToType(data['Listings'], [RentalOfferListing]);
+        obj.Listings = ApiClient.convertToType(data['Listings'], [RentalOfferListing]);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:model/RentalOfferListing>} Listings
-   */
-  exports.prototype['Listings'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
