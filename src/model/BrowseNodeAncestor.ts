@@ -21,45 +21,36 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.BrowseNodeAncestor = factory(root.ProductAdvertisingAPIv1.ApiClient);
-  }
-}(this, function(ApiClient, BrowseNodeAncestor) {
-  'use strict';
+/**
+ * The BrowseNodeAncestor model module.
+ * @module model/BrowseNodeAncestor
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
 
-
-
+/**
+ * Constructs a new <code>BrowseNodeAncestor</code>.
+ * @alias module:model/BrowseNodeAncestor
+ * @class
+ */
+export class BrowseNodeAncestor {
   /**
-   * The BrowseNodeAncestor model module.
-   * @module model/BrowseNodeAncestor
-   * @version 1.0.0
+   * @member {module:model/BrowseNodeAncestor} Ancestor
    */
-
+  public Ancestor?: BrowseNodeAncestor;
   /**
-   * Constructs a new <code>BrowseNodeAncestor</code>.
-   * @alias module:model/BrowseNodeAncestor
-   * @class
+   * @member {String} ContextFreeName
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-  };
+  public ContextFreeName?: string;
+  /**
+   * @member {String} DisplayName
+   */
+  public DisplayName?: string;
+  /**
+   * @member {String} Id
+   */
+  public Id?: string;
 
   /**
    * Constructs a <code>BrowseNodeAncestor</code> from a plain JavaScript object, optionally creating a new instance.
@@ -68,46 +59,23 @@
    * @param {module:model/BrowseNodeAncestor} obj Optional instance to populate.
    * @return {module:model/BrowseNodeAncestor} The populated <code>BrowseNodeAncestor</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: BrowseNodeAncestor) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new BrowseNodeAncestor();
 
       if (data.hasOwnProperty('Ancestor')) {
-        obj['Ancestor'] = this.constructFromObject(data['Ancestor']);
+        obj.Ancestor = this.constructFromObject(data['Ancestor']);
       }
       if (data.hasOwnProperty('ContextFreeName')) {
-        obj['ContextFreeName'] = ApiClient.convertToType(data['ContextFreeName'], 'String');
+        obj.ContextFreeName = ApiClient.convertToType(data['ContextFreeName'], 'String');
       }
       if (data.hasOwnProperty('DisplayName')) {
-        obj['DisplayName'] = ApiClient.convertToType(data['DisplayName'], 'String');
+        obj.DisplayName = ApiClient.convertToType(data['DisplayName'], 'String');
       }
       if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+        obj.Id = ApiClient.convertToType(data['Id'], 'String');
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/BrowseNodeAncestor} Ancestor
-   */
-  exports.prototype['Ancestor'] = undefined;
-  /**
-   * @member {String} ContextFreeName
-   */
-  exports.prototype['ContextFreeName'] = undefined;
-  /**
-   * @member {String} DisplayName
-   */
-  exports.prototype['DisplayName'] = undefined;
-  /**
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
