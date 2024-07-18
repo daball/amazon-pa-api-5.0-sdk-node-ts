@@ -51,6 +51,7 @@ import { GetItemsResource } from "./model/GetItemsResource";
 import { ImageSize } from "./model/ImageSize";
 import { ImageType } from "./model/ImageType";
 import { Images } from "./model/Images";
+import { Item } from "./model/Item";
 import { ItemIdType } from "./model/ItemIdType";
 import { ItemInfo } from "./model/ItemInfo";
 import { Languages } from "./model/Languages";

@@ -21,52 +21,71 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BrowseNodeInfo', 'model/CustomerReviews', 'model/Images', 'model/ItemInfo', 'model/Offers', 'model/RentalOffers', 'model/VariationAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BrowseNodeInfo'), require('./CustomerReviews'), require('./Images'), require('./ItemInfo'), require('./Offers'), require('./RentalOffers'), require('./VariationAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.Item = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.BrowseNodeInfo, root.ProductAdvertisingAPIv1.CustomerReviews, root.ProductAdvertisingAPIv1.Images, root.ProductAdvertisingAPIv1.ItemInfo, root.ProductAdvertisingAPIv1.Offers, root.ProductAdvertisingAPIv1.RentalOffers, root.ProductAdvertisingAPIv1.VariationAttribute);
-  }
-}(this, function(ApiClient, BrowseNodeInfo, CustomerReviews, Images, ItemInfo, Offers, RentalOffers, VariationAttribute) {
-  'use strict';
+/**
+ * The Item model module.
+ * @module model/Item
+ * @version 1.0.0
+ */
 
+import { ApiClient } from "../ApiClient";
+import { BrowseNodeInfo } from "./BrowseNodeInfo";
+import { CustomerReviews } from "./CustomerReviews";
+import { Images } from "./Images";
+import { ItemInfo } from "./ItemInfo";
+import { Offers } from "./Offers";
+import { RentalOffers } from "./RentalOffers";
+import { VariationAttribute } from "./VariationAttribute";
 
-
-
+/**
+ * Constructs a new <code>Item</code>.
+ * @alias module:model/Item
+ * @class
+ */
+export class Item {
   /**
-   * The Item model module.
-   * @module model/Item
-   * @version 1.0.0
+   * @member {String} ASIN
    */
-
+  public ASIN?: string;
   /**
-   * Constructs a new <code>Item</code>.
-   * @alias module:model/Item
-   * @class
+   * @member {module:model/BrowseNodeInfo} BrowseNodeInfo
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-
-
-
-
-
-
-  };
+  public BrowseNodeInfo?: BrowseNodeInfo;
+  /**
+   * @member {module:model/CustomerReviews} CustomerReviews
+   */
+  public CustomerReviews?: CustomerReviews;
+  /**
+   * @member {String} DetailPageURL
+   */
+  public DetailPageURL?: string;
+  /**
+   * @member {module:model/Images} Images
+   */
+  public Images?: Images;
+  /**
+   * @member {module:model/ItemInfo} ItemInfo
+   */
+  public ItemInfo?: ItemInfo;
+  /**
+   * @member {module:model/Offers} Offers
+   */
+  public Offers?: Offers;
+  /**
+   * @member {String} ParentASIN
+   */
+  public ParentASIN?: string;
+  /**
+   * @member {module:model/RentalOffers} RentalOffers
+   */
+  public RentalOffers?: RentalOffers;
+  /**
+   * @member {Number} Score
+   */
+  public Score?: number;
+  /**
+   * @member {Array.<module:model/VariationAttribute>} VariationAttributes
+   */
+  public VariationAttributes?: VariationAttribute[];
 
   /**
    * Constructs a <code>Item</code> from a plain JavaScript object, optionally creating a new instance.
@@ -75,9 +94,9 @@
    * @param {module:model/Item} obj Optional instance to populate.
    * @return {module:model/Item} The populated <code>Item</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: Item) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new Item();
 
       if (data.hasOwnProperty('ASIN')) {
         obj['ASIN'] = ApiClient.convertToType(data['ASIN'], 'String');
@@ -115,55 +134,4 @@
     }
     return obj;
   }
-
-  /**
-   * @member {String} ASIN
-   */
-  exports.prototype['ASIN'] = undefined;
-  /**
-   * @member {module:model/BrowseNodeInfo} BrowseNodeInfo
-   */
-  exports.prototype['BrowseNodeInfo'] = undefined;
-  /**
-   * @member {module:model/CustomerReviews} CustomerReviews
-   */
-  exports.prototype['CustomerReviews'] = undefined;
-  /**
-   * @member {String} DetailPageURL
-   */
-  exports.prototype['DetailPageURL'] = undefined;
-  /**
-   * @member {module:model/Images} Images
-   */
-  exports.prototype['Images'] = undefined;
-  /**
-   * @member {module:model/ItemInfo} ItemInfo
-   */
-  exports.prototype['ItemInfo'] = undefined;
-  /**
-   * @member {module:model/Offers} Offers
-   */
-  exports.prototype['Offers'] = undefined;
-  /**
-   * @member {String} ParentASIN
-   */
-  exports.prototype['ParentASIN'] = undefined;
-  /**
-   * @member {module:model/RentalOffers} RentalOffers
-   */
-  exports.prototype['RentalOffers'] = undefined;
-  /**
-   * @member {Number} Score
-   */
-  exports.prototype['Score'] = undefined;
-  /**
-   * @member {Array.<module:model/VariationAttribute>} VariationAttributes
-   */
-  exports.prototype['VariationAttributes'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};
