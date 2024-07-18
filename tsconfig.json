@@ -6,6 +6,8 @@
       "removeComments": false,
       "sourceMap": true,
       "target": "ESNext",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
       "outDir": "dist"
     },
     "include": [
