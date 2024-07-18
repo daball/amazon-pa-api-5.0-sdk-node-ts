@@ -63,6 +63,7 @@ import { OfferSavings } from "./model/OfferSavings";
 import { PartnerType } from "./model/PartnerType";
 import { Price } from "./model/Price";
 import { PriceType } from "./model/PriceType";
+import { ProductInfo } from "./model/ProductInfo";
 import { Properties } from "./model/Properties";
 import { Rating } from "./model/Rating";
 import { Refinement } from "./model/Refinement";

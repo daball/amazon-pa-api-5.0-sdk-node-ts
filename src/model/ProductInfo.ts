@@ -21,47 +21,47 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DimensionBasedAttribute', 'model/SingleBooleanValuedAttribute', 'model/SingleIntegerValuedAttribute', 'model/SingleStringValuedAttribute'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DimensionBasedAttribute'), require('./SingleBooleanValuedAttribute'), require('./SingleIntegerValuedAttribute'), require('./SingleStringValuedAttribute'));
-  } else {
-    // Browser globals (root is window)
-    if (!root.ProductAdvertisingAPIv1) {
-      root.ProductAdvertisingAPIv1 = {};
-    }
-    root.ProductAdvertisingAPIv1.ProductInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.DimensionBasedAttribute, root.ProductAdvertisingAPIv1.SingleBooleanValuedAttribute, root.ProductAdvertisingAPIv1.SingleIntegerValuedAttribute, root.ProductAdvertisingAPIv1.SingleStringValuedAttribute);
-  }
-}(this, function(ApiClient, DimensionBasedAttribute, SingleBooleanValuedAttribute, SingleIntegerValuedAttribute, SingleStringValuedAttribute) {
-  'use strict';
+/**
+ * The ProductInfo model module.
+ * @module model/ProductInfo
+ * @version 1.0.0
+ */
 
+import { DimensionBasedAttribute } from "./DimensionBasedAttribute";
+import { SingleBooleanValuedAttribute } from "./SingleBooleanValuedAttribute";
+import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute";
 
-
-
+/**
+ * Constructs a new <code>ProductInfo</code>.
+ * @alias module:model/ProductInfo
+ * @class
+ */
+export class ProductInfo {
   /**
-   * The ProductInfo model module.
-   * @module model/ProductInfo
-   * @version 1.0.0
+   * @member {module:model/SingleStringValuedAttribute} Color
    */
-
+  public Color?: SingleStringValuedAttribute
   /**
-   * Constructs a new <code>ProductInfo</code>.
-   * @alias module:model/ProductInfo
-   * @class
+   * @member {module:model/SingleBooleanValuedAttribute} IsAdultProduct
    */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-
-
-
-  };
+  public IsAdultProduct?: SingleBooleanValuedAttribute;
+  /**
+   * @member {module:model/DimensionBasedAttribute} ItemDimensions
+   */
+  public ItemDimensions?: DimensionBasedAttribute;
+  /**
+   * @member {module:model/SingleStringValuedAttribute} ReleaseDate
+   */
+  public ReleaseDate?: SingleStringValuedAttribute;
+  /**
+   * @member {module:model/SingleStringValuedAttribute} Size
+   */
+  public Size?: SingleStringValuedAttribute;
+  /**
+   * @member {module:model/SingleIntegerValuedAttribute} UnitCount
+   */
+  public UnitCount?: SingleIntegerValuedAttribute
 
   /**
    * Constructs a <code>ProductInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -70,60 +70,29 @@
    * @param {module:model/ProductInfo} obj Optional instance to populate.
    * @return {module:model/ProductInfo} The populated <code>ProductInfo</code> instance.
    */
-  exports.constructFromObject = function(data, obj) {
+  public static constructFromObject(data: any, obj?: ProductInfo) {
     if (data) {
-      obj = obj || new exports();
+      obj = obj || new ProductInfo();
 
       if (data.hasOwnProperty('Color')) {
-        obj['Color'] = SingleStringValuedAttribute.constructFromObject(data['Color']);
+        obj.Color = SingleStringValuedAttribute.constructFromObject(data['Color']);
       }
       if (data.hasOwnProperty('IsAdultProduct')) {
-        obj['IsAdultProduct'] = SingleBooleanValuedAttribute.constructFromObject(data['IsAdultProduct']);
+        obj.IsAdultProduct = SingleBooleanValuedAttribute.constructFromObject(data['IsAdultProduct']);
       }
       if (data.hasOwnProperty('ItemDimensions')) {
-        obj['ItemDimensions'] = DimensionBasedAttribute.constructFromObject(data['ItemDimensions']);
+        obj.ItemDimensions = DimensionBasedAttribute.constructFromObject(data['ItemDimensions']);
       }
       if (data.hasOwnProperty('ReleaseDate')) {
-        obj['ReleaseDate'] = SingleStringValuedAttribute.constructFromObject(data['ReleaseDate']);
+        obj.ReleaseDate = SingleStringValuedAttribute.constructFromObject(data['ReleaseDate']);
       }
       if (data.hasOwnProperty('Size')) {
-        obj['Size'] = SingleStringValuedAttribute.constructFromObject(data['Size']);
+        obj.Size = SingleStringValuedAttribute.constructFromObject(data['Size']);
       }
       if (data.hasOwnProperty('UnitCount')) {
-        obj['UnitCount'] = SingleIntegerValuedAttribute.constructFromObject(data['UnitCount']);
+        obj.UnitCount = SingleIntegerValuedAttribute.constructFromObject(data['UnitCount']);
       }
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Color
-   */
-  exports.prototype['Color'] = undefined;
-  /**
-   * @member {module:model/SingleBooleanValuedAttribute} IsAdultProduct
-   */
-  exports.prototype['IsAdultProduct'] = undefined;
-  /**
-   * @member {module:model/DimensionBasedAttribute} ItemDimensions
-   */
-  exports.prototype['ItemDimensions'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} ReleaseDate
-   */
-  exports.prototype['ReleaseDate'] = undefined;
-  /**
-   * @member {module:model/SingleStringValuedAttribute} Size
-   */
-  exports.prototype['Size'] = undefined;
-  /**
-   * @member {module:model/SingleIntegerValuedAttribute} UnitCount
-   */
-  exports.prototype['UnitCount'] = undefined;
-
-
-
-  return exports;
-}));
-
-
+};

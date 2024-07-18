@@ -55,7 +55,7 @@ export class SingleBooleanValuedAttribute {
    * @param {module:model/SingleBooleanValuedAttribute} obj Optional instance to populate.
    * @return {module:model/SingleBooleanValuedAttribute} The populated <code>SingleBooleanValuedAttribute</code> instance.
    */
-  public constructFromObject(data: any, obj?: SingleBooleanValuedAttribute) {
+  public static constructFromObject(data: any, obj?: SingleBooleanValuedAttribute) {
     if (data) {
       obj = obj || new SingleBooleanValuedAttribute();
 
