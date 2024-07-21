@@ -329,10 +329,11 @@ export const SearchItemsResourceValues = {
   "SearchRefinements": "SearchRefinements"
 };
 
-export class SearchItemsResource {
+export class SearchItemsResource extends String {
   [key: string]: any;
   
   public constructor() {
+    super();
     const self = this;
     Object.keys(SearchItemsResourceValues).forEach((key: string) => self[key] = SearchItemsResourceValues[key]);
   }
@@ -342,5 +343,5 @@ export class SearchItemsResource {
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/SearchItemsResource} The enum <code>SearchItemsResource</code> value.
    */
-  public static constructFromObject(object: any) { return object; }
+  public static constructFromObject(object: string|SearchItemsResource|typeof SearchItemsResourceValues) { return object; }
 };
