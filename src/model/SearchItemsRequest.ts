@@ -33,7 +33,7 @@ import { MinSavingPercent } from "./MinSavingPercent";
 import { OfferCount } from "./OfferCount";
 import { PartnerType } from "./PartnerType";
 import { Properties } from "./Properties";
-import { SearchItemsResource } from "./SearchItemsResource";
+import { SearchItemsResource, SearchItemsResourceValues } from "./SearchItemsResource";
 import { SortBy } from "./SortBy";
 
 /**
@@ -145,7 +145,7 @@ export class SearchItemsRequest {
   /**
    * @member {Array.<module:model/SearchItemsResource>} Resources
    */
-  public Resources?: SearchItemsResource[];
+  public Resources?: SearchItemsResource[]|(typeof SearchItemsResourceValues)[]|string[];
   /**
    * @member {String} SearchIndex
    */
