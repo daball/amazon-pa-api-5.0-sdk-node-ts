@@ -73,6 +73,11 @@ export const SearchItemsResourceValues = {
    */
   "Images.Primary.Large": "Images.Primary.Large",
   /**
+   * value: "Images.Primary.HighRes"
+   * @const
+   */
+  "Images.Primary.HighRes": "Images.Primary.HighRes",
+  /**
    * value: "Images.Variants.Small"
    * @const
    */
@@ -87,6 +92,11 @@ export const SearchItemsResourceValues = {
    * @const
    */
   "Images.Variants.Large": "Images.Variants.Large",
+  /**
+   * value: "Images.Variants.HighRes"
+   * @const
+   */
+  "Images.Variants.HighRes": "Images.Variants.HighRes",
   /**
    * value: "ItemInfo.ByLineInfo"
    * @const
