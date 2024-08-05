@@ -43,7 +43,7 @@ export class Images {
   /**
    * @member {Array.<module:model/ImageType>} Variants
    */
-  public Variants?: ImageType;
+  public Variants?: ImageType[];
 
   /**
    * Constructs a <code>Images</code> from a plain JavaScript object, optionally creating a new instance.

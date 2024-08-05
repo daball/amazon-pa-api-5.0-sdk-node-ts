@@ -1,6 +1,6 @@
 {   // Copied from https://github.com/withastro/astro/blob/main/packages/astro/tsconfigs/strict.json
     "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "./base.json",
+    "extends": "./tsconfig.base.json",
     "compilerOptions": {
       // Enable strict mode. This enables a few options at a time, see https://www.typescriptlang.org/tsconfig#strict for a list.
       "strict": true

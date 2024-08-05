@@ -1,10 +1,11 @@
 {
   "name": "amazon-pa-api5-node-ts",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "ProductAdvertisingAPI 5.0 NodeJS SDK rewritten in TypeScript.",
   "license": "Apache-2.0",
   "main": "dist/src/index",
   "types": "dist/src/index",
+  "type": "module",
   "scripts": {
     "clean": "rimraf dist",
     "build": "tsc",
