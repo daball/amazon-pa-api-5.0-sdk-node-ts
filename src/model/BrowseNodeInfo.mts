@@ -40,7 +40,7 @@ export class BrowseNodeInfo {
   /**
    * @member {Array.<module:model/BrowseNode>} BrowseNodes
    */
-  public BrowseNodes?: BrowseNode;
+  public BrowseNodes?: BrowseNode[];
   /**
    * @member {module:model/WebsiteSalesRank} WebsiteSalesRank
    */
