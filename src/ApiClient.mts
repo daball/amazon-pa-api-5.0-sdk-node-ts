@@ -68,6 +68,11 @@
     */
    MULTI = 'multi',
  };
+
+ export interface ApiResponse<T> {
+  data: T;
+  response: any;
+ }
  
  /**
   * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -344,9 +349,9 @@
     * constructor for a complex type.
     * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
     */
-   public callApi(path: string, httpMethod: string, apiName: string, pathParams: Record<string, string>,
+   public callApi<T>(path: string, httpMethod: string, apiName: string, pathParams: Record<string, string>,
        queryParams: Record<string, any>, collectionQueryParams: Record<string, any>, headerParams: Record<string, any>, formParams: Record<string, any>, bodyParam: any, authNames: string[], contentTypes: string[], accepts: string[],
-       returnType: string|string[]|any|any[]) {
+       returnType: string|string[]|any|any[]): Promise<ApiResponse<T>> {
  
      // Throw error if credentials are not specified
      if (this.accessKey === undefined || this.secretKey === undefined || this.accessKey === null || this.secretKey === null) {
@@ -454,13 +459,13 @@
        this.agent.attachCookies(request);
      }
  
-     return new Promise(function(resolve, reject) {
+     return new Promise<ApiResponse<T>>(function(resolve, reject) {
        request.end(function(error, response) {
          if (error) {
            reject(error);
          } else {
            try {
-             var data = self.deserialize(response, returnType);
+             var data = self.deserialize(response, returnType) as T;
              if (self.enableCookies && typeof window === 'undefined'){
                self.agent.saveCookies(response);
              }

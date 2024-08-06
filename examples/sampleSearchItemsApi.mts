@@ -21,7 +21,7 @@
  * https://webservices.amazon.com/paapi5/documentation/search-items.html
  */
 
-var ProductAdvertisingAPIv1 = require('./src/index');
+import * as ProductAdvertisingAPIv1 from '../src/index.mjs';
 
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
@@ -66,11 +66,11 @@ searchItemsRequest['Resources'] = ['Images.Primary.Medium', 'ItemInfo.Title', 'O
 
 function onSuccess(data) {
   console.log('API called successfully.');
-  var searchItemsResponse = ProductAdvertisingAPIv1.SearchItemsResponse.constructFromObject(data);
+  var searchItemsResponse = ProductAdvertisingAPIv1.SearchItemsResponse.constructFromObject(data)!;
   console.log('Complete Response: \n' + JSON.stringify(searchItemsResponse, null, 1));
   if (searchItemsResponse['SearchResult'] !== undefined) {
     console.log('Printing First Item Information in SearchResult:');
-    var item_0 = searchItemsResponse['SearchResult']['Items'][0];
+    var item_0 = searchItemsResponse['SearchResult']['Items']![0];
     if (item_0 !== undefined) {
       if (item_0['ASIN'] !== undefined) {
         console.log('ASIN: ' + item_0['ASIN']);

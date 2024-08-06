@@ -63,7 +63,7 @@ export class GetBrowseNodesRequest {
   /**
    * @member {Array.<module:model/GetBrowseNodesResource>} Resources
    */
-  public Resources?: GetBrowseNodesResource;
+  public Resources?: GetBrowseNodesResource[];
 
   // not sure if this is ever going to be relevant:
   // public constructor(browseNodeIds, partnerTag, partnerType) {

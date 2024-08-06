@@ -21,7 +21,7 @@
  * https://webservices.amazon.com/paapi5/documentation/get-items.html
  */
 
-var ProductAdvertisingAPIv1 = require('./src/index');
+import * as ProductAdvertisingAPIv1 from '../src/index.mjs';
 
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
@@ -72,7 +72,7 @@ function parseResponse(itemsResponseList) {
 
 function onSuccess(data) {
   console.log('API called successfully.');
-  var getItemsResponse = ProductAdvertisingAPIv1.GetItemsResponse.constructFromObject(data);
+  var getItemsResponse = ProductAdvertisingAPIv1.GetItemsResponse.constructFromObject(data)!;
   console.log('Complete Response: \n' + JSON.stringify(getItemsResponse, null, 1));
   if (getItemsResponse['ItemsResult'] !== undefined) {
     console.log('Printing All Item Information in ItemsResult:');

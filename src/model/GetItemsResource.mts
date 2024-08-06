@@ -330,12 +330,9 @@ export const GetItemsResourceValues = {
  * @enum {}
  * @readonly
  */
-export class GetItemsResource {
-  [key: string]: any;
-  
-  public constructor() {
-    const self = this;
-    Object.keys(GetItemsResourceValues).forEach((key: string) => self[key] = GetItemsResource[key]);
+export class GetItemsResource extends String {
+  public constructor(s: string) {
+    super(GetItemsResourceValues[s]);
   }
   
   /**

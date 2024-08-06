@@ -26,17 +26,17 @@
  * @enum {}
  * @readonly
  */
-export const enum GetBrowseNodesResourceValues {
+export const GetBrowseNodesResourceValues = {
   /**
    * value: "BrowseNodes.Ancestor"
    * @const
    */
-  Ancestor = "BrowseNodes.Ancestor",
+  "BrowseNodes.Ancestor": "BrowseNodes.Ancestor",
   /**
    * value: "BrowseNodes.Children"
    * @const
    */
-  Children = "BrowseNodes.Children"
+  "BrowseNodes.Children": "BrowseNodes.Children",
 };
 
 /**
@@ -45,20 +45,14 @@ export const enum GetBrowseNodesResourceValues {
  * @readonly
  */
 export class GetBrowseNodesResource extends String {
-  /**
-   * value: "BrowseNodes.Ancestor"
-   * @const
-   */
-  public static get Ancestor() { return GetBrowseNodesResourceValues.Ancestor; }
-  /**
-   * value: "BrowseNodes.Children"
-   * @const
-   */
-  public static get Children() { return GetBrowseNodesResourceValues.Children; }
+  public constructor(s: string) {
+    super(GetBrowseNodesResourceValues[s]);
+  }
+
   /**
    * Returns a <code>GetBrowseNodesResource</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
    * @return {module:model/GetBrowseNodesResource} The enum <code>GetBrowseNodesResource</code> value.
    */
-  public static constructFromObject(object: GetBrowseNodesResource|GetBrowseNodesResourceValues|string) { return object; }
+  public static constructFromObject(object: GetBrowseNodesResource|string) { return object; }
 };

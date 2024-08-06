@@ -26,7 +26,7 @@
  * @enum {}
  * @readonly
  */
-export const GetVariationsResourceValues = {
+export const GetVariationsResourceValues: Record<string, string> = {
   /**
    * value: "BrowseNodeInfo.BrowseNodes"
    * @const
@@ -336,7 +336,7 @@ export const GetVariationsResourceValues = {
    * value: "VariationSummary.VariationDimension"
    * @const
    */
-  "VariationSummary.VariationDimension": "VariationSummary.VariationDimension"
+  "VariationSummary.VariationDimension": "VariationSummary.VariationDimension",
 };
 
 /**
@@ -344,12 +344,9 @@ export const GetVariationsResourceValues = {
  * @enum {}
  * @readonly
  */
-export class GetVariationsResource {
-  [key: string]: any;
-  
-  public constructor() {
-    const self = this;
-    Object.keys(GetVariationsResourceValues).forEach((key: string) => self[key] = GetVariationsResourceValues[key]);
+export class GetVariationsResource extends String {  
+  public constructor(s: string) {
+    super(GetVariationsResourceValues[s]);
   }
 
   /**

@@ -21,7 +21,7 @@
  * https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html
  */
 
-var ProductAdvertisingAPIv1 = require('./src/index');
+import * as ProductAdvertisingAPIv1 from '../src/index.mjs';
 
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
@@ -77,7 +77,7 @@ function parseResponse(browseNodesResponseList) {
 
 function onSuccess(data) {
   console.log('API called successfully.');
-  var getBrowseNodesResponse = ProductAdvertisingAPIv1.GetBrowseNodesResponse.constructFromObject(data);
+  var getBrowseNodesResponse = ProductAdvertisingAPIv1.GetBrowseNodesResponse.constructFromObject(data)!;
   console.log('Complete Response: \n' + JSON.stringify(getBrowseNodesResponse, null, 1));
   if (getBrowseNodesResponse['BrowseNodesResult'] !== undefined) {
     console.log('Printing all browse node information in BrowseNodesResult:');

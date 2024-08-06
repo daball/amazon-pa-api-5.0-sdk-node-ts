@@ -21,7 +21,7 @@
  * https://webservices.amazon.com/paapi5/documentation/get-variations.html
  */
 
-var ProductAdvertisingAPIv1 = require('./src/index');
+import * as ProductAdvertisingAPIv1 from '../src/index.mjs';
 
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
@@ -62,7 +62,7 @@ getVariationsRequest['Resources'] = [
 
 function onSuccess(data) {
   console.log('API called successfully.');
-  var getVariationsResponse = ProductAdvertisingAPIv1.GetVariationsResponse.constructFromObject(data);
+  var getVariationsResponse = ProductAdvertisingAPIv1.GetVariationsResponse.constructFromObject(data)!;
   console.log('Complete Response: \n' + JSON.stringify(getVariationsResponse, null, 1));
   if (getVariationsResponse['VariationsResult'] !== undefined) {
     //console.log('Complete VariationsResult: \n' + JSON.stringify(getVariationsResponse['VariationsResult'], null, 1));
@@ -74,7 +74,7 @@ function onSuccess(data) {
       console.log('VariationCount: ' + getVariationsResponse['VariationsResult']['VariationSummary']['VariationCount']);
     }
     console.log('Printing First Item Information in VariationsResult:');
-    var item_0 = getVariationsResponse['VariationsResult']['Items'][0];
+    var item_0 = getVariationsResponse['VariationsResult']['Items']![0];
     if (item_0 !== undefined) {
       if (item_0['ASIN'] !== undefined) {
         console.log('ASIN: ' + item_0['ASIN']);

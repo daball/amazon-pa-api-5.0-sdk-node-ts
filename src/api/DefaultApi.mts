@@ -21,7 +21,8 @@
  *
  */
 
- import { ApiClient } from "../ApiClient.mjs";
+ import { ApiClient, type ApiResponse } from "../ApiClient.mjs";
+import type { GetItemsResource } from "../index.mjs";
  import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest.mjs";
  import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse.mjs";
  import { GetItemsRequest } from "../model/GetItemsRequest.mjs";
@@ -55,7 +56,7 @@
     * @param {module:model/GetBrowseNodesRequest} getBrowseNodesRequest GetBrowseNodesRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBrowseNodesResponse} and HTTP response
     */
-   public getBrowseNodesWithHttpInfo(getBrowseNodesRequest: GetBrowseNodesRequest) {
+   public getBrowseNodesWithHttpInfo(getBrowseNodesRequest: GetBrowseNodesRequest): Promise<ApiResponse<GetBrowseNodesResponse>> {
      var postBody = getBrowseNodesRequest;
  
      // verify the required parameter 'getBrowseNodesRequest' is set
@@ -91,11 +92,9 @@
     * @param {module:model/GetBrowseNodesRequest} getBrowseNodesRequest GetBrowseNodesRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBrowseNodesResponse}
     */
-   public getBrowseNodes(getBrowseNodesRequest: GetBrowseNodesRequest) {
+   public getBrowseNodes(getBrowseNodesRequest: GetBrowseNodesRequest): Promise<GetBrowseNodesResponse> {
      return this.getBrowseNodesWithHttpInfo(getBrowseNodesRequest)
-       .then(function(response_and_data: any) {
-         return response_and_data.data;
-       });
+       .then((response_and_data: ApiResponse<GetBrowseNodesResponse>) => response_and_data.data);
    }
  
  
@@ -103,7 +102,7 @@
     * @param {module:model/GetItemsRequest} getItemsRequest GetItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetItemsResponse} and HTTP response
     */
-   public getItemsWithHttpInfo(getItemsRequest: GetItemsRequest) {
+   public getItemsWithHttpInfo(getItemsRequest: GetItemsRequest): Promise<ApiResponse<GetItemsResponse>> {
      var postBody = getItemsRequest;
  
      // verify the required parameter 'getItemsRequest' is set
@@ -139,11 +138,9 @@
     * @param {module:model/GetItemsRequest} getItemsRequest GetItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetItemsResponse}
     */
-   public getItems(getItemsRequest: GetItemsRequest) {
+   public getItems(getItemsRequest: GetItemsRequest): Promise<GetItemsResponse> {
      return this.getItemsWithHttpInfo(getItemsRequest)
-       .then(function(response_and_data: any) {
-         return response_and_data.data;
-       });
+       .then((response_and_data: ApiResponse<GetItemsResponse>) => response_and_data.data);
    }
  
  
@@ -151,7 +148,7 @@
     * @param {module:model/GetVariationsRequest} getVariationsRequest GetVariationsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetVariationsResponse} and HTTP response
     */
-   public getVariationsWithHttpInfo(getVariationsRequest: GetVariationsRequest) {
+   public getVariationsWithHttpInfo(getVariationsRequest: GetVariationsRequest): Promise<ApiResponse<GetVariationsResponse>> {
      var postBody = getVariationsRequest;
  
      // verify the required parameter 'getVariationsRequest' is set
@@ -187,11 +184,9 @@
     * @param {module:model/GetVariationsRequest} getVariationsRequest GetVariationsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetVariationsResponse}
     */
-   public getVariations(getVariationsRequest: GetVariationsRequest) {
+   public getVariations(getVariationsRequest: GetVariationsRequest): Promise<GetVariationsResponse> {
      return this.getVariationsWithHttpInfo(getVariationsRequest)
-       .then(function(response_and_data: any) {
-         return response_and_data.data;
-       });
+       .then((response_and_data: ApiResponse<GetVariationsResponse>) => response_and_data.data);
    }
  
  
@@ -199,7 +194,7 @@
     * @param {module:model/SearchItemsRequest} searchItemsRequest SearchItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchItemsResponse} and HTTP response
     */
-   public searchItemsWithHttpInfo(searchItemsRequest: SearchItemsRequest) {
+   public searchItemsWithHttpInfo(searchItemsRequest: SearchItemsRequest): Promise<ApiResponse<SearchItemsResponse>> {
      var postBody = searchItemsRequest;
  
      // verify the required parameter 'searchItemsRequest' is set
@@ -235,11 +230,9 @@
     * @param {module:model/SearchItemsRequest} searchItemsRequest SearchItemsRequest
     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchItemsResponse}
     */
-   public searchItems(searchItemsRequest: SearchItemsRequest) {
+   public searchItems(searchItemsRequest: SearchItemsRequest): Promise<SearchItemsResponse> {
      return this.searchItemsWithHttpInfo(searchItemsRequest)
-       .then(function(response_and_data: any) {
-         return response_and_data.data;
-       });
+       .then((response_and_data: ApiResponse<SearchItemsResponse>) => response_and_data.data);
    }
  };
  
