@@ -82,7 +82,7 @@ export class OfferListing {
   /**
    * @member {Array.<module:model/OfferPromotion>} Promotions
    */
-  public Promotions?: OfferPromotion
+  public Promotions?: OfferPromotion[]
   /**
    * @member {module:model/OfferPrice} SavingBasis
    */
