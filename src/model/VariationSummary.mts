@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Price } from "./Price.mts";
-import { VariationDimension } from "./VariationDimension.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Price } from "./Price.mjs";
+import { VariationDimension } from "./VariationDimension.mjs";
 
 /**
  * Constructs a new <code>VariationSummary</code>.

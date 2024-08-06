@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { LanguageType } from "./LanguageType.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { LanguageType } from "./LanguageType.mjs";
 
 /**
  * Constructs a new <code>Languages</code>.

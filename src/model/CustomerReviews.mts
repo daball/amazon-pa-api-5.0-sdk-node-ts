@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Rating } from "./Rating.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Rating } from "./Rating.mjs";
 
 /**
  * Constructs a new <code>CustomerReviews</code>.

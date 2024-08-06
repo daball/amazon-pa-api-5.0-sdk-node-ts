@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { Languages } from "./Languages.mts";
-import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute.mts";
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
+import { Languages } from "./Languages.mjs";
+import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute.mjs";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
 
 /**
  * Constructs a new <code>ContentInfo</code>.

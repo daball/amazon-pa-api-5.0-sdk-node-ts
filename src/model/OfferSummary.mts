@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { OfferCondition } from "./OfferCondition.mts";
-import { OfferPrice } from "./OfferPrice.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { OfferCondition } from "./OfferCondition.mjs";
+import { OfferPrice } from "./OfferPrice.mjs";
 
 /**
  * Constructs a new <code>OfferSummary</code>.

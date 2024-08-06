@@ -21,20 +21,20 @@
  *
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Availability } from "./Availability.mts";
-import { Condition } from "./Condition.mts";
-import { DeliveryFlag } from "./DeliveryFlag.mts";
-import { MaxPrice } from "./MaxPrice.mts";
-import { Merchant } from "./Merchant.mts";
-import { MinPrice } from "./MinPrice.mts";
-import { MinReviewsRating } from "./MinReviewsRating.mts";
-import { MinSavingPercent } from "./MinSavingPercent.mts";
-import { OfferCount } from "./OfferCount.mts";
-import { PartnerType } from "./PartnerType.mts";
-import { Properties } from "./Properties.mts";
-import { SearchItemsResource, SearchItemsResourceValues } from "./SearchItemsResource.mts";
-import { SortBy } from "./SortBy.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Availability } from "./Availability.mjs";
+import { Condition } from "./Condition.mjs";
+import { DeliveryFlag } from "./DeliveryFlag.mjs";
+import { MaxPrice } from "./MaxPrice.mjs";
+import { Merchant } from "./Merchant.mjs";
+import { MinPrice } from "./MinPrice.mjs";
+import { MinReviewsRating } from "./MinReviewsRating.mjs";
+import { MinSavingPercent } from "./MinSavingPercent.mjs";
+import { OfferCount } from "./OfferCount.mjs";
+import { PartnerType } from "./PartnerType.mjs";
+import { Properties } from "./Properties.mjs";
+import { SearchItemsResource, SearchItemsResourceValues } from "./SearchItemsResource.mjs";
+import { SortBy } from "./SortBy.mjs";
 
 /**
  * The SearchItemsRequest model module.

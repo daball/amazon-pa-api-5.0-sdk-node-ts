@@ -21,15 +21,15 @@
  *
  */
 
- import { ApiClient } from "../ApiClient.mts";
- import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest.mts";
- import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse.mts";
- import { GetItemsRequest } from "../model/GetItemsRequest.mts";
- import { GetItemsResponse } from "../model/GetItemsResponse.mts";
- import { GetVariationsRequest } from "../model/GetVariationsRequest.mts";
- import { GetVariationsResponse } from "../model/GetVariationsResponse.mts";
- import { SearchItemsRequest } from "../model/SearchItemsRequest.mts";
- import { SearchItemsResponse } from "../model/SearchItemsResponse.mts";
+ import { ApiClient } from "../ApiClient.mjs";
+ import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest.mjs";
+ import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse.mjs";
+ import { GetItemsRequest } from "../model/GetItemsRequest.mjs";
+ import { GetItemsResponse } from "../model/GetItemsResponse.mjs";
+ import { GetVariationsRequest } from "../model/GetVariationsRequest.mjs";
+ import { GetVariationsResponse } from "../model/GetVariationsResponse.mjs";
+ import { SearchItemsRequest } from "../model/SearchItemsRequest.mjs";
+ import { SearchItemsResponse } from "../model/SearchItemsResponse.mjs";
  
  /**
   * Default service.

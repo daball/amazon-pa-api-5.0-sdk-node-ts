@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { BrowseNode } from "./BrowseNode.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { BrowseNode } from "./BrowseNode.mjs";
 
 /**
  * Constructs a new <code>BrowseNodesResult</code>.

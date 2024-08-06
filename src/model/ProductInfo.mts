@@ -27,10 +27,10 @@
  * @version 1.0.0
  */
 
-import { DimensionBasedAttribute } from "./DimensionBasedAttribute.mts";
-import { SingleBooleanValuedAttribute } from "./SingleBooleanValuedAttribute.mts";
-import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute.mts";
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
+import { DimensionBasedAttribute } from "./DimensionBasedAttribute.mjs";
+import { SingleBooleanValuedAttribute } from "./SingleBooleanValuedAttribute.mjs";
+import { SingleIntegerValuedAttribute } from "./SingleIntegerValuedAttribute.mjs";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
 
 /**
  * Constructs a new <code>ProductInfo</code>.

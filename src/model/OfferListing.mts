@@ -27,15 +27,15 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { OfferAvailability } from "./OfferAvailability.mts";
-import { OfferCondition } from "./OfferCondition.mts";
-import { OfferDeliveryInfo } from "./OfferDeliveryInfo.mts";
-import { OfferLoyaltyPoints } from "./OfferLoyaltyPoints.mts";
-import { OfferMerchantInfo } from "./OfferMerchantInfo.mts";
-import { OfferPrice } from "./OfferPrice.mts";
-import { OfferProgramEligibility } from "./OfferProgramEligibility.mts";
-import { OfferPromotion } from "./OfferPromotion.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { OfferAvailability } from "./OfferAvailability.mjs";
+import { OfferCondition } from "./OfferCondition.mjs";
+import { OfferDeliveryInfo } from "./OfferDeliveryInfo.mjs";
+import { OfferLoyaltyPoints } from "./OfferLoyaltyPoints.mjs";
+import { OfferMerchantInfo } from "./OfferMerchantInfo.mjs";
+import { OfferPrice } from "./OfferPrice.mjs";
+import { OfferProgramEligibility } from "./OfferProgramEligibility.mjs";
+import { OfferPromotion } from "./OfferPromotion.mjs";
 
 /**
  * Constructs a new <code>OfferListing</code>.

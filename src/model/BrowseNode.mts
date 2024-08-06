@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { BrowseNodeAncestor } from "./BrowseNodeAncestor.mts";
-import { BrowseNodeChild } from "./BrowseNodeChild.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { BrowseNodeAncestor } from "./BrowseNodeAncestor.mjs";
+import { BrowseNodeChild } from "./BrowseNodeChild.mjs";
 
 /**
  * Constructs a new <code>BrowseNode</code>.

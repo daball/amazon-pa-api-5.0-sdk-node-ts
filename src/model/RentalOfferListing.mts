@@ -27,12 +27,12 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { DurationPrice } from "./DurationPrice.mts";
-import { OfferAvailability } from "./OfferAvailability.mts";
-import { OfferCondition } from "./OfferCondition.mts";
-import { OfferDeliveryInfo } from "./OfferDeliveryInfo.mts";
-import { OfferMerchantInfo } from "./OfferMerchantInfo.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { DurationPrice } from "./DurationPrice.mjs";
+import { OfferAvailability } from "./OfferAvailability.mjs";
+import { OfferCondition } from "./OfferCondition.mjs";
+import { OfferDeliveryInfo } from "./OfferDeliveryInfo.mjs";
+import { OfferMerchantInfo } from "./OfferMerchantInfo.mjs";
 
 /**
  * Constructs a new <code>RentalOfferListing</code>.

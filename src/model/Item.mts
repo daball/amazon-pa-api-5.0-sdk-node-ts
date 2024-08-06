@@ -27,14 +27,14 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { BrowseNodeInfo } from "./BrowseNodeInfo.mts";
-import { CustomerReviews } from "./CustomerReviews.mts";
-import { Images } from "./Images.mts";
-import { ItemInfo } from "./ItemInfo.mts";
-import { Offers } from "./Offers.mts";
-import { RentalOffers } from "./RentalOffers.mts";
-import { VariationAttribute } from "./VariationAttribute.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { BrowseNodeInfo } from "./BrowseNodeInfo.mjs";
+import { CustomerReviews } from "./CustomerReviews.mjs";
+import { Images } from "./Images.mjs";
+import { ItemInfo } from "./ItemInfo.mjs";
+import { Offers } from "./Offers.mjs";
+import { RentalOffers } from "./RentalOffers.mjs";
+import { VariationAttribute } from "./VariationAttribute.mjs";
 
 /**
  * Constructs a new <code>Item</code>.

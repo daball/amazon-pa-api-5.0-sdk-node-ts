@@ -21,13 +21,13 @@
  *
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Condition } from "./Condition.mts";
-import { GetVariationsResource } from "./GetVariationsResource.mts";
-import { Merchant } from "./Merchant.mts";
-import { OfferCount } from "./OfferCount.mts";
-import { PartnerType } from "./PartnerType.mts";
-import { Properties } from "./Properties.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Condition } from "./Condition.mjs";
+import { GetVariationsResource } from "./GetVariationsResource.mjs";
+import { Merchant } from "./Merchant.mjs";
+import { OfferCount } from "./OfferCount.mjs";
+import { PartnerType } from "./PartnerType.mjs";
+import { Properties } from "./Properties.mjs";
 
 /**
  * The GetVariationsRequest model module.

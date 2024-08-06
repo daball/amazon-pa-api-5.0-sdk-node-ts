@@ -21,7 +21,7 @@
  *
  */
 
- import { MultiValuedAttribute } from "./MultiValuedAttribute.mts";
+ import { MultiValuedAttribute } from "./MultiValuedAttribute.mjs";
 
  /**
  * The ExternalIds model module.

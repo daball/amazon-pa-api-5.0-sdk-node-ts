@@ -15,7 +15,7 @@
  * permissions and limitations under the License.
  */
 
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
 
  /**
  * ProductAdvertisingAPI

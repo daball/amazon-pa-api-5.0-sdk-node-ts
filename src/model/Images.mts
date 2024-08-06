@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { ImageType } from "./ImageType.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { ImageType } from "./ImageType.mjs";
 
 /**
  * Constructs a new <code>Images</code>.

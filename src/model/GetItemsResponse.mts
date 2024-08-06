@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { ErrorData } from "./ErrorData.mts";
-import { ItemsResult } from "./ItemsResult.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { ErrorData } from "./ErrorData.mjs";
+import { ItemsResult } from "./ItemsResult.mjs";
 
 /**
  * Constructs a new <code>GetItemsResponse</code>.

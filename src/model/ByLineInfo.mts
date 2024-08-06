@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from '../ApiClient.mts';
-import { Contributor } from './Contributor.mts';
-import { SingleStringValuedAttribute } from './SingleStringValuedAttribute.mts';
+import { ApiClient } from '../ApiClient.mjs';
+import { Contributor } from './Contributor.mjs';
+import { SingleStringValuedAttribute } from './SingleStringValuedAttribute.mjs';
 
 /**
  * Constructs a new <code>ByLineInfo</code>.

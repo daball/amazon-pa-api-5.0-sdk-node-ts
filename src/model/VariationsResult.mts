@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Item } from "./Item.mts";
-import { VariationSummary } from "./VariationSummary.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Item } from "./Item.mjs";
+import { VariationSummary } from "./VariationSummary.mjs";
 
 /**
  * Constructs a new <code>VariationsResult</code>.

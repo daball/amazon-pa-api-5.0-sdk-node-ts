@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { OfferListing } from "./OfferListing.mts";
-import { OfferSummary } from "./OfferSummary.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { OfferListing } from "./OfferListing.mjs";
+import { OfferSummary } from "./OfferSummary.mjs";
 
 /**
  * Constructs a new <code>Offers</code>.

@@ -27,7 +27,7 @@
  * @version 1.0.0
 */
 
-import { ImageSize } from "./ImageSize.mts";
+import { ImageSize } from "./ImageSize.mjs";
 
 /**
  * Constructs a new <code>ImageType</code>.

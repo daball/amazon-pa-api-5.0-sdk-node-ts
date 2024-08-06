@@ -27,7 +27,7 @@
  * @version 1.0.0
  */
 
-import { UnitBasedAttribute } from "./UnitBasedAttribute.mts";
+import { UnitBasedAttribute } from "./UnitBasedAttribute.mjs";
 
 /**
  * Constructs a new <code>DimensionBasedAttribute</code>.

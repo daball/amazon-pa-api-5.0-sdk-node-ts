@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { MultiValuedAttribute } from "./MultiValuedAttribute.mts";
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
+import { MultiValuedAttribute } from "./MultiValuedAttribute.mjs";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
 
 /**
  * Constructs a new <code>TechnicalInfo</code>.

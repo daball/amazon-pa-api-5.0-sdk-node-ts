@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { RefinementBin } from "./RefinementBin.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { RefinementBin } from "./RefinementBin.mjs";
 
 /**
  * Constructs a new <code>Refinement</code>.

@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { ErrorData } from "./ErrorData.mts";
-import { SearchResult } from "./SearchResult.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { ErrorData } from "./ErrorData.mjs";
+import { SearchResult } from "./SearchResult.mjs";
 
 /**
  * Constructs a new <code>SearchItemsResponse</code>.

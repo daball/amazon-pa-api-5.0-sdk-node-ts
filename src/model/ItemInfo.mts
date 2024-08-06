@@ -27,17 +27,17 @@
  * @version 1.0.0
  */
 
-import { ByLineInfo } from "./ByLineInfo.mts";
-import { Classifications } from "./Classifications.mts";
-import { ContentInfo } from "./ContentInfo.mts";
-import { ContentRating } from "./ContentRating.mts";
-import { ExternalIds } from "./ExternalIds.mts";
-import { ManufactureInfo } from "./ManufactureInfo.mts";
-import { MultiValuedAttribute } from "./MultiValuedAttribute.mts";
-import { ProductInfo } from "./ProductInfo.mts";
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
-import { TechnicalInfo } from "./TechnicalInfo.mts";
-import { TradeInInfo } from "./TradeInInfo.mts";
+import { ByLineInfo } from "./ByLineInfo.mjs";
+import { Classifications } from "./Classifications.mjs";
+import { ContentInfo } from "./ContentInfo.mjs";
+import { ContentRating } from "./ContentRating.mjs";
+import { ExternalIds } from "./ExternalIds.mjs";
+import { ManufactureInfo } from "./ManufactureInfo.mjs";
+import { MultiValuedAttribute } from "./MultiValuedAttribute.mjs";
+import { ProductInfo } from "./ProductInfo.mjs";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
+import { TechnicalInfo } from "./TechnicalInfo.mjs";
+import { TradeInInfo } from "./TradeInInfo.mjs";
 
 /**
  * Constructs a new <code>ItemInfo</code>.

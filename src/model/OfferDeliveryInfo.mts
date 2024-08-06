@@ -21,8 +21,8 @@
  *
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { OfferShippingCharge } from "./OfferShippingCharge.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { OfferShippingCharge } from "./OfferShippingCharge.mjs";
 
 /**
  * The OfferDeliveryInfo model module.

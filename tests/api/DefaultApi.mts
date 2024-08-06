@@ -21,7 +21,7 @@
  *
  */
 
-import * as ProductAdvertisingAPIv1 from '../../src/index.mts';
+import * as ProductAdvertisingAPIv1 from '../../src/index.mjs';
 
 const DUMMY_ACCESS_KEY = 'DUMMY_ACCESS_KEY';
 const DUMMY_SECRET_KEY = 'DUMMY_SECRET_KEY';

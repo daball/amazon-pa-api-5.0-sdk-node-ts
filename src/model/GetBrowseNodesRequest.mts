@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { PartnerType } from "./PartnerType.mts";
-import { GetBrowseNodesResource } from "./GetBrowseNodesResource.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { PartnerType } from "./PartnerType.mjs";
+import { GetBrowseNodesResource } from "./GetBrowseNodesResource.mjs";
 
 /**
  * Constructs a new <code>GetBrowseNodesRequest</code>.

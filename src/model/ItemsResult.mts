@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Item } from "./Item.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Item } from "./Item.mjs";
 
 /**
  * Constructs a new <code>ItemsResult</code>.

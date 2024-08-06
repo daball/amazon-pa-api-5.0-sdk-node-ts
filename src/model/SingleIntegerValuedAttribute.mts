@@ -21,7 +21,7 @@
  *
  */
 
-import { ApiClient } from "../ApiClient.mts";
+import { ApiClient } from "../ApiClient.mjs";
 
 /**
  * The SingleIntegerValuedAttribute model module.

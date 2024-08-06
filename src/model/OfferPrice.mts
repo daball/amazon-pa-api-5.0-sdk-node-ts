@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from '../ApiClient.mts';
-import { OfferSavings } from './OfferSavings.mts';
-import { PriceType } from './PriceType.mts';
+import { ApiClient } from '../ApiClient.mjs';
+import { OfferSavings } from './OfferSavings.mjs';
+import { PriceType } from './PriceType.mjs';
 
 /**
  * Constructs a new <code>OfferPrice</code>.

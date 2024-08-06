@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Refinement } from "./Refinement.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Refinement } from "./Refinement.mjs";
 
 /**
  * Constructs a new <code>SearchRefinements</code>.

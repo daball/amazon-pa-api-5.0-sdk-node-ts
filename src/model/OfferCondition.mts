@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { OfferConditionNote } from "./OfferConditionNote.mts";
-import { OfferSubCondition } from "./OfferSubCondition.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { OfferConditionNote } from "./OfferConditionNote.mjs";
+import { OfferSubCondition } from "./OfferSubCondition.mjs";
 
 /**
  * Constructs a new <code>OfferCondition</code>.

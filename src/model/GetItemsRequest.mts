@@ -27,14 +27,14 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { Condition } from "./Condition.mts";
-import { GetItemsResource } from "./GetItemsResource.mts";
-import { ItemIdType } from "./ItemIdType.mts";
-import { Merchant } from "./Merchant.mts";
-import { OfferCount } from "./OfferCount.mts";
-import { PartnerType } from "./PartnerType.mts";
-import { Properties } from "./Properties.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { Condition } from "./Condition.mjs";
+import { GetItemsResource } from "./GetItemsResource.mjs";
+import { ItemIdType } from "./ItemIdType.mjs";
+import { Merchant } from "./Merchant.mjs";
+import { OfferCount } from "./OfferCount.mjs";
+import { PartnerType } from "./PartnerType.mjs";
+import { Properties } from "./Properties.mjs";
 
 /**
  * Constructs a new <code>GetItemsRequest</code>.

@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { BrowseNode } from "./BrowseNode.mts";
-import { WebsiteSalesRank } from "./WebsiteSalesRank.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { BrowseNode } from "./BrowseNode.mjs";
+import { WebsiteSalesRank } from "./WebsiteSalesRank.mjs";
 
 /**
  * Constructs a new <code>BrowseNodeInfo</code>.

@@ -21,7 +21,7 @@
  *
  */
 
- import * as awsv4 from './auth/SignHelper.mts';
+ import * as awsv4 from './auth/SignHelper.mjs';
  import superagent from 'superagent';
  import querystring from 'querystring';
  

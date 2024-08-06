@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { OfferPrice } from "./OfferPrice.mts";
-import { UnitBasedAttribute } from "./UnitBasedAttribute.mts";
+import { OfferPrice } from "./OfferPrice.mjs";
+import { UnitBasedAttribute } from "./UnitBasedAttribute.mjs";
 
 /**
  * Constructs a new <code>DurationPrice</code>.

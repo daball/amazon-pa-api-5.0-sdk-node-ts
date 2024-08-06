@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { TradeInPrice } from "./TradeInPrice.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { TradeInPrice } from "./TradeInPrice.mjs";
 
 /**
  * Constructs a new <code>TradeInInfo</code>.

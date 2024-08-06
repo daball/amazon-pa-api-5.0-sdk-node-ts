@@ -21,7 +21,7 @@
  *
  */
 
- import { OfferPrice } from "./OfferPrice.mts";
+ import { OfferPrice } from "./OfferPrice.mjs";
 
 /**
  * The Price model module.

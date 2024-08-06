@@ -27,7 +27,7 @@
  * @version 1.0.0
  */
 
-import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mts";
+import { SingleStringValuedAttribute } from "./SingleStringValuedAttribute.mjs";
 
 /**
  * Constructs a new <code>ManufactureInfo</code>.

@@ -27,7 +27,7 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
+import { ApiClient } from "../ApiClient.mjs";
 
 /**
  * Constructs a new <code>OfferProgramEligibility</code>.

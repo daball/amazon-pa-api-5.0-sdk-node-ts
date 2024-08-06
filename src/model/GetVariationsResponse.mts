@@ -27,9 +27,9 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { ErrorData } from "./ErrorData.mts";
-import { VariationsResult } from "./VariationsResult.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { ErrorData } from "./ErrorData.mjs";
+import { VariationsResult } from "./VariationsResult.mjs";
 
 /**
  * Constructs a new <code>GetVariationsResponse</code>.

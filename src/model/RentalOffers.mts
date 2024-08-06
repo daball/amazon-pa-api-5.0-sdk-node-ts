@@ -27,8 +27,8 @@
  * @version 1.0.0
  */
 
-import { ApiClient } from "../ApiClient.mts";
-import { RentalOfferListing } from "./RentalOfferListing.mts";
+import { ApiClient } from "../ApiClient.mjs";
+import { RentalOfferListing } from "./RentalOfferListing.mjs";
 
 /**
  * Constructs a new <code>RentalOffers</code>.
