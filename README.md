@@ -1,34 +1,40 @@
 # amazon-pa-api-5.0-sdk-node-ts
 
-I downloaded Amazon's Product Advertising API SDK "Example."
+I rebuilt Amazon's Product Advertising API SDK for Node.js but for my particular Node.js.
 
-I'm going to rebuild this mess so I can read it and understand it.
+In particular I had the following design requirement:
 
-Here's to setting better examples.
+- Transpiles with TypeScript to ESNext module (ESM) without errors as a NodeNext module for NodeNext (Node 18 in my case).
+- Sample artifacts from API Scratchpad parses in Node.js with TypeScript using the class types.
+- Minimal breaking changes to the initial Product Advertising API 5.0.
+- I didn't want to touch the HTTP client they used for now.
 
 Refactored by [David A. Ball](https://daball.me).
 
 # Product Advertising API 5.0 SDK for NodeJS
 
-[![NPM](https://nodei.co/npm/paapi5-nodejs-sdk.svg?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/paapi5-nodejs-sdk/)
+[![NPM](https://nodei.co/npm/amazon-pa-api5-node-ts.png)](https://nodei.co/npm/amazon-pa-api5-node-ts/)
 
-[![Version](https://badge.fury.io/js/paapi5-nodejs-sdk.svg)](http://badge.fury.io/js/paapi5-nodejs-sdk) [![npm](https://img.shields.io/npm/dt/paapi5-nodejs-sdk.svg)](https://www.npmjs.com/package/paapi5-nodejs-sdk)
+[![npm version](https://badge.fury.io/js/amazon-pa-api5-node-ts.svg)](https://badge.fury.io/js/amazon-pa-api5-node-ts) [![npm](https://img.shields.io/npm/dt/amazon-pa-api5-node-ts.svg)](https://www.npmjs.com/package/amazon-pa-api5-node-ts)
 
-This repository contains the official Product Advertising API 5.0 NodeJS SDK called **paapi5-nodejs-sdk** that allows you to access the [Product Advertising API](https://webservices.amazon.com/paapi5/documentation/index.html) from your NodeJS app.
+This repository started with the official Product Advertising API 5.0 NodeJS SDK called **[paapi5-nodejs-sdk](https://www.npmjs.com/package/paapi5-nodejs-sdk)** that allows you to access the [Product Advertising API](https://webservices.amazon.com/paapi5/documentation/index.html) from your NodeJS app.
 
 ## Installation
 
 ### For [Node.js](https://nodejs.org/)
 
-The Product Advertising API NodeJS SDK can be installed via [npm](https://www.npmjs.com/package/paapi5-nodejs-sdk):
+The Product Advertising API NodeJS SDK can be installed via [npm](https://www.npmjs.com/package/amazon-pa-api5-node-ts):
  
 ```shell
-npm install paapi5-nodejs-sdk --save
+npm install amazon-pa-api5-node-ts --save
 ```
 
-You should now be able to `require('paapi5-nodejs-sdk')` in javascript files.
+You should now be able to `import * as ProductAdvertisingAPIv1 from 'amazon-pa-api5-node-ts'` in TypeScript files.
 
 ### For browser
+
+I assume it works in the browser. I have no idea really. I use it on the server. I'm leaving the documentation up from
+the original documentation.
 
 The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
 the above steps with Node.js and installing browserify with `npm install -g browserify`,
@@ -42,6 +48,9 @@ browserify main.js > bundle.js
 Then include *bundle.js* in the HTML pages.
 
 ### Webpack Configuration
+
+I assume it works in Webpack. I'm using it with Vite, for instance, with Astro. I have no idea really. I'm leaving the documentation up from
+the original documentation.
 
 Using Webpack you may encounter the following error: "Module not found: Error:
 Cannot resolve module", most certainly you should disable AMD loader. Add/merge
@@ -60,6 +69,9 @@ module: {
 ```
 
 ## Getting Started
+
+This is an old example. I'm sure you won't have trouble getting started since I've made every effort not to break the original API but it works with all the type hinting of TypeScript. I'm leaving the documentation up from
+the original documentation.
 
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
@@ -172,4 +184,5 @@ api.searchItems(searchItemsRequest).then(
 Complete documentation, installation instructions, and examples are available [here](https://webservices.amazon.com/paapi5/documentation/index.html).
 
 ## License
+
 This SDK is distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), see LICENSE.txt and NOTICE.txt for more information.
