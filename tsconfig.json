@@ -1,8 +1,10 @@
 {
     "extends": "./tsconfig.strict.json",
     "compilerOptions": {
+      "allowImportingTsExtensions": false,
       "declaration": true,
       "noImplicitAny": false,
+      "noEmit": false,
       "noEmitOnError": true,
       "removeComments": false,
       "sourceMap": true,
