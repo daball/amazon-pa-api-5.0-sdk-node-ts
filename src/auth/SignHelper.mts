@@ -48,18 +48,17 @@ const hexEncodedHash = (data: BinaryLike | string) => {
   return hashSHA256.digest(HEX).toString();
 }
 
-
 export const createAuthorizationHeaders = (timestamp: number | string | Date, accessKey: string, region: string, service: string, signedHeaders: string, signature: string) =>
-  `${AWS4_HMAC_SHA256} Credential=${accessKey}/${exports.createCredentialScope(timestamp, region, service)}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
+  `${AWS4_HMAC_SHA256} Credential=${accessKey}/${createCredentialScope(timestamp, region, service)}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
 
 export const createCanonicalRequest = (method: string, pathname: string, query: Record<string, string | number | boolean>, headers: Record<string, any>, payload: any) => {
   var payloadJson = JSON.stringify(payload);
   return [
     method.toUpperCase(),
     pathname,
-    exports.createCanonicalQueryString(query),
-    exports.createCanonicalHeaders(headers),
-    exports.createSignedHeaders(headers),
+    createCanonicalQueryString(query),
+    createCanonicalHeaders(headers),
+    createSignedHeaders(headers),
     hexEncodedHash(String(payloadJson))
   ].join('\n');
 };
@@ -96,7 +95,7 @@ export const createStringToSign = (time: number | string | Date, region: string,
   [
     AWS4_HMAC_SHA256,
     toTime(time),
-    exports.createCredentialScope(time, region, service),
+    createCredentialScope(time, region, service),
     hexEncodedHash(request)
   ].join('\n');
 
