@@ -87,7 +87,7 @@ export class GetVariationsRequest {
   /**
    * @member {Array.<module:model/GetVariationsResource>} Resources
    */
-  public Resources?: GetVariationsResource[];
+  public Resources?: GetVariationsResource[]|string[];
   /**
    * @member {Number} VariationCount
    */

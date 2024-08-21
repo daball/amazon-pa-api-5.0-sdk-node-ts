@@ -92,7 +92,7 @@ export class GetItemsRequest {
   /**
    * @member {Array.<module:model/GetItemsResource>} Resources
    */
-  public Resources?: GetItemsResource[];
+  public Resources?: GetItemsResource[]|string[];
 
   // not sure if this is ever relevant:
   // public constructor(itemIds, partnerTag, partnerType) {
