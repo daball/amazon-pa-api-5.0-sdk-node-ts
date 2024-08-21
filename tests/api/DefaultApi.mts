@@ -33,9 +33,9 @@ const REGION = 'us-east-1';
 
 let instance;
 
-beforeEach(function() {
-  instance = new ProductAdvertisingAPIv1.DefaultApi();
-});
+// beforeEach(function() {
+//   instance = new ProductAdvertisingAPIv1.DefaultApi();
+// });
 
 var getProperty = function(object, getter, property) {
   // Use getter method if present; otherwise, get the property directly.
