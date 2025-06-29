@@ -31,6 +31,7 @@ import { ApiClient } from "../ApiClient.mjs";
 import { Condition } from "./Condition.mjs";
 import { GetItemsResource } from "./GetItemsResource.mjs";
 import { ItemIdType } from "./ItemIdType.mjs";
+import { Marketplace } from "./Marketplace.mjs";
 import { Merchant } from "./Merchant.mjs";
 import { OfferCount } from "./OfferCount.mjs";
 import { PartnerType } from "./PartnerType.mjs";
@@ -58,17 +59,19 @@ export class GetItemsRequest {
    */
   public ItemIds?: string[];
   /**
-   * @member {module:model/ItemIdType} ItemIdType
+   * @member {module:model/ItemIdType} ItemIdType|string
    */
-  public ItemIdType?: ItemIdType;
+  public ItemIdType?: ItemIdType|string;
   /**
    * @member {Array.<String>} LanguagesOfPreference
    */
   public LanguagesOfPreference?: string[];
   /**
-   * @member {String} Marketplace
+   * When specifying a string literal, use the correct URL from https://webservices.amazon.com/paapi5/documentation/locale-reference.html.
+   * Otherwise refer to the values in MarketplaceValues.
+   * @member {String} Marketplace|string
    */
-  public Marketplace?: string;
+  public Marketplace?: Marketplace|string;
   /**
    * @member {module:model/Merchant} Merchant
    */

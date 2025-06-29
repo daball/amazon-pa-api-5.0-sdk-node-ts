@@ -25,7 +25,7 @@ import { ApiClient } from "./ApiClient.mjs";
 
 import { DefaultApi } from "./api/DefaultApi.mjs";
 
-import { Availability } from "./model/Availability.mjs";
+import { Availability, AvailabilityValues } from "./model/Availability.mjs";
 import { BrowseNode } from "./model/BrowseNode.mjs";
 import { BrowseNodeAncestor } from "./model/BrowseNodeAncestor.mjs";
 import { BrowseNodeChild } from "./model/BrowseNodeChild.mjs";
@@ -38,32 +38,33 @@ import { ContentInfo } from "./model/ContentInfo.mjs";
 import { ContentRating } from "./model/ContentRating.mjs";
 import { Contributor } from "./model/Contributor.mjs";
 import { CustomerReviews } from "./model/CustomerReviews.mjs";
-import { DeliveryFlag } from "./model/DeliveryFlag.mjs";
+import { DeliveryFlag, DeliveryFlagValues } from "./model/DeliveryFlag.mjs";
 import { DimensionBasedAttribute } from "./model/DimensionBasedAttribute.mjs";
 import { DurationPrice } from "./model/DurationPrice.mjs";
 import { ErrorData } from "./model/ErrorData.mjs";
 import { ExternalIds } from "./model/ExternalIds.mjs";
 import { GetBrowseNodesRequest } from "./model/GetBrowseNodesRequest.mjs";
-import { GetBrowseNodesResource } from "./model/GetBrowseNodesResource.mjs";
+import { GetBrowseNodesResource, GetBrowseNodesResourceValues } from "./model/GetBrowseNodesResource.mjs";
 import { GetBrowseNodesResponse } from "./model/GetBrowseNodesResponse.mjs";
 import { GetItemsRequest } from "./model/GetItemsRequest.mjs";
-import { GetItemsResource } from "./model/GetItemsResource.mjs";
+import { GetItemsResource, GetItemsResourceValues } from "./model/GetItemsResource.mjs";
 import { GetItemsResponse } from "./model/GetItemsResponse.mjs";
 import { GetVariationsRequest } from "./model/GetVariationsRequest.mjs";
-import { GetVariationsResource } from "./model/GetVariationsResource.mjs";
+import { GetVariationsResource, GetVariationsResourceValues } from "./model/GetVariationsResource.mjs";
 import { GetVariationsResponse } from "./model/GetVariationsResponse.mjs";
 import { ImageSize } from "./model/ImageSize.mjs";
 import { ImageType } from "./model/ImageType.mjs";
 import { Images } from "./model/Images.mjs";
 import { Item } from "./model/Item.mjs";
-import { ItemIdType } from "./model/ItemIdType.mjs";
+import { ItemIdType, ItemIdTypeValues } from "./model/ItemIdType.mjs";
 import { ItemInfo } from "./model/ItemInfo.mjs";
 import { ItemsResult } from "./model/ItemsResult.mjs";
 import { Languages } from "./model/Languages.mjs";
 import { LanguageType } from "./model/LanguageType.mjs";
 import { ManufactureInfo } from "./model/ManufactureInfo.mjs";
+import { Marketplace, MarketplaceValues } from "./model/Marketplace.mjs";
 import { MaxPrice } from "./model/MaxPrice.mjs";
-import { Merchant } from "./model/Merchant.mjs";
+import { Merchant, MerchantValues } from "./model/Merchant.mjs";
 import { MinPrice } from "./model/MinPrice.mjs";
 import { MinReviewsRating } from "./model/MinReviewsRating.mjs";
 import { MinSavingPercent } from "./model/MinSavingPercent.mjs";
@@ -84,7 +85,7 @@ import { OfferShippingCharge } from "./model/OfferShippingCharge.mjs";
 import { OfferSubCondition } from "./model/OfferSubCondition.mjs";
 import { OfferSummary } from "./model/OfferSummary.mjs";
 import { Offers } from "./model/Offers.mjs";
-import { PartnerType } from "./model/PartnerType.mjs";
+import { PartnerType, PartnerTypeValues } from "./model/PartnerType.mjs";
 import { Price } from "./model/Price.mjs";
 import { PriceType } from "./model/PriceType.mjs";
 import { ProductAdvertisingAPIClientException } from "./model/ProductAdvertisingAPIClientException.mjs";
@@ -97,14 +98,14 @@ import { RefinementBin } from "./model/RefinementBin.mjs";
 import { RentalOfferListing } from "./model/RentalOfferListing.mjs";
 import { RentalOffers } from "./model/RentalOffers.mjs";
 import { SearchItemsRequest } from "./model/SearchItemsRequest.mjs";
-import { SearchItemsResource } from "./model/SearchItemsResource.mjs";
+import { SearchItemsResource, SearchItemsResourceValues } from "./model/SearchItemsResource.mjs";
 import { SearchItemsResponse } from "./model/SearchItemsResponse.mjs";
 import { SearchRefinements } from "./model/SearchRefinements.mjs";
 import { SearchResult } from "./model/SearchResult.mjs";
 import { SingleBooleanValuedAttribute } from "./model/SingleBooleanValuedAttribute.mjs";
 import { SingleIntegerValuedAttribute } from "./model/SingleIntegerValuedAttribute.mjs";
 import { SingleStringValuedAttribute } from "./model/SingleStringValuedAttribute.mjs";
-import { SortBy } from "./model/SortBy.mjs";
+import { SortBy, SortByValues } from "./model/SortBy.mjs";
 import { TechnicalInfo } from "./model/TechnicalInfo.mjs";
 import { TradeInInfo } from "./model/TradeInInfo.mjs";
 import { TradeInPrice } from "./model/TradeInPrice.mjs";
@@ -157,6 +158,11 @@ export {
    * @property {module:model/Availability}
    */
   Availability,
+  /**
+   * The Availability model constructor.
+   * @property {module:model/Availability}
+   */
+  AvailabilityValues,
   /**
    * The BrowseNode model constructor.
    * @property {module:model/BrowseNode}
@@ -222,6 +228,7 @@ export {
    * @property {module:model/DeliveryFlag}
    */
   DeliveryFlag,
+  DeliveryFlagValues,
   /**
    * The DimensionBasedAttribute model constructor.
    * @property {module:model/DimensionBasedAttribute}
@@ -252,6 +259,7 @@ export {
    * @property {module:model/GetBrowseNodesResource}
    */
   GetBrowseNodesResource,
+  GetBrowseNodesResourceValues,
   /**
    * The GetBrowseNodesResponse model constructor.
    * @property {module:model/GetBrowseNodesResponse}
@@ -267,6 +275,7 @@ export {
    * @property {module:model/GetItemsResource}
    */
   GetItemsResource,
+  GetItemsResourceValues,
   /**
    * The GetItemsResponse model constructor.
    * @property {module:model/GetItemsResponse}
@@ -282,6 +291,7 @@ export {
    * @property {module:model/GetVariationsResource}
    */
   GetVariationsResource,
+  GetVariationsResourceValues,
   /**
    * The GetVariationsResponse model constructor.
    * @property {module:model/GetVariationsResponse}
@@ -312,6 +322,7 @@ export {
    * @property {module:model/ItemIdType}
    */
   ItemIdType,
+  ItemIdTypeValues,
   /**
    * The ItemInfo model constructor.
    * @property {module:model/ItemInfo}
@@ -337,6 +348,8 @@ export {
    * @property {module:model/ManufactureInfo}
    */
   ManufactureInfo,
+  Marketplace,
+  MarketplaceValues,
   /**
    * The MaxPrice model constructor.
    * @property {module:model/MaxPrice}
@@ -347,6 +360,7 @@ export {
    * @property {module:model/Merchant}
    */
   Merchant,
+  MerchantValues,
   /**
    * The MinPrice model constructor.
    * @property {module:model/MinPrice}
@@ -452,6 +466,7 @@ export {
    * @property {module:model/PartnerType}
    */
   PartnerType,
+  PartnerTypeValues,
   /**
    * The Price model constructor.
    * @property {module:model/Price}
@@ -517,6 +532,7 @@ export {
    * @property {module:model/SearchItemsResource}
    */
   SearchItemsResource,
+  SearchItemsResourceValues,
   /**
    * The SearchItemsResponse model constructor.
    * @property {module:model/SearchItemsResponse}
@@ -552,6 +568,7 @@ export {
    * @property {module:model/SortBy}
    */
   SortBy,
+  SortByValues,
   /**
    * The TechnicalInfo model constructor.
    * @property {module:model/TechnicalInfo}

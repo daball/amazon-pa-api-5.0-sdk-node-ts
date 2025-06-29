@@ -63,9 +63,9 @@ export class SearchItemsRequest {
    */
   public Author?: string;
   /**
-   * @member {module:model/Availability} Availability
+   * @member {module:model/Availability} Availability|string
    */
-  public Availability?: Availability;
+  public Availability?: Availability|string;
   /**
    * @member {String} Brand
    */
@@ -83,9 +83,9 @@ export class SearchItemsRequest {
    */
   public CurrencyOfPreference?: string;
   /**
-   * @member {Array.<module:model/DeliveryFlag>} DeliveryFlags
+   * @member {Array.<module:model/DeliveryFlag>} DeliveryFlags|string[]
    */
-  public DeliveryFlags?: DeliveryFlag[];
+  public DeliveryFlags?: DeliveryFlag[]|string[];
   /**
    * @member {Number} ItemCount
    */
@@ -111,9 +111,9 @@ export class SearchItemsRequest {
    */
   public MaxPrice?: MaxPrice;
   /**
-   * @member {module:model/Merchant} Merchant
+   * @member {module:model/Merchant} Merchant|string
    */
-  public Merchant?: Merchant;
+  public Merchant?: Merchant|string;
   /**
    * @member {module:model/MinPrice} MinPrice
    */
@@ -135,9 +135,9 @@ export class SearchItemsRequest {
    */
   public PartnerTag?: string;
   /**
-   * @member {module:model/PartnerType} PartnerType
+   * @member {module:model/PartnerType} PartnerType|string
    */
-  public PartnerType?: PartnerType;
+  public PartnerType?: PartnerType|string;
   /**
    * @member {module:model/Properties} Properties
    */
@@ -151,9 +151,9 @@ export class SearchItemsRequest {
    */
   public SearchIndex?: string;
   /**
-   * @member {module:model/SortBy} SortBy
+   * @member {module:model/SortBy} SortBy|string
    */
-  public SortBy?: SortBy;
+  public SortBy?: SortBy|string;
   /**
    * @member {String} Title
    */

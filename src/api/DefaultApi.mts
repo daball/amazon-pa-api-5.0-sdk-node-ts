@@ -21,17 +21,17 @@
  *
  */
 
- import { ApiClient, type ApiResponse } from "../ApiClient.mjs";
+import { ApiClient, type ApiResponse } from "../ApiClient.mjs";
 import type { GetItemsResource } from "../index.mjs";
- import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest.mjs";
- import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse.mjs";
- import { GetItemsRequest } from "../model/GetItemsRequest.mjs";
- import { GetItemsResponse } from "../model/GetItemsResponse.mjs";
- import { GetVariationsRequest } from "../model/GetVariationsRequest.mjs";
- import { GetVariationsResponse } from "../model/GetVariationsResponse.mjs";
- import { SearchItemsRequest } from "../model/SearchItemsRequest.mjs";
- import { SearchItemsResponse } from "../model/SearchItemsResponse.mjs";
- 
+import { GetBrowseNodesRequest } from "../model/GetBrowseNodesRequest.mjs";
+import { GetBrowseNodesResponse } from "../model/GetBrowseNodesResponse.mjs";
+import { GetItemsRequest } from "../model/GetItemsRequest.mjs";
+import { GetItemsResponse } from "../model/GetItemsResponse.mjs";
+import { GetVariationsRequest } from "../model/GetVariationsRequest.mjs";
+import { GetVariationsResponse } from "../model/GetVariationsResponse.mjs";
+import { SearchItemsRequest } from "../model/SearchItemsRequest.mjs";
+import { SearchItemsResponse } from "../model/SearchItemsResponse.mjs";
+
  /**
   * Default service.
   * @module api/DefaultApi
