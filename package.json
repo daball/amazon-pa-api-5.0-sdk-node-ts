@@ -1,10 +1,10 @@
 {
   "name": "amazon-pa-api5-node-ts",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "ProductAdvertisingAPI 5.0 NodeJS SDK rewritten in TypeScript.",
   "license": "Apache-2.0",
   "main": "dist/src/index.mjs",
-  "types": "dist/src/index.mjs",
+  "types": "dist/src/index.d.mts",
   "type": "module",
   "scripts": {
     "clean": "rimraf dist",
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/daball/amazon-pa-api-5.0-sdk-node-ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daball/amazon-pa-api-5.0-sdk-node-ts"
+    "url": "git+https://github.com/daball/amazon-pa-api-5.0-sdk-node-ts.git"
   },
   "dependencies": {
     "superagent": "^9.0.0"
